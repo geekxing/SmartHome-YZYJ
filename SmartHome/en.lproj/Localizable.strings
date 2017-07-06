@@ -1,0 +1,39 @@
+/*
+ Localizable.strings
+ SmartHome
+ 
+ Created by 赖霄冰 on 2017/4/23.
+ Copyright © 2017年 helloworld.com. All rights reserved.
+ */
+
+"ALERTDONE" = "OK";
+
+"ALERTCANCEL" = "CANCEL";
+
+//MARK: - FAMILY CARE
+
+"CANCEL_CARE_OTHER_TIP" = "No longer care %1$@?";
+
+"CANCEL_CARED_BY_OTHER_TIP" = "No longer be cared\nby %1$@?";
+
+//MARK: - REAL-TIME DATA
+
+"TRACKING_REPORT_DATE" = "Date：%1$@ %2$zd";
+
+"TRACKING_TOTAL_SLEEP_TIME" = "Sleep Time:%1$zd h %2$zd min";
+
+"TRACKING_DEEP_SLEEP_TIME" = "Deep Sleep:%1$zd h %2$zd min";
+
+"TRACKING_LIGHT_SLEEP_TIME" = "Light Sleep:%1$zd h %2$zd min";
+
+"DATA_ANALYSIS_DATE_PERIOD" = "%1$@ %2$zd - %3$@ %4$zd";
+
+"DATA_ANALYSIS_TOTAL_REPORTS" = "Total Reports:%1$zd";
+
+//MARK: - BLE
+
+"BLE_MODIFY_SUCESS" = "modify success";
+
+"BLE_MODIFY_FAIL" = "modify fail";
+
+

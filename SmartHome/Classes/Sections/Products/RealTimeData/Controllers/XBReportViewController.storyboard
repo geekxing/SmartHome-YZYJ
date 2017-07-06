@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Report View Controller-->
+        <scene sceneID="kGv-x8-g3S">
+            <objects>
+                <viewController storyboardIdentifier="reportViewController" id="89Y-Cn-k7Z" customClass="XBReportViewController" customModule="SmartHome" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="taJ-ea-GWc"/>
+                        <viewControllerLayoutGuide type="bottom" id="t9y-GV-Pvj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FsM-oV-kec" customClass="UIScrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="检测日期：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IED-Dr-tXo">
+                                <rect key="frame" x="33" y="84.5" width="143" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sxC-Za-LrU" customClass="XBSliderView" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="298" width="264" height="36.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUA-Do-3Uy" customClass="XBSquareButton" customModule="SmartHome" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="37" height="54.5"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-p7-iiO" customClass="XBSquareButton" customModule="SmartHome" customModuleProvider="target">
+                                        <rect key="frame" x="227" y="0.0" width="37" height="54.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <state key="normal">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMX-CH-5z6" customClass="XBSliderView" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="362" width="264" height="29.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jo0-aj-HCL" customClass="XBSliderView" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="489.5" width="264" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxe-wB-tpx" customClass="XBSquareButton" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="33" y="213" width="50.5" height="76.5"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="heartRate">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jTf-ta-pDy" customClass="XBSquareButton" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="99" y="213" width="51" height="76.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="breath">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="meB-Ux-XQy" customClass="XBSquareButton" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="170" y="213" width="51" height="76.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="Button" image="fanshen">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVd-Mv-DX3" customClass="XBSquareButton" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="236.5" y="213" width="50.5" height="76.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" image="qiye">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JnT-Na-BeB" customClass="XBSliderView" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="27.5" y="426" width="264" height="29.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="深度睡眠时长：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1K-vh-qwl">
+                                <rect key="frame" x="28" y="398.5" width="79.5" height="13.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="浅度睡眠时长：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIe-tA-NXD">
+                                <rect key="frame" x="28" y="462.5" width="79.5" height="13.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qMJ-z9-wZQ" customClass="XBRingView" customModule="SmartHome" customModuleProvider="target">
+                                <rect key="frame" x="108.5" y="106.5" width="100.5" height="100.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="总睡眠时长：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLL-gF-cxR">
+                                <rect key="frame" x="28" y="526.5" width="68.5" height="13.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="breathButton" destination="jTf-ta-pDy" id="HCd-xV-2Zy"/>
+                        <outlet property="dateLabel" destination="IED-Dr-tXo" id="eSC-9r-nVg"/>
+                        <outlet property="deepSleepLabel" destination="Z1K-vh-qwl" id="iwE-wI-N7l"/>
+                        <outlet property="deepSleepView" destination="LMX-CH-5z6" id="DR4-gL-j13"/>
+                        <outlet property="fanshenButton" destination="meB-Ux-XQy" id="7Ow-vM-804"/>
+                        <outlet property="getupButton" destination="fwM-p7-iiO" id="wCZ-6P-qly"/>
+                        <outlet property="heatRateButton" destination="Dxe-wB-tpx" id="y8n-nP-zYI"/>
+                        <outlet property="qiyeButton" destination="fVd-Mv-DX3" id="YvV-l9-zrs"/>
+                        <outlet property="ringView" destination="qMJ-z9-wZQ" id="Au8-O2-kN5"/>
+                        <outlet property="scrollView" destination="FsM-oV-kec" id="f7u-Rq-utH"/>
+                        <outlet property="sleepButton" destination="EUA-Do-3Uy" id="9rS-fr-zm6"/>
+                        <outlet property="sleepLabel" destination="cIe-tA-NXD" id="zFd-xU-je2"/>
+                        <outlet property="sleepTimeLineView" destination="sxC-Za-LrU" id="Xd8-5k-0p0"/>
+                        <outlet property="sleepView" destination="JnT-Na-BeB" id="B2O-D8-3Ua"/>
+                        <outlet property="totalSleepLabel" destination="BLL-gF-cxR" id="WLo-Y4-z5t"/>
+                        <outlet property="totalSleepView" destination="jo0-aj-HCL" id="j4r-Sx-CZB"/>
+                        <outletCollection property="squareButtons" destination="Dxe-wB-tpx" collectionClass="NSMutableArray" id="xmN-Em-Jui"/>
+                        <outletCollection property="squareButtons" destination="jTf-ta-pDy" collectionClass="NSMutableArray" id="4h9-or-KUe"/>
+                        <outletCollection property="squareButtons" destination="meB-Ux-XQy" collectionClass="NSMutableArray" id="9tt-gj-Qaq"/>
+                        <outletCollection property="squareButtons" destination="fVd-Mv-DX3" collectionClass="NSMutableArray" id="Eaj-n4-82f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9fv-JY-yR5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-306.39999999999998" y="96.7016491754123"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="breath" width="60" height="60"/>
+        <image name="fanshen" width="60" height="60"/>
+        <image name="heartRate" width="60" height="60"/>
+        <image name="qiye" width="60" height="60"/>
+    </resources>
+</document>

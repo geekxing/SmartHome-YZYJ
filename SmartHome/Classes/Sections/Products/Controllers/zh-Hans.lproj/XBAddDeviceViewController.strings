@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "添加设备"; ObjectID = "Coj-Pa-ITA"; */
+"Coj-Pa-ITA.text" = "添加设备";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "Dks-oo-hLU"; */
+"Dks-oo-hLU.normalTitle" = "提交";
+
+/* Class = "UIButton"; normalTitle = "扫一扫"; ObjectID = "QvS-nb-Dgb"; */
+"QvS-nb-Dgb.normalTitle" = "扫一扫";
+
+/* Class = "UITextField"; placeholder = "手工输入SN"; ObjectID = "RZI-64-e5j"; */
+"RZI-64-e5j.placeholder" = "手工输入SN";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "rcF-lP-lJa"; */
+"rcF-lP-lJa.normalTitle" = "返回";

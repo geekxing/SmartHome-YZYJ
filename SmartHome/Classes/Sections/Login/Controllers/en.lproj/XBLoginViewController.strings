@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "REGISTER AN ACCOUNT"; ObjectID = "942-WX-6Tj"; */
+"942-WX-6Tj.normalTitle" = "REGISTER AN ACCOUNT";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "MIU-1G-HNk"; */
+"MIU-1G-HNk.text" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "U5e-63-KYo"; */
+"U5e-63-KYo.normalTitle" = "Forgot Password?";
+
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "VPr-qy-orB"; */
+"VPr-qy-orB.normalTitle" = "Log In";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "Yeu-Mj-Cfr"; */
+"Yeu-Mj-Cfr.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "gPP-0f-fXj"; */
+"gPP-0f-fXj.placeholder" = "Password";

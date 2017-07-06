@@ -1,0 +1,45 @@
+
+/* Class = "UITextField"; placeholder = "Confirm Password*"; ObjectID = "9tc-xu-VtJ"; */
+"9tc-xu-VtJ.placeholder" = "Confirm Password*";
+
+/* Class = "UIButton"; normalTitle = "SUBMIT"; ObjectID = "Ans-E4-gGz"; */
+"Ans-E4-gGz.normalTitle" = "SUBMIT";
+
+/* Class = "UITextField"; placeholder = "Password*"; ObjectID = "CBY-B5-Ige"; */
+"CBY-B5-Ige.placeholder" = "Password*";
+
+/* Class = "UITextField"; placeholder = "Last Name*"; ObjectID = "LKA-kM-G8l"; */
+"LKA-kM-G8l.placeholder" = "Last Name*";
+
+/* Class = "UITextField"; placeholder = "Address"; ObjectID = "Ofa-fd-TmT"; */
+"Ofa-fd-TmT.placeholder" = "Address";
+
+/* Class = "UITextField"; placeholder = "Gender*"; ObjectID = "WwL-7k-akS"; */
+"WwL-7k-akS.placeholder" = "Gender";
+
+/* Class = "UILabel"; text = "I agree to the Term of Service"; ObjectID = "Ytb-Mq-wg6"; */
+"Ytb-Mq-wg6.text" = "I agree to the Term of Service";
+
+/* Class = "UITextField"; placeholder = "Phone Number*"; ObjectID = "ZUZ-uo-PTW"; */
+"ZUZ-uo-PTW.placeholder" = "Phone Number*";
+
+/* Class = "UITextField"; placeholder = "Middle Name"; ObjectID = "cD7-mv-El6"; */
+"cD7-mv-El6.placeholder" = "Middle Name";
+
+/* Class = "UITextField"; placeholder = "First Name*"; ObjectID = "m5x-bu-ZTl"; */
+"m5x-bu-ZTl.placeholder" = "First Name*";
+
+/* Class = "UITextField"; placeholder = "Email*"; ObjectID = "m8A-N6-m3z"; */
+"m8A-N6-m3z.placeholder" = "Email*";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "o75-pp-iFL"; */
+"o75-pp-iFL.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "Attention: The message with * must be filled out !"; ObjectID = "ooB-1b-OHg"; */
+"ooB-1b-OHg.text" = "Attention: The message with * must be filled out !";
+
+/* Class = "UITextField"; placeholder = "Birthday*"; ObjectID = "qyb-3X-mZB"; */
+"qyb-3X-mZB.placeholder" = "Birthday";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "yQY-Yd-2AH"; */
+"yQY-Yd-2AH.text" = "Register";

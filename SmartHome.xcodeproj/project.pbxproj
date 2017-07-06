@@ -1,0 +1,1354 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A018D7C1E2B6A0400B1629D /* XBAddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D7A1E2B6A0400B1629D /* XBAddDeviceViewController.swift */; };
+		1A018D7F1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D7E1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift */; };
+		1A018D851E2BAE5200B1629D /* XBRelationNoticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D841E2BAE5200B1629D /* XBRelationNoticeController.swift */; };
+		1A018D881E2BB9AD00B1629D /* XBTableGroupItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D871E2BB9AD00B1629D /* XBTableGroupItem.swift */; };
+		1A018D8A1E2C57E100B1629D /* XBRelationConcernModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D891E2C57E100B1629D /* XBRelationConcernModel.swift */; };
+		1A018D8C1E2C59E400B1629D /* XBRelationConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D8B1E2C59E400B1629D /* XBRelationConcernCell.swift */; };
+		1A018D8E1E2C5D3900B1629D /* XBApplyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D8D1E2C5D3900B1629D /* XBApplyConcernCell.swift */; };
+		1A0426801E96091500D2FC9B /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A04267F1E96091500D2FC9B /* NSObject+Extension.swift */; };
+		1A10733A1E5A0AF400D06DBB /* XBDeleteDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1073381E5A0AF400D06DBB /* XBDeleteDeviceViewController.swift */; };
+		1A14D6421DE6B81E00CE719B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D6411DE6B81E00CE719B /* MBProgressHUD.m */; };
+		1A14D6441DE6C10700CE719B /* MBProgressHUD+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A14D6431DE6C10700CE719B /* MBProgressHUD+Extension.swift */; };
+		1A1A944F1E9637C60076DD86 /* XBLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1A944E1E9637C60076DD86 /* XBLog.swift */; };
+		1A31D5801DE440F900B9BB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31D57F1DE440F900B9BB33 /* AppDelegate.swift */; };
+		1A31D5871DE440F900B9BB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A31D5861DE440F900B9BB33 /* Assets.xcassets */; };
+		1A31D58A1DE440F900B9BB33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A31D5881DE440F900B9BB33 /* LaunchScreen.storyboard */; };
+		1A31D59D1DE569D800B9BB33 /* XBLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31D59B1DE569D800B9BB33 /* XBLoginViewController.swift */; };
+		1A31D5A01DE56E2700B9BB33 /* XBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31D59F1DE56E2700B9BB33 /* XBNavigationController.swift */; };
+		1A31D5A31DE586CE00B9BB33 /* XBRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A31D5A11DE586CE00B9BB33 /* XBRegisterViewController.swift */; };
+		1A3352E71E9DD62200C24CD7 /* XBAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3352E61E9DD62200C24CD7 /* XBAnimator.swift */; };
+		1A37A3C61DF71684003B006C /* XBFindPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A37A3C41DF71684003B006C /* XBFindPasswordController.swift */; };
+		1A3F78BA1E8E2500000AD173 /* XBRequestURLs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3F78B91E8E2500000AD173 /* XBRequestURLs.swift */; };
+		1A42B1DD1DF3C26300A407B7 /* XBSquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42B1DC1DF3C26300A407B7 /* XBSquareButton.swift */; };
+		1A42B1DF1DF3C3E000A407B7 /* XBMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42B1DE1DF3C3E000A407B7 /* XBMainView.swift */; };
+		1A42B1E41DF3DB6F00A407B7 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42B1E31DF3DB6F00A407B7 /* UIButton.swift */; };
+		1A42B1E61DF42DED00A407B7 /* GlobalDefines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42B1E51DF42DED00A407B7 /* GlobalDefines.swift */; };
+		1A42B1E81DF43EA900A407B7 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42B1E71DF43EA900A407B7 /* UIView+Extension.swift */; };
+		1A42B1EA1DF4634100A407B7 /* XBLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A42B1E91DF4634100A407B7 /* XBLoginManager.swift */; };
+		1A4A75F51E2A2DA600A40787 /* MainItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A75F41E2A2DA600A40787 /* MainItemModel.swift */; };
+		1A4A75F81E2A622D00A40787 /* XBEditUserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4A75F61E2A622D00A40787 /* XBEditUserInfoViewController.swift */; };
+		1A7720471DF4FC9200257F02 /* XBUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7720461DF4FC9200257F02 /* XBUserManager.swift */; };
+		1A8AC67F1DE809E4009CC8F6 /* XBNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8AC67E1DE809E4009CC8F6 /* XBNetworking.swift */; };
+		1A973C2D1E65CF7900FB2431 /* XBShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A973C2C1E65CF7900FB2431 /* XBShadowButton.swift */; };
+		1A973C311E6693BB00FB2431 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A973C301E6693BB00FB2431 /* UIImageView+Extension.swift */; };
+		1A9923051E91EE1400C1E02B /* BLECentralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922E31E91EE1400C1E02B /* BLECentralManager.m */; };
+		1A9923061E91EE1400C1E02B /* BLEConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922E51E91EE1400C1E02B /* BLEConnector.m */; };
+		1A9923071E91EE1400C1E02B /* BLEDataPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922E71E91EE1400C1E02B /* BLEDataPack.m */; };
+		1A9923081E91EE1400C1E02B /* BLEDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922E91E91EE1400C1E02B /* BLEDeviceInfo.m */; };
+		1A9923091E91EE1400C1E02B /* BLEInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922EB1E91EE1400C1E02B /* BLEInfoCell.m */; };
+		1A99230A1E91EE1400C1E02B /* BLEInfoEditCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922ED1E91EE1400C1E02B /* BLEInfoEditCell.m */; };
+		1A99230B1E91EE1400C1E02B /* BLEInfoManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922F01E91EE1400C1E02B /* BLEInfoManagerViewController.m */; };
+		1A99230C1E91EE1400C1E02B /* ActionSheetHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922F31E91EE1400C1E02B /* ActionSheetHelper.m */; };
+		1A99230D1E91EE1400C1E02B /* AlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922F51E91EE1400C1E02B /* AlertHelper.m */; };
+		1A99230E1E91EE1400C1E02B /* RIButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922F71E91EE1400C1E02B /* RIButtonItem.m */; };
+		1A99230F1E91EE1400C1E02B /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922F91E91EE1400C1E02B /* UIActionSheet+Blocks.m */; };
+		1A9923101E91EE1400C1E02B /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922FB1E91EE1400C1E02B /* UIAlertView+Blocks.m */; };
+		1A9923111E91EE1400C1E02B /* UEBaseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9922FF1E91EE1400C1E02B /* UEBaseData.m */; };
+		1A9923121E91EE1400C1E02B /* UEReadDataPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9923011E91EE1400C1E02B /* UEReadDataPack.m */; };
+		1A9923131E91EE1400C1E02B /* BLEPeripheralManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A9923041E91EE1400C1E02B /* BLEPeripheralManager.m */; };
+		1A99231D1E91F33E00C1E02B /* CBCentralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A99231C1E91F33E00C1E02B /* CBCentralViewController.m */; };
+		1A9923251E92275B00C1E02B /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9923241E92275B00C1E02B /* UIDevice+Extension.swift */; };
+		1A9BCADC1E2A8B990001A880 /* XBPhotoPickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BCADB1E2A8B990001A880 /* XBPhotoPickerManager.swift */; };
+		1A9BCADE1E2B1FFB0001A880 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BCADD1E2B1FFB0001A880 /* UIImage+Extension.swift */; };
+		1A9BCAE01E2B37D70001A880 /* XBOperateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BCADF1E2B37D70001A880 /* XBOperateUtils.swift */; };
+		1A9BCAE61E2B5D280001A880 /* XBProductMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BCAE51E2B5D280001A880 /* XBProductMainView.swift */; };
+		1A9BCAE81E2B5FB90001A880 /* XBProductMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BCAE71E2B5FB90001A880 /* XBProductMainController.swift */; };
+		1AAF140B1EAF21B800FB7453 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1AAF140D1EAF21B800FB7453 /* InfoPlist.strings */; };
+		1AAF1E0C1E2C9EE400B1792E /* XBProductVersionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAF1E0B1E2C9EE400B1792E /* XBProductVersionController.swift */; };
+		1ABA44BC1E83A3AD009AED65 /* XBMultiReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44BB1E83A3AD009AED65 /* XBMultiReportViewController.swift */; };
+		1ABA44BE1E83A57C009AED65 /* XBMultiReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44BD1E83A57C009AED65 /* XBMultiReportView.swift */; };
+		1ABA44C01E83A710009AED65 /* XBSingleReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44BF1E83A710009AED65 /* XBSingleReportView.swift */; };
+		1ABA44C21E83C3CC009AED65 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44C11E83C3CC009AED65 /* Math.swift */; };
+		1ABA44C41E83DABE009AED65 /* XBRealDetailTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44C31E83DABE009AED65 /* XBRealDetailTableCell.swift */; };
+		1ABA44C91E8407B1009AED65 /* XBDoubleSetLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44C81E8407B1009AED65 /* XBDoubleSetLineView.swift */; };
+		1ABA44CC1E84313F009AED65 /* XBHourValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44CB1E84313F009AED65 /* XBHourValueFormatter.swift */; };
+		1ABA44CE1E84C335009AED65 /* XBDisplayRealStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44CD1E84C335009AED65 /* XBDisplayRealStateView.swift */; };
+		1ABA44D01E8502F0009AED65 /* XBButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABA44CF1E8502F0009AED65 /* XBButton.swift */; };
+		1ABA912F1EAC7BD200EA9F3D /* XBLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA91311EAC7BD200EA9F3D /* XBLoginViewController.xib */; };
+		1ABA91351EAC7EDC00EA9F3D /* XBRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA91371EAC7EDC00EA9F3D /* XBRegisterViewController.xib */; };
+		1ABA913C1EAC7FDD00EA9F3D /* XBFindPasswordController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA913E1EAC7FDD00EA9F3D /* XBFindPasswordController.xib */; };
+		1ABA91431EAC806200EA9F3D /* XBEditUserInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA91451EAC806200EA9F3D /* XBEditUserInfoViewController.xib */; };
+		1ABA914B1EAC86E200EA9F3D /* XBAddDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA914D1EAC86E200EA9F3D /* XBAddDeviceViewController.xib */; };
+		1ABA91521EAC873F00EA9F3D /* XBDeleteDeviceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA91541EAC873F00EA9F3D /* XBDeleteDeviceViewController.xib */; };
+		1ABA915D1EACA2F100EA9F3D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1ABA915F1EACA2F100EA9F3D /* Localizable.strings */; };
+		1ABFB3F71DF56C0100A9B212 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABFB3F61DF56C0100A9B212 /* libsqlite3.0.tbd */; };
+		1AC239F31E8F9016005C7AD5 /* XBVerifyCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC239F21E8F9016005C7AD5 /* XBVerifyCodeViewController.swift */; };
+		1AC239F51E8FA4F0005C7AD5 /* XBModifyPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC239F41E8FA4F0005C7AD5 /* XBModifyPasswordViewController.swift */; };
+		1AC239F71E8FAAEC005C7AD5 /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC239F61E8FAAEC005C7AD5 /* UITextField+Extension.swift */; };
+		1AC7B5BA1E5A7B2C0080BABD /* XBSplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7B5B91E5A7B2C0080BABD /* XBSplitView.swift */; };
+		1AC7B5BC1E5A887C0080BABD /* XBApplyConcernViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7B5BB1E5A887C0080BABD /* XBApplyConcernViewController.swift */; };
+		1AC7B5BE1E5A888C0080BABD /* XBConcernMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7B5BD1E5A888C0080BABD /* XBConcernMeViewController.swift */; };
+		1AC7B5C01E5A889A0080BABD /* XBMyConcernViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7B5BF1E5A889A0080BABD /* XBMyConcernViewController.swift */; };
+		1AC7B5C21E5AB0900080BABD /* XBTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7B5C11E5AB0900080BABD /* XBTextField.swift */; };
+		1AC7B5C41E5AF1F70080BABD /* XBRoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC7B5C31E5AF1F70080BABD /* XBRoundedTextField.swift */; };
+		1AEC2C701E6081F3005E181D /* XBTableViewHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C6F1E6081F3005E181D /* XBTableViewHeaderFooterView.swift */; };
+		1AEC2C721E60A521005E181D /* XBCheckProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C711E60A521005E181D /* XBCheckProductView.swift */; };
+		1AEC2C741E611415005E181D /* XBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C731E611415005E181D /* XBBaseViewController.swift */; };
+		1AEC2C761E611DBD005E181D /* XBProductVersionSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C751E611DBD005E181D /* XBProductVersionSectionHeader.swift */; };
+		1AEC2C781E612120005E181D /* XBMyPurchaseTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C771E612120005E181D /* XBMyPurchaseTableCell.swift */; };
+		1AEC2C7A1E612809005E181D /* XBHealthCareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C791E612809005E181D /* XBHealthCareViewController.swift */; };
+		1AEC2C7E1E614B20005E181D /* XBMultiSelectHealthHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C7D1E614B20005E181D /* XBMultiSelectHealthHistoryController.swift */; };
+		1AEC2C801E614B48005E181D /* XBSingleSelectHealthHistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C7F1E614B48005E181D /* XBSingleSelectHealthHistoryController.swift */; };
+		1AEC2C821E615038005E181D /* XBHealthCareHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C811E615038005E181D /* XBHealthCareHeaderView.swift */; };
+		1AEC2C841E615283005E181D /* XBDateSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEC2C831E615283005E181D /* XBDateSelectView.swift */; };
+		1AECDDA21E752EAD00294A3F /* XBReportViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AECDDA11E752EAD00294A3F /* XBReportViewController.storyboard */; };
+		1AECDDA71E752F2800294A3F /* XBReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AECDDA61E752F2800294A3F /* XBReportViewController.swift */; };
+		1AECDDA91E75332F00294A3F /* XBRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AECDDA81E75332F00294A3F /* XBRingView.swift */; };
+		1AECDDAB1E763F0F00294A3F /* XBSliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AECDDAA1E763F0F00294A3F /* XBSliderView.swift */; };
+		1AECDDAD1E76908300294A3F /* XBRealDataTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AECDDAC1E76908300294A3F /* XBRealDataTableCell.swift */; };
+		1AECDDAF1E76EBAD00294A3F /* XBEcgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AECDDAE1E76EBAD00294A3F /* XBEcgView.swift */; };
+		1AF364211E5B0924008AD8FC /* XBSearchApplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF364201E5B0924008AD8FC /* XBSearchApplyCell.swift */; };
+		1AF364231E5B0AC9008AD8FC /* XBRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF364221E5B0AC9008AD8FC /* XBRoundedButton.swift */; };
+		1AF921071DEF195400075A34 /* XBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF921061DEF195400075A34 /* XBMainViewController.swift */; };
+		1AF921091DEF1BB600075A34 /* XBFileLocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF921081DEF1BB600075A34 /* XBFileLocationHelper.swift */; };
+		1AFA39E61E2C82880036C870 /* XBConcernMeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA39E51E2C82880036C870 /* XBConcernMeCell.swift */; };
+		1AFA39E81E2C91DE0036C870 /* XBMyConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA39E71E2C91DE0036C870 /* XBMyConcernCell.swift */; };
+		1AFA7F781E935EC9000F7B9F /* NSString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA7F771E935EC9000F7B9F /* NSString+Extension.swift */; };
+		1AFA7F7E1E93B49D000F7B9F /* XBRealData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFA7F7D1E93B49D000F7B9F /* XBRealData.swift */; };
+		1AFB62251E6270DA00AB254E /* XBSleepData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB62241E6270DA00AB254E /* XBSleepData.swift */; };
+		1AFB62271E62723400AB254E /* XBSleepHistoryTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB62261E62723400AB254E /* XBSleepHistoryTableCell.swift */; };
+		1AFB622B1E62D11600AB254E /* XBProductModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB622A1E62D11600AB254E /* XBProductModel.swift */; };
+		1AFB622D1E62EA6D00AB254E /* XBAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB622C1E62EA6D00AB254E /* XBAlertController.swift */; };
+		1AFB622F1E62EACE00AB254E /* XBDimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB622E1E62EACE00AB254E /* XBDimmingPresentationController.swift */; };
+		1AFB62311E62F66400AB254E /* XBAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB62301E62F66400AB254E /* XBAlertView.swift */; };
+		1AFB62371E63089900AB254E /* XBRealDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AFB62361E63089900AB254E /* XBRealDataViewController.swift */; };
+		B498EEB41F8F88E5EA2B04F1 /* Pods_SmartHome.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDE2BC2DC55828391CCDB759 /* Pods_SmartHome.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1A018D7A1E2B6A0400B1629D /* XBAddDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBAddDeviceViewController.swift; sourceTree = "<group>"; };
+		1A018D7E1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBQRCodeScanViewController.swift; sourceTree = "<group>"; };
+		1A018D841E2BAE5200B1629D /* XBRelationNoticeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRelationNoticeController.swift; sourceTree = "<group>"; };
+		1A018D871E2BB9AD00B1629D /* XBTableGroupItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableGroupItem.swift; sourceTree = "<group>"; };
+		1A018D891E2C57E100B1629D /* XBRelationConcernModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRelationConcernModel.swift; sourceTree = "<group>"; };
+		1A018D8B1E2C59E400B1629D /* XBRelationConcernCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRelationConcernCell.swift; sourceTree = "<group>"; };
+		1A018D8D1E2C5D3900B1629D /* XBApplyConcernCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBApplyConcernCell.swift; sourceTree = "<group>"; };
+		1A04267F1E96091500D2FC9B /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		1A1073381E5A0AF400D06DBB /* XBDeleteDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBDeleteDeviceViewController.swift; sourceTree = "<group>"; };
+		1A14D63F1DE6B81E00CE719B /* MBProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		1A14D6401DE6B81E00CE719B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1A14D6411DE6B81E00CE719B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1A14D6431DE6C10700CE719B /* MBProgressHUD+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MBProgressHUD+Extension.swift"; sourceTree = "<group>"; };
+		1A1A944E1E9637C60076DD86 /* XBLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBLog.swift; sourceTree = "<group>"; };
+		1A31D57C1DE440F900B9BB33 /* SmartHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A31D57F1DE440F900B9BB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A31D5861DE440F900B9BB33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1A31D5891DE440F900B9BB33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1A31D58B1DE440F900B9BB33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A31D59B1DE569D800B9BB33 /* XBLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBLoginViewController.swift; sourceTree = "<group>"; };
+		1A31D59F1DE56E2700B9BB33 /* XBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBNavigationController.swift; sourceTree = "<group>"; };
+		1A31D5A11DE586CE00B9BB33 /* XBRegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRegisterViewController.swift; sourceTree = "<group>"; };
+		1A3352E61E9DD62200C24CD7 /* XBAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBAnimator.swift; sourceTree = "<group>"; };
+		1A3352EF1E9F6D4700C24CD7 /* SmartHome-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartHome-Bridging-Header.h"; sourceTree = "<group>"; };
+		1A37A3C41DF71684003B006C /* XBFindPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBFindPasswordController.swift; sourceTree = "<group>"; };
+		1A3F78B91E8E2500000AD173 /* XBRequestURLs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRequestURLs.swift; sourceTree = "<group>"; };
+		1A42B1DC1DF3C26300A407B7 /* XBSquareButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSquareButton.swift; sourceTree = "<group>"; };
+		1A42B1DE1DF3C3E000A407B7 /* XBMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMainView.swift; sourceTree = "<group>"; };
+		1A42B1E31DF3DB6F00A407B7 /* UIButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		1A42B1E51DF42DED00A407B7 /* GlobalDefines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalDefines.swift; sourceTree = "<group>"; };
+		1A42B1E71DF43EA900A407B7 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		1A42B1E91DF4634100A407B7 /* XBLoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBLoginManager.swift; sourceTree = "<group>"; };
+		1A4A75F41E2A2DA600A40787 /* MainItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainItemModel.swift; sourceTree = "<group>"; };
+		1A4A75F61E2A622D00A40787 /* XBEditUserInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBEditUserInfoViewController.swift; sourceTree = "<group>"; };
+		1A7720461DF4FC9200257F02 /* XBUserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBUserManager.swift; sourceTree = "<group>"; };
+		1A8AC67E1DE809E4009CC8F6 /* XBNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBNetworking.swift; sourceTree = "<group>"; };
+		1A973C2C1E65CF7900FB2431 /* XBShadowButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBShadowButton.swift; sourceTree = "<group>"; };
+		1A973C301E6693BB00FB2431 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		1A9922E21E91EE1400C1E02B /* BLECentralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLECentralManager.h; sourceTree = "<group>"; };
+		1A9922E31E91EE1400C1E02B /* BLECentralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLECentralManager.m; sourceTree = "<group>"; };
+		1A9922E41E91EE1400C1E02B /* BLEConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEConnector.h; sourceTree = "<group>"; };
+		1A9922E51E91EE1400C1E02B /* BLEConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEConnector.m; sourceTree = "<group>"; };
+		1A9922E61E91EE1400C1E02B /* BLEDataPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDataPack.h; sourceTree = "<group>"; };
+		1A9922E71E91EE1400C1E02B /* BLEDataPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDataPack.m; sourceTree = "<group>"; };
+		1A9922E81E91EE1400C1E02B /* BLEDeviceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDeviceInfo.h; sourceTree = "<group>"; };
+		1A9922E91E91EE1400C1E02B /* BLEDeviceInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEDeviceInfo.m; sourceTree = "<group>"; };
+		1A9922EA1E91EE1400C1E02B /* BLEInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEInfoCell.h; sourceTree = "<group>"; };
+		1A9922EB1E91EE1400C1E02B /* BLEInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEInfoCell.m; sourceTree = "<group>"; };
+		1A9922EC1E91EE1400C1E02B /* BLEInfoEditCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEInfoEditCell.h; sourceTree = "<group>"; };
+		1A9922ED1E91EE1400C1E02B /* BLEInfoEditCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEInfoEditCell.m; sourceTree = "<group>"; };
+		1A9922EF1E91EE1400C1E02B /* BLEInfoManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEInfoManagerViewController.h; sourceTree = "<group>"; };
+		1A9922F01E91EE1400C1E02B /* BLEInfoManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEInfoManagerViewController.m; sourceTree = "<group>"; };
+		1A9922F21E91EE1400C1E02B /* ActionSheetHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActionSheetHelper.h; sourceTree = "<group>"; };
+		1A9922F31E91EE1400C1E02B /* ActionSheetHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActionSheetHelper.m; sourceTree = "<group>"; };
+		1A9922F41E91EE1400C1E02B /* AlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertHelper.h; sourceTree = "<group>"; };
+		1A9922F51E91EE1400C1E02B /* AlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertHelper.m; sourceTree = "<group>"; };
+		1A9922F61E91EE1400C1E02B /* RIButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RIButtonItem.h; sourceTree = "<group>"; };
+		1A9922F71E91EE1400C1E02B /* RIButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RIButtonItem.m; sourceTree = "<group>"; };
+		1A9922F81E91EE1400C1E02B /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		1A9922F91E91EE1400C1E02B /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		1A9922FA1E91EE1400C1E02B /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		1A9922FB1E91EE1400C1E02B /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		1A9922FC1E91EE1400C1E02B /* BluetoothConfigDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothConfigDefine.h; sourceTree = "<group>"; };
+		1A9922FE1E91EE1400C1E02B /* UEBaseData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UEBaseData.h; sourceTree = "<group>"; };
+		1A9922FF1E91EE1400C1E02B /* UEBaseData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UEBaseData.m; sourceTree = "<group>"; };
+		1A9923001E91EE1400C1E02B /* UEReadDataPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UEReadDataPack.h; sourceTree = "<group>"; };
+		1A9923011E91EE1400C1E02B /* UEReadDataPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UEReadDataPack.m; sourceTree = "<group>"; };
+		1A9923031E91EE1400C1E02B /* BLEPeripheralManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEPeripheralManager.h; sourceTree = "<group>"; };
+		1A9923041E91EE1400C1E02B /* BLEPeripheralManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLEPeripheralManager.m; sourceTree = "<group>"; };
+		1A9923141E91EE3100C1E02B /* BLEHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLEHeaders.h; sourceTree = "<group>"; };
+		1A99231B1E91F33E00C1E02B /* CBCentralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBCentralViewController.h; sourceTree = "<group>"; };
+		1A99231C1E91F33E00C1E02B /* CBCentralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBCentralViewController.m; sourceTree = "<group>"; };
+		1A9923241E92275B00C1E02B /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		1A9BCADB1E2A8B990001A880 /* XBPhotoPickerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBPhotoPickerManager.swift; sourceTree = "<group>"; };
+		1A9BCADD1E2B1FFB0001A880 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		1A9BCADF1E2B37D70001A880 /* XBOperateUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBOperateUtils.swift; sourceTree = "<group>"; };
+		1A9BCAE51E2B5D280001A880 /* XBProductMainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBProductMainView.swift; sourceTree = "<group>"; };
+		1A9BCAE71E2B5FB90001A880 /* XBProductMainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBProductMainController.swift; sourceTree = "<group>"; };
+		1AAF140C1EAF21B800FB7453 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AAF140E1EAF21BA00FB7453 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		1AAF140F1EAF224500FB7453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1AAF1E0B1E2C9EE400B1792E /* XBProductVersionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBProductVersionController.swift; sourceTree = "<group>"; };
+		1ABA44BB1E83A3AD009AED65 /* XBMultiReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMultiReportViewController.swift; sourceTree = "<group>"; };
+		1ABA44BD1E83A57C009AED65 /* XBMultiReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMultiReportView.swift; sourceTree = "<group>"; };
+		1ABA44BF1E83A710009AED65 /* XBSingleReportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSingleReportView.swift; sourceTree = "<group>"; };
+		1ABA44C11E83C3CC009AED65 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		1ABA44C31E83DABE009AED65 /* XBRealDetailTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRealDetailTableCell.swift; sourceTree = "<group>"; };
+		1ABA44C81E8407B1009AED65 /* XBDoubleSetLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBDoubleSetLineView.swift; sourceTree = "<group>"; };
+		1ABA44CB1E84313F009AED65 /* XBHourValueFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBHourValueFormatter.swift; sourceTree = "<group>"; };
+		1ABA44CD1E84C335009AED65 /* XBDisplayRealStateView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBDisplayRealStateView.swift; sourceTree = "<group>"; };
+		1ABA44CF1E8502F0009AED65 /* XBButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBButton.swift; sourceTree = "<group>"; };
+		1ABA91331EAC7BD600EA9F3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/XBLoginViewController.strings"; sourceTree = "<group>"; };
+		1ABA91341EAC7C7B00EA9F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/XBLoginViewController.xib; sourceTree = "<group>"; };
+		1ABA91361EAC7EDC00EA9F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/XBRegisterViewController.xib; sourceTree = "<group>"; };
+		1ABA91391EAC7EE300EA9F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/XBRegisterViewController.strings; sourceTree = "<group>"; };
+		1ABA913D1EAC7FDD00EA9F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/XBFindPasswordController.xib; sourceTree = "<group>"; };
+		1ABA91421EAC7FE000EA9F3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/XBFindPasswordController.strings"; sourceTree = "<group>"; };
+		1ABA91441EAC806200EA9F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/XBEditUserInfoViewController.xib; sourceTree = "<group>"; };
+		1ABA91471EAC806400EA9F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/XBEditUserInfoViewController.strings; sourceTree = "<group>"; };
+		1ABA914A1EAC80C400EA9F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/XBLoginViewController.strings; sourceTree = "<group>"; };
+		1ABA914C1EAC86E200EA9F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/XBAddDeviceViewController.xib; sourceTree = "<group>"; };
+		1ABA914F1EAC86E400EA9F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/XBAddDeviceViewController.strings; sourceTree = "<group>"; };
+		1ABA91511EAC86E500EA9F3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/XBAddDeviceViewController.strings"; sourceTree = "<group>"; };
+		1ABA91531EAC873F00EA9F3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/XBDeleteDeviceViewController.xib; sourceTree = "<group>"; };
+		1ABA91561EAC874000EA9F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/XBDeleteDeviceViewController.strings; sourceTree = "<group>"; };
+		1ABA91581EAC874100EA9F3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/XBDeleteDeviceViewController.strings"; sourceTree = "<group>"; };
+		1ABA91601EACA2F300EA9F3D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1ABA91611EACA2F400EA9F3D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1ABFB3F61DF56C0100A9B212 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		1AC239F21E8F9016005C7AD5 /* XBVerifyCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBVerifyCodeViewController.swift; sourceTree = "<group>"; };
+		1AC239F41E8FA4F0005C7AD5 /* XBModifyPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBModifyPasswordViewController.swift; sourceTree = "<group>"; };
+		1AC239F61E8FAAEC005C7AD5 /* UITextField+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
+		1AC7B5B91E5A7B2C0080BABD /* XBSplitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSplitView.swift; sourceTree = "<group>"; };
+		1AC7B5BB1E5A887C0080BABD /* XBApplyConcernViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBApplyConcernViewController.swift; sourceTree = "<group>"; };
+		1AC7B5BD1E5A888C0080BABD /* XBConcernMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBConcernMeViewController.swift; sourceTree = "<group>"; };
+		1AC7B5BF1E5A889A0080BABD /* XBMyConcernViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMyConcernViewController.swift; sourceTree = "<group>"; };
+		1AC7B5C11E5AB0900080BABD /* XBTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTextField.swift; sourceTree = "<group>"; };
+		1AC7B5C31E5AF1F70080BABD /* XBRoundedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRoundedTextField.swift; sourceTree = "<group>"; };
+		1AD9802F1EAE459F00B09FC7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/XBRegisterViewController.xib"; sourceTree = "<group>"; };
+		1AD980301EAE4FD700B09FC7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/XBEditUserInfoViewController.xib"; sourceTree = "<group>"; };
+		1AEC2C6F1E6081F3005E181D /* XBTableViewHeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBTableViewHeaderFooterView.swift; sourceTree = "<group>"; };
+		1AEC2C711E60A521005E181D /* XBCheckProductView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBCheckProductView.swift; sourceTree = "<group>"; };
+		1AEC2C731E611415005E181D /* XBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBBaseViewController.swift; sourceTree = "<group>"; };
+		1AEC2C751E611DBD005E181D /* XBProductVersionSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBProductVersionSectionHeader.swift; sourceTree = "<group>"; };
+		1AEC2C771E612120005E181D /* XBMyPurchaseTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMyPurchaseTableCell.swift; sourceTree = "<group>"; };
+		1AEC2C791E612809005E181D /* XBHealthCareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBHealthCareViewController.swift; sourceTree = "<group>"; };
+		1AEC2C7D1E614B20005E181D /* XBMultiSelectHealthHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMultiSelectHealthHistoryController.swift; sourceTree = "<group>"; };
+		1AEC2C7F1E614B48005E181D /* XBSingleSelectHealthHistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSingleSelectHealthHistoryController.swift; sourceTree = "<group>"; };
+		1AEC2C811E615038005E181D /* XBHealthCareHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBHealthCareHeaderView.swift; sourceTree = "<group>"; };
+		1AEC2C831E615283005E181D /* XBDateSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBDateSelectView.swift; sourceTree = "<group>"; };
+		1AECDDA11E752EAD00294A3F /* XBReportViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = XBReportViewController.storyboard; sourceTree = "<group>"; };
+		1AECDDA61E752F2800294A3F /* XBReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBReportViewController.swift; sourceTree = "<group>"; };
+		1AECDDA81E75332F00294A3F /* XBRingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRingView.swift; sourceTree = "<group>"; };
+		1AECDDAA1E763F0F00294A3F /* XBSliderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSliderView.swift; sourceTree = "<group>"; };
+		1AECDDAC1E76908300294A3F /* XBRealDataTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRealDataTableCell.swift; sourceTree = "<group>"; };
+		1AECDDAE1E76EBAD00294A3F /* XBEcgView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBEcgView.swift; sourceTree = "<group>"; };
+		1AF364201E5B0924008AD8FC /* XBSearchApplyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSearchApplyCell.swift; sourceTree = "<group>"; };
+		1AF364221E5B0AC9008AD8FC /* XBRoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRoundedButton.swift; sourceTree = "<group>"; };
+		1AF921061DEF195400075A34 /* XBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMainViewController.swift; sourceTree = "<group>"; };
+		1AF921081DEF1BB600075A34 /* XBFileLocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBFileLocationHelper.swift; sourceTree = "<group>"; };
+		1AFA39E51E2C82880036C870 /* XBConcernMeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBConcernMeCell.swift; sourceTree = "<group>"; };
+		1AFA39E71E2C91DE0036C870 /* XBMyConcernCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBMyConcernCell.swift; sourceTree = "<group>"; };
+		1AFA7F771E935EC9000F7B9F /* NSString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Extension.swift"; sourceTree = "<group>"; };
+		1AFA7F7D1E93B49D000F7B9F /* XBRealData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRealData.swift; sourceTree = "<group>"; };
+		1AFB62241E6270DA00AB254E /* XBSleepData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSleepData.swift; sourceTree = "<group>"; };
+		1AFB62261E62723400AB254E /* XBSleepHistoryTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBSleepHistoryTableCell.swift; sourceTree = "<group>"; };
+		1AFB622A1E62D11600AB254E /* XBProductModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBProductModel.swift; sourceTree = "<group>"; };
+		1AFB622C1E62EA6D00AB254E /* XBAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBAlertController.swift; sourceTree = "<group>"; };
+		1AFB622E1E62EACE00AB254E /* XBDimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBDimmingPresentationController.swift; sourceTree = "<group>"; };
+		1AFB62301E62F66400AB254E /* XBAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBAlertView.swift; sourceTree = "<group>"; };
+		1AFB62361E63089900AB254E /* XBRealDataViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRealDataViewController.swift; sourceTree = "<group>"; };
+		686A3CF006294A054FA73D8C /* Pods-SmartHome.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.release.xcconfig"; sourceTree = "<group>"; };
+		9747999DE36F1A85A7ACB267 /* Pods-SmartHome.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartHome.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome.debug.xcconfig"; sourceTree = "<group>"; };
+		ADA7EA3F61B3EB23A02BF9E6 /* Pods_ProductTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDE2BC2DC55828391CCDB759 /* Pods_SmartHome.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartHome.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1A31D5791DE440F900B9BB33 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ABFB3F71DF56C0100A9B212 /* libsqlite3.0.tbd in Frameworks */,
+				B498EEB41F8F88E5EA2B04F1 /* Pods_SmartHome.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A018D801E2BAE3500B1629D /* RelationNotice */ = {
+			isa = PBXGroup;
+			children = (
+				1A018D811E2BAE3500B1629D /* Controllers */,
+				1A018D821E2BAE3500B1629D /* Models */,
+				1A018D831E2BAE3500B1629D /* Views */,
+			);
+			path = RelationNotice;
+			sourceTree = "<group>";
+		};
+		1A018D811E2BAE3500B1629D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A018D841E2BAE5200B1629D /* XBRelationNoticeController.swift */,
+				1AC7B5BB1E5A887C0080BABD /* XBApplyConcernViewController.swift */,
+				1AC7B5BD1E5A888C0080BABD /* XBConcernMeViewController.swift */,
+				1AC7B5BF1E5A889A0080BABD /* XBMyConcernViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A018D821E2BAE3500B1629D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A018D891E2C57E100B1629D /* XBRelationConcernModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A018D831E2BAE3500B1629D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A018D8B1E2C59E400B1629D /* XBRelationConcernCell.swift */,
+				1AF364201E5B0924008AD8FC /* XBSearchApplyCell.swift */,
+				1A018D8D1E2C5D3900B1629D /* XBApplyConcernCell.swift */,
+				1AFA39E51E2C82880036C870 /* XBConcernMeCell.swift */,
+				1AFA39E71E2C91DE0036C870 /* XBMyConcernCell.swift */,
+				1AC7B5B91E5A7B2C0080BABD /* XBSplitView.swift */,
+				1AEC2C6F1E6081F3005E181D /* XBTableViewHeaderFooterView.swift */,
+				1AEC2C711E60A521005E181D /* XBCheckProductView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A018D861E2BB98E00B1629D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A018D871E2BB9AD00B1629D /* XBTableGroupItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A12F0751E29EE8C002FA91F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A12F07B1E29FC46002FA91F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AC7B5C11E5AB0900080BABD /* XBTextField.swift */,
+				1AC7B5C31E5AF1F70080BABD /* XBRoundedTextField.swift */,
+				1AF364221E5B0AC9008AD8FC /* XBRoundedButton.swift */,
+				1AFB62301E62F66400AB254E /* XBAlertView.swift */,
+				1A973C2C1E65CF7900FB2431 /* XBShadowButton.swift */,
+				1ABA44CF1E8502F0009AED65 /* XBButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1A14D6371DE5B55000CE719B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A14D6381DE6B4F000CE719B /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+				1A9922E01E91EE1400C1E02B /* XBBLE */,
+				1A14D6391DE6B77200CE719B /* MBProgressHUD */,
+			);
+			path = Venders;
+			sourceTree = "<group>";
+		};
+		1A14D6391DE6B77200CE719B /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				1A3352EF1E9F6D4700C24CD7 /* SmartHome-Bridging-Header.h */,
+				1A14D63F1DE6B81E00CE719B /* MBProgressHUD-Prefix.pch */,
+				1A14D6401DE6B81E00CE719B /* MBProgressHUD.h */,
+				1A14D6411DE6B81E00CE719B /* MBProgressHUD.m */,
+				1A14D6431DE6C10700CE719B /* MBProgressHUD+Extension.swift */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		1A31D5731DE440F900B9BB33 = {
+			isa = PBXGroup;
+			children = (
+				1A31D57E1DE440F900B9BB33 /* SmartHome */,
+				1A31D57D1DE440F900B9BB33 /* Products */,
+				8089209A8391032793ADB9B1 /* Pods */,
+				D73F738D72E6BC2C07898354 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		1A31D57D1DE440F900B9BB33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1A31D57C1DE440F900B9BB33 /* SmartHome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1A31D57E1DE440F900B9BB33 /* SmartHome */ = {
+			isa = PBXGroup;
+			children = (
+				1A14D6381DE6B4F000CE719B /* Venders */,
+				1A31D5911DE5698000B9BB33 /* Classes */,
+				1A31D5971DE5698000B9BB33 /* Common */,
+				1A31D57F1DE440F900B9BB33 /* AppDelegate.swift */,
+				1AAF140D1EAF21B800FB7453 /* InfoPlist.strings */,
+				1ABA915F1EACA2F100EA9F3D /* Localizable.strings */,
+				1A31D5861DE440F900B9BB33 /* Assets.xcassets */,
+				1A31D5881DE440F900B9BB33 /* LaunchScreen.storyboard */,
+				1A31D58B1DE440F900B9BB33 /* Info.plist */,
+			);
+			path = SmartHome;
+			sourceTree = "<group>";
+		};
+		1A31D5911DE5698000B9BB33 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1A31D5921DE5698000B9BB33 /* Sections */,
+				1A31D5961DE5698000B9BB33 /* Utils */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1A31D5921DE5698000B9BB33 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF1E071E2C9EBE00B1792E /* ProducVersion */,
+				1A018D801E2BAE3500B1629D /* RelationNotice */,
+				1A9BCAE11E2B5C2D0001A880 /* Products */,
+				1AF921021DEF191100075A34 /* Main */,
+				1A31D5931DE5698000B9BB33 /* Login */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		1A31D5931DE5698000B9BB33 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1A31D5941DE5698000B9BB33 /* Controllers */,
+				1A12F0751E29EE8C002FA91F /* Views */,
+				1A14D6371DE5B55000CE719B /* Models */,
+				1A31D5951DE5698000B9BB33 /* Manager */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1A31D5941DE5698000B9BB33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A31D59B1DE569D800B9BB33 /* XBLoginViewController.swift */,
+				1ABA91311EAC7BD200EA9F3D /* XBLoginViewController.xib */,
+				1A31D5A11DE586CE00B9BB33 /* XBRegisterViewController.swift */,
+				1ABA91371EAC7EDC00EA9F3D /* XBRegisterViewController.xib */,
+				1A37A3C41DF71684003B006C /* XBFindPasswordController.swift */,
+				1ABA913E1EAC7FDD00EA9F3D /* XBFindPasswordController.xib */,
+				1A4A75F61E2A622D00A40787 /* XBEditUserInfoViewController.swift */,
+				1ABA91451EAC806200EA9F3D /* XBEditUserInfoViewController.xib */,
+				1AC239F21E8F9016005C7AD5 /* XBVerifyCodeViewController.swift */,
+				1AC239F41E8FA4F0005C7AD5 /* XBModifyPasswordViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A31D5951DE5698000B9BB33 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				1A42B1E91DF4634100A407B7 /* XBLoginManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		1A31D5961DE5698000B9BB33 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1AF921081DEF1BB600075A34 /* XBFileLocationHelper.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		1A31D5971DE5698000B9BB33 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A37A3C11DF67DE1003B006C /* Database */,
+				1A42B1E01DF3DB1500A407B7 /* Extension */,
+				1A8AC67D1DE80997009CC8F6 /* Tools */,
+				1A31D5981DE5698000B9BB33 /* Controllers */,
+				1A018D861E2BB98E00B1629D /* Models */,
+				1A12F07B1E29FC46002FA91F /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A31D5981DE5698000B9BB33 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A31D59F1DE56E2700B9BB33 /* XBNavigationController.swift */,
+				1AEC2C731E611415005E181D /* XBBaseViewController.swift */,
+				1A018D7E1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift */,
+				1AFB622C1E62EA6D00AB254E /* XBAlertController.swift */,
+				1AFB622E1E62EACE00AB254E /* XBDimmingPresentationController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A37A3C11DF67DE1003B006C /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		1A42B1E01DF3DB1500A407B7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				1A42B1E31DF3DB6F00A407B7 /* UIButton.swift */,
+				1A42B1E71DF43EA900A407B7 /* UIView+Extension.swift */,
+				1A9BCADD1E2B1FFB0001A880 /* UIImage+Extension.swift */,
+				1A973C301E6693BB00FB2431 /* UIImageView+Extension.swift */,
+				1AC239F61E8FAAEC005C7AD5 /* UITextField+Extension.swift */,
+				1A9923241E92275B00C1E02B /* UIDevice+Extension.swift */,
+				1AFA7F771E935EC9000F7B9F /* NSString+Extension.swift */,
+				1A04267F1E96091500D2FC9B /* NSObject+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		1A8AC67D1DE80997009CC8F6 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				1A8AC67E1DE809E4009CC8F6 /* XBNetworking.swift */,
+				1A42B1E51DF42DED00A407B7 /* GlobalDefines.swift */,
+				1A9BCADB1E2A8B990001A880 /* XBPhotoPickerManager.swift */,
+				1A9BCADF1E2B37D70001A880 /* XBOperateUtils.swift */,
+				1ABA44C11E83C3CC009AED65 /* Math.swift */,
+				1A3F78B91E8E2500000AD173 /* XBRequestURLs.swift */,
+				1A1A944E1E9637C60076DD86 /* XBLog.swift */,
+				1A3352E61E9DD62200C24CD7 /* XBAnimator.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		1A9922E01E91EE1400C1E02B /* XBBLE */ = {
+			isa = PBXGroup;
+			children = (
+				1A9922E11E91EE1400C1E02B /* Central */,
+				1A9922EE1E91EE1400C1E02B /* Common */,
+				1A9922FD1E91EE1400C1E02B /* Models */,
+				1A9923021E91EE1400C1E02B /* Peripheral */,
+				1A9923141E91EE3100C1E02B /* BLEHeaders.h */,
+			);
+			path = XBBLE;
+			sourceTree = "<group>";
+		};
+		1A9922E11E91EE1400C1E02B /* Central */ = {
+			isa = PBXGroup;
+			children = (
+				1A9922E21E91EE1400C1E02B /* BLECentralManager.h */,
+				1A9922E31E91EE1400C1E02B /* BLECentralManager.m */,
+				1A9922E41E91EE1400C1E02B /* BLEConnector.h */,
+				1A9922E51E91EE1400C1E02B /* BLEConnector.m */,
+				1A9922E61E91EE1400C1E02B /* BLEDataPack.h */,
+				1A9922E71E91EE1400C1E02B /* BLEDataPack.m */,
+				1A9922E81E91EE1400C1E02B /* BLEDeviceInfo.h */,
+				1A9922E91E91EE1400C1E02B /* BLEDeviceInfo.m */,
+				1A9922EA1E91EE1400C1E02B /* BLEInfoCell.h */,
+				1A9922EB1E91EE1400C1E02B /* BLEInfoCell.m */,
+				1A9922EC1E91EE1400C1E02B /* BLEInfoEditCell.h */,
+				1A9922ED1E91EE1400C1E02B /* BLEInfoEditCell.m */,
+			);
+			path = Central;
+			sourceTree = "<group>";
+		};
+		1A9922EE1E91EE1400C1E02B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1A99231B1E91F33E00C1E02B /* CBCentralViewController.h */,
+				1A99231C1E91F33E00C1E02B /* CBCentralViewController.m */,
+				1A9922EF1E91EE1400C1E02B /* BLEInfoManagerViewController.h */,
+				1A9922F01E91EE1400C1E02B /* BLEInfoManagerViewController.m */,
+				1A9922F11E91EE1400C1E02B /* Block */,
+				1A9922FC1E91EE1400C1E02B /* BluetoothConfigDefine.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1A9922F11E91EE1400C1E02B /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				1A9922F21E91EE1400C1E02B /* ActionSheetHelper.h */,
+				1A9922F31E91EE1400C1E02B /* ActionSheetHelper.m */,
+				1A9922F41E91EE1400C1E02B /* AlertHelper.h */,
+				1A9922F51E91EE1400C1E02B /* AlertHelper.m */,
+				1A9922F61E91EE1400C1E02B /* RIButtonItem.h */,
+				1A9922F71E91EE1400C1E02B /* RIButtonItem.m */,
+				1A9922F81E91EE1400C1E02B /* UIActionSheet+Blocks.h */,
+				1A9922F91E91EE1400C1E02B /* UIActionSheet+Blocks.m */,
+				1A9922FA1E91EE1400C1E02B /* UIAlertView+Blocks.h */,
+				1A9922FB1E91EE1400C1E02B /* UIAlertView+Blocks.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
+		1A9922FD1E91EE1400C1E02B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A9922FE1E91EE1400C1E02B /* UEBaseData.h */,
+				1A9922FF1E91EE1400C1E02B /* UEBaseData.m */,
+				1A9923001E91EE1400C1E02B /* UEReadDataPack.h */,
+				1A9923011E91EE1400C1E02B /* UEReadDataPack.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A9923021E91EE1400C1E02B /* Peripheral */ = {
+			isa = PBXGroup;
+			children = (
+				1A9923031E91EE1400C1E02B /* BLEPeripheralManager.h */,
+				1A9923041E91EE1400C1E02B /* BLEPeripheralManager.m */,
+			);
+			path = Peripheral;
+			sourceTree = "<group>";
+		};
+		1A9BCAE11E2B5C2D0001A880 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB62321E63087D00AB254E /* RealTimeData */,
+				1A9BCAE21E2B5C2D0001A880 /* Controllers */,
+				1A9BCAE31E2B5C2D0001A880 /* Models */,
+				1A9BCAE41E2B5C2D0001A880 /* Views */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		1A9BCAE21E2B5C2D0001A880 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BCAE71E2B5FB90001A880 /* XBProductMainController.swift */,
+				1A018D7A1E2B6A0400B1629D /* XBAddDeviceViewController.swift */,
+				1ABA914D1EAC86E200EA9F3D /* XBAddDeviceViewController.xib */,
+				1A1073381E5A0AF400D06DBB /* XBDeleteDeviceViewController.swift */,
+				1ABA91541EAC873F00EA9F3D /* XBDeleteDeviceViewController.xib */,
+				1AEC2C791E612809005E181D /* XBHealthCareViewController.swift */,
+				1AEC2C7F1E614B48005E181D /* XBSingleSelectHealthHistoryController.swift */,
+				1AEC2C7D1E614B20005E181D /* XBMultiSelectHealthHistoryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1A9BCAE31E2B5C2D0001A880 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB62241E6270DA00AB254E /* XBSleepData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A9BCAE41E2B5C2D0001A880 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BCAE51E2B5D280001A880 /* XBProductMainView.swift */,
+				1AEC2C811E615038005E181D /* XBHealthCareHeaderView.swift */,
+				1AEC2C831E615283005E181D /* XBDateSelectView.swift */,
+				1AFB62261E62723400AB254E /* XBSleepHistoryTableCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AAF1E071E2C9EBE00B1792E /* ProducVersion */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF1E081E2C9EBE00B1792E /* Controllers */,
+				1AAF1E091E2C9EBE00B1792E /* Models */,
+				1AAF1E0A1E2C9EBE00B1792E /* Views */,
+			);
+			path = ProducVersion;
+			sourceTree = "<group>";
+		};
+		1AAF1E081E2C9EBE00B1792E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AAF1E0B1E2C9EE400B1792E /* XBProductVersionController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1AAF1E091E2C9EBE00B1792E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB622A1E62D11600AB254E /* XBProductModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AAF1E0A1E2C9EBE00B1792E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AEC2C751E611DBD005E181D /* XBProductVersionSectionHeader.swift */,
+				1AEC2C771E612120005E181D /* XBMyPurchaseTableCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1ABA44CA1E84310E009AED65 /* Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA44CB1E84313F009AED65 /* XBHourValueFormatter.swift */,
+			);
+			path = Formatters;
+			sourceTree = "<group>";
+		};
+		1AF921021DEF191100075A34 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1AF921031DEF191100075A34 /* Controllers */,
+				1AF921041DEF191100075A34 /* Models */,
+				1AF921051DEF191100075A34 /* Views */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1AF921031DEF191100075A34 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AF921061DEF195400075A34 /* XBMainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1AF921041DEF191100075A34 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A7720461DF4FC9200257F02 /* XBUserManager.swift */,
+				1A4A75F41E2A2DA600A40787 /* MainItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AF921051DEF191100075A34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A42B1DC1DF3C26300A407B7 /* XBSquareButton.swift */,
+				1A42B1DE1DF3C3E000A407B7 /* XBMainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1AFB62321E63087D00AB254E /* RealTimeData */ = {
+			isa = PBXGroup;
+			children = (
+				1ABA44CA1E84310E009AED65 /* Formatters */,
+				1AFB62331E63087D00AB254E /* Controllers */,
+				1AFB62341E63087D00AB254E /* Models */,
+				1AFB62351E63087D00AB254E /* Views */,
+			);
+			path = RealTimeData;
+			sourceTree = "<group>";
+		};
+		1AFB62331E63087D00AB254E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1AFB62361E63089900AB254E /* XBRealDataViewController.swift */,
+				1AECDDA11E752EAD00294A3F /* XBReportViewController.storyboard */,
+				1AECDDA61E752F2800294A3F /* XBReportViewController.swift */,
+				1ABA44BB1E83A3AD009AED65 /* XBMultiReportViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1AFB62341E63087D00AB254E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1AFA7F7D1E93B49D000F7B9F /* XBRealData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1AFB62351E63087D00AB254E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1AECDDA81E75332F00294A3F /* XBRingView.swift */,
+				1AECDDAA1E763F0F00294A3F /* XBSliderView.swift */,
+				1AECDDAC1E76908300294A3F /* XBRealDataTableCell.swift */,
+				1ABA44C31E83DABE009AED65 /* XBRealDetailTableCell.swift */,
+				1AECDDAE1E76EBAD00294A3F /* XBEcgView.swift */,
+				1ABA44BD1E83A57C009AED65 /* XBMultiReportView.swift */,
+				1ABA44BF1E83A710009AED65 /* XBSingleReportView.swift */,
+				1ABA44C81E8407B1009AED65 /* XBDoubleSetLineView.swift */,
+				1ABA44CD1E84C335009AED65 /* XBDisplayRealStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8089209A8391032793ADB9B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9747999DE36F1A85A7ACB267 /* Pods-SmartHome.debug.xcconfig */,
+				686A3CF006294A054FA73D8C /* Pods-SmartHome.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D73F738D72E6BC2C07898354 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ABFB3F61DF56C0100A9B212 /* libsqlite3.0.tbd */,
+				ADA7EA3F61B3EB23A02BF9E6 /* Pods_ProductTest.framework */,
+				DDE2BC2DC55828391CCDB759 /* Pods_SmartHome.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A31D57B1DE440F900B9BB33 /* SmartHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1A31D58E1DE440F900B9BB33 /* Build configuration list for PBXNativeTarget "SmartHome" */;
+			buildPhases = (
+				999B249A1084609758F6A1DA /* [CP] Check Pods Manifest.lock */,
+				1A31D5781DE440F900B9BB33 /* Sources */,
+				1A31D5791DE440F900B9BB33 /* Frameworks */,
+				1A31D57A1DE440F900B9BB33 /* Resources */,
+				90DBEEE44396A6B1A3C25E01 /* [CP] Embed Pods Frameworks */,
+				E9555C3CAA09A26F118F2734 /* [CP] Copy Pods Resources */,
+				1A4A75F31E2A153900A40787 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SmartHome;
+			productName = ProductTest;
+			productReference = 1A31D57C1DE440F900B9BB33 /* SmartHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1A31D5741DE440F900B9BB33 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = helloworld.com;
+				TargetAttributes = {
+					1A31D57B1DE440F900B9BB33 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 94DU7LRUN8;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1A31D5771DE440F900B9BB33 /* Build configuration list for PBXProject "SmartHome" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 1A31D5731DE440F900B9BB33;
+			productRefGroup = 1A31D57D1DE440F900B9BB33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A31D57B1DE440F900B9BB33 /* SmartHome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1A31D57A1DE440F900B9BB33 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A31D58A1DE440F900B9BB33 /* LaunchScreen.storyboard in Resources */,
+				1ABA913C1EAC7FDD00EA9F3D /* XBFindPasswordController.xib in Resources */,
+				1ABA91521EAC873F00EA9F3D /* XBDeleteDeviceViewController.xib in Resources */,
+				1ABA912F1EAC7BD200EA9F3D /* XBLoginViewController.xib in Resources */,
+				1A31D5871DE440F900B9BB33 /* Assets.xcassets in Resources */,
+				1ABA915D1EACA2F100EA9F3D /* Localizable.strings in Resources */,
+				1ABA914B1EAC86E200EA9F3D /* XBAddDeviceViewController.xib in Resources */,
+				1ABA91431EAC806200EA9F3D /* XBEditUserInfoViewController.xib in Resources */,
+				1AECDDA21E752EAD00294A3F /* XBReportViewController.storyboard in Resources */,
+				1AAF140B1EAF21B800FB7453 /* InfoPlist.strings in Resources */,
+				1ABA91351EAC7EDC00EA9F3D /* XBRegisterViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A4A75F31E2A153900A40787 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n#\n# Copyright 2016 Bugly, Tencent. All rights reserved.\n#\n# V1.4.0\n#\n# 2016.08.03\n#\n#\n#\n######################################################\n# 1. 脚本集成到Xcode工程的Target\n######################################################\n#\n# --- Copy the SCRIPT to the Run Script of Build Phases in the Xcode project ---\n#\n# #\nBUGLY_APP_ID=\"86e9c0d8d0\"\n# #\nBUGLY_APP_KEY=\"e0a2190e-1209-4297-8aff-13db0eb297b2\"\n# #\nBUNDLE_IDENTIFIER=\"com.app.YZYJ\"\n# #\nUPLOAD_DSYM_ONLY=1\n#\n# # 脚本默认配置的版本格式为CFBundleShortVersionString(CFBundleVersion),  如果你修改默认的版本格式, 请设置此变量, 如果不想修改, 请忽略此设置\n# CUSTOMIZED_APP_VERSION=\"\"\n#\n# # Debug模式编译是否上传，1＝上传 0＝不上传，默认不上传\n# UPLOAD_DEBUG_SYMBOLS=0\n#\n# # 模拟器编译是否上传，1=上传 0=不上传，默认不上传\nUPLOAD_SIMULATOR_SYMBOLS=0\n#\n# #只有Archive操作时上传, 1=支持Archive上传 0=所有Release模式编译都上传\nUPLOAD_ARCHIVE_ONLY=0\n#\n# #\n# source dSYMUpload.sh\n#\n# --- END OF SCRIPT ---\n#\n#\n#\n#\n#######################################################\n# 2. 脚本根据输入参数处理\n#######################################################\n#\n# #命令行下输入应用基本信息, .dSYM文件的父目录路径, 输出文件目录即可\n#\n# sh dSYMUpload.sh <bugly_app_id> <bugly_app_key> <app_bundle_identifier> <app_version> <dSYM_src_dir> <bSYMBOL_dest_dir>\n#\n# #\n#\n# #注意:\n# # 1. dSYMUpload.sh会调用buglySymboliOS.jar进行.dSYM解析，所以依赖Java运行时环境\n# # 2. dSYMUpload.sh和buglySymboliOS.jar的文件路径需一致\n#\n#\n\n#\n# --- CONTENT OF SCRIPT ---\n#\n\n# Bugly服务域名\nBUGLY_DSYM_UPLOAD_DOMAIN=\"api.bugly.qq.com\"\n\n# 注意jar工具的路径跟dSYMUpload.sh脚本路径一致, 请务必保证jar路径的正确性\nBUGLY_SYMBOL_JAR_PATH=\"dsymtool/buglySymboliOS.jar\"\n# 查找添加到系统目录的jar工具\nif [ ! -f \"${BUGLY_SYMBOL_JAR_PATH}\" ]; then\nBUGLY_SYMBOL_JAR_PATH=\"$HOME/bin/buglySymboliOS.jar\"\nfi\n\n# 打印错误信息\nfunction exitWithMessage(){\n    echo \"--------------------------------\"\n    echo \"${1}\"\n    echo \"--------------------------------\"\n    exit ${2}\n}\n\n# 上传bSYMBOL文件\nfunction dSYMUpload() {\n    P_APP_ID=\"$1\"\n    P_APP_KEY=\"$2\"\n    P_APP_BUNDLE_ID=\"$3\"\n    P_APP_VERSION=\"$4\"\n    P_BSYMBOL_ZIP_FILE=\"$5\"\n    \n    #\n    P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE##*/}\n        P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE_NAME//&/_}\n            P_BSYMBOL_ZIP_FILE_NAME=\"${P_BSYMBOL_ZIP_FILE_NAME// /_}\"\n            \n            DSYM_UPLOAD_URL=\"https://${BUGLY_DSYM_UPLOAD_DOMAIN}/openapi/file/upload/symbol?app_id=${P_APP_ID}&app_key=${P_APP_KEY}\"\n            echo \"dSYM upload url: ${DSYM_UPLOAD_URL}\"\n            \n            echo \"-----------------------------\"\n            STATUS=$(/usr/bin/curl -k \"${DSYM_UPLOAD_URL}\" --form \"api_version=1\" --form \"app_id=${P_APP_ID}\" --form \"app_key=${P_APP_KEY}\" --form \"symbolType=2\"  --form \"bundleId=${BUNDLE_IDENTIFIER}\" --form \"productVersion=${BUGLY_APP_VERSION}\" --form \"fileName=${P_BSYMBOL_ZIP_FILE_NAME}\" --form \"file=@${P_BSYMBOL_ZIP_FILE}\" --verbose)\n            echo \"-----------------------------\"\n            \n            UPLOAD_RESULT=\"FAILTURE\"\n            echo \"Bugly server response: ${STATUS}\"\n            if [ ! \"${STATUS}\" ]; then\n            echo \"Error: Failed to upload the zip archive file.\"\n            elif [[ \"${STATUS}\" == *\"{\\\"reponseCode\\\":\\\"0\\\"}\"* ]]; then\n            echo \"Success to upload the dSYM for the app [${BUNDLE_IDENTIFIER} ${BUGLY_APP_VERSION}]\"\n            UPLOAD_RESULT=\"SUCCESS\"\n            else\n            echo \"Error: Failed to upload the zip archive file to Bugly.\"\n            fi\n            \n            #Remove temp dSYM archive\n            #echo \"Remove temporary zip archive: ${DSYM_ZIP_FPATH}\"\n            #/bin/rm -f \"${DSYM_ZIP_FPATH}\"\n            \n            if [ \"$?\" -ne 0 ]; then\n            exitWithMessage \"Error: Failed to remove temporary zip archive.\" 0\n            fi\n            \n            echo \"--------------------------------\"\n            echo \"${UPLOAD_RESULT} - dSYM upload complete.\"\n            \n            if [[ \"${UPLOAD_RESULT}\" == \"FAILTURE\" ]]; then\n            echo \"--------------------------------\"\n            echo \"Failed to upload the dSYM\"\n            echo \"Please check the script and try it again.\"\n            fi\n        }\n        \n        # .dSYM解析为bSYMBOL文件\n        function dSYMParse() {\n            DSYM_FILE=\"$1\"\n            DSYM_SYMBOL_FILE=\"$2\"\n            \n            echo \"--------------------------------\"\n            echo \"Extract symbol info from .dSYM file. to ${DSYM_SYMBOL_FILE}\"\n            (/usr/bin/java -Xms512m -Xmx1024m -Dfile.encoding=UTF8 -jar \"${BUGLY_SYMBOL_JAR_PATH}\" -i \"${DSYM_FILE}\" -o \"${DSYM_SYMBOL_FILE}\" ) || exitWithMessage \"Error: Failed to extract symbols.\" 1\n            echo \"--------------------------------\"\n            \n        }\n        \n        # 执行\n        function run() {\n            \n            CONFIG_BUGLY_APP_ID=\"$1\"\n            CONFIG_BUGLY_APP_KEY=\"$2\"\n            \n            CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER=\"$3\"\n            CONFIG_BUGLY_APP_VERSION=\"$4\"\n            CONFIG_DSYM_SOURCE_DIR=\"$5\"\n            CONFIG_DSYM_DEST_DIR=\"$6\"\n            CONFIG_UPLOAD_DSYM_ONLY=\"$7\"\n            \n            # 检查必须参数是否设置\n            if [ ! \"${CONFIG_BUGLY_APP_ID}\" ]; then\n            exitWithMessage \"Error: Bugly App ID not defined. Please set 'BUGLY_APP_ID' \" 0\n            fi\n            \n            if [[ \"${CONFIG_BUGLY_APP_ID}\" == *\"App ID\"* ]]; then\n            exitWithMessage \"Error: Bugly App ID not defined.\" 0\n            fi\n            \n            if [ ! \"${CONFIG_BUGLY_APP_KEY}\" ]; then\n            exitWithMessage \"Error: Bugly App Key not defined.\" 0\n            fi\n            \n            if [ ! \"${CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER}\" ]; then\n            exitWithMessage \"Error: Bundle Identifier not defined.\" 0\n            fi\n            \n            if [ ! \"${CONFIG_BUGLY_APP_VERSION}\" ]; then\n            exitWithMessage \"Error: App Version not defined.\" 0\n            fi\n            \n            if [ ! -e \"${CONFIG_DSYM_SOURCE_DIR}\" ]; then\n            exitWithMessage \"Error: Invalid dir ${CONFIG_DSYM_SOURCE_DIR}\" 0\n            fi\n            \n            if [ ! \"${CONFIG_DSYM_DEST_DIR}\" ]; then\n            exitWithMessage \"Error: Invalid dir ${CONFIG_DSYM_DEST_DIR}\" 0\n            fi\n            \n            if [ ! -e \"${CONFIG_DSYM_DEST_DIR}\" ]; then\n            mkdir ${CONFIG_DSYM_DEST_DIR}\n            fi\n            \n            DSYM_FOLDER=\"${CONFIG_DSYM_SOURCE_DIR}\"\n            IFS=$'\\n'\n            \n            echo \"Scaning dSYM FOLDER: ${DSYM_FOLDER} ...\"\n            RET=\"F\"\n            \n            #\n            for dsymFile in $(find \"$DSYM_FOLDER\" -name '*.dSYM'); do\n            RET=\"T\"\n            echo \"Found dSYM file: $dsymFile\"\n            \n            DSYM_FILE_NAME=${dsymFile##*/}\n                DSYM_SYMBOL_ZIP_FILE_NAME=\"${DSYM_FILE_NAME}.zip\"\n                DSYM_SYMBOL_ZIP_FILE_NAME=\"${DSYM_SYMBOL_ZIP_FILE_NAME// /_}\"\n                DSYM_SYMBOL_ZIP_FILE=${CONFIG_DSYM_DEST_DIR}/${DSYM_SYMBOL_ZIP_FILE_NAME}\n                \n                if [ $CONFIG_UPLOAD_DSYM_ONLY -eq 1 ]; then\n                if [ -e $DSYM_SYMBOL_ZIP_FILE ]; then\n                rm -f $DSYM_SYMBOL_ZIP_FILE\n                fi\n                # 如果只上传dSYM，直接压缩dSYM目录\n                zip -r -j $DSYM_SYMBOL_ZIP_FILE $dsymFile -x *.plist\n                else\n                # 使用符号表工具来生成Symbol文件\n                dSYMParse $dsymFile $DSYM_SYMBOL_ZIP_FILE\n                fi\n                \n                # 上传\n                dSYMUpload $CONFIG_BUGLY_APP_ID $CONFIG_BUGLY_APP_KEY $CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER $CONFIG_BUGLY_APP_VERSION $DSYM_SYMBOL_ZIP_FILE\n                done\n                \n                if [ $RET = \"F\" ]; then\n                exitWithMessage \"No .dSYM found in ${DSYM_FOLDER}\" 0\n                fi\n            }\n            \n            # 在Xcode工程中执行\n            function runInXcode(){\n                echo \"Uploading dSYM to Bugly in Xcode ...\"\n                \n                echo \"Info.Plist : ${INFOPLIST_FILE}\"\n                \n                BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleVersion' \"${INFOPLIST_FILE}\")\n                BUNDLE_SHORT_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' \"${INFOPLIST_FILE}\")\n                \n                # 组装Bugly默认识别的版本信息(格式为CFBundleShortVersionString(CFBundleVersion), 例如: 1.0(1))\n                if [ ! \"${CUSTOMIZED_APP_VERSION}\" ]; then\n                BUGLY_APP_VERSION=\"${BUNDLE_SHORT_VERSION}(${BUNDLE_VERSION})\"\n                else\n                BUGLY_APP_VERSION=\"${CUSTOMIZED_APP_VERSION}\"\n                fi\n                \n                echo \"--------------------------------\"\n                echo \"Prepare application information.\"\n                echo \"--------------------------------\"\n                \n                echo \"Product Name: ${PRODUCT_NAME}\"\n                echo \"Bundle Identifier: ${BUNDLE_IDENTIFIER}\"\n                echo \"Version: ${BUNDLE_SHORT_VERSION}\"\n                echo \"Build: ${BUNDLE_VERSION}\"\n                \n                echo \"Bugly App ID: ${BUGLY_APP_ID}\"\n                echo \"Bugly App key: ${BUGLY_APP_KEY}\"\n                echo \"Bugly App Version: ${BUGLY_APP_VERSION}\"\n                \n                echo \"--------------------------------\"\n                echo \"Check the arguments ...\"\n                \n                ##检查模拟器编译是否允许上传符号\n                if [ \"$EFFECTIVE_PLATFORM_NAME\" == \"-iphonesimulator\" ]; then\n                if [ $UPLOAD_SIMULATOR_SYMBOLS -eq 0 ]; then\n                exitWithMessage \"Warning: Build for simulator and skipping to upload. \\nYou can modify 'UPLOAD_SIMULATOR_SYMBOLS' to 1 in the script.\" 0\n                fi\n                fi\n                \n                ##检查是否是Release模式编译\n                if [ \"${CONFIGURATION=}\" == \"Debug\" ]; then\n                if [ $UPLOAD_DEBUG_SYMBOLS -eq 0 ]; then\n                exitWithMessage \"Warning: Build for debug mode and skipping to upload. \\nYou can modify 'UPLOAD_DEBUG_SYMBOLS' to 1 in the script.\" 0\n                fi\n                fi\n                \n                ##检查是否Archive操作\n                if [ $UPLOAD_ARCHIVE_ONLY -eq 1 ]; then\n                if [[ \"$TARGET_BUILD_DIR\" == *\"/Archive\"* ]]; then\n                echo \"Archive the package\"\n                else\n                exitWithMessage \"Warning: Build for NOT Archive mode and skipping to upload. \\nYou can modify 'UPLOAD_ARCHIVE_ONLY' to 0 in the script.\" 0\n                fi\n                fi\n                \n                #\n                run ${BUGLY_APP_ID} ${BUGLY_APP_KEY} ${BUNDLE_IDENTIFIER} ${BUGLY_APP_VERSION} ${DWARF_DSYM_FOLDER_PATH} ${BUILD_DIR}/BuglySymbolTemp ${UPLOAD_DSYM_ONLY}\n            }\n            \n            # 根据Xcode的环境变量判断是否处于Xcode环境\n            INFO_PLIST_FILE=\"${INFOPLIST_FILE}\"\n            \n            BuildInXcode=\"F\"\n            if [ -f \"${INFO_PLIST_FILE}\" ]; then\n            BuildInXcode=\"T\"\n            fi\n            \n            if [ $BuildInXcode = \"T\" ]; then\n            runInXcode\n            else\n            echo \"\\nUsage: dSYMUpload.sh <bugly_app_id> <bugly_app_key> <app_bundle_identifier> <app_version> <dSYM_src_dir> <bSYMBOL_dest_dir> [upload_dsym_only]\\n\"\n            # 你可以在此处直接设置BuglyAppID和BuglyAppKey，排除不常变参数的输入\n            BUGLY_APP_ID=\"$1\"\n            BUGLY_APP_KEY=\"$2\"\n            BUNDLE_IDENTIFIER=\"$3\"\n            BUGLY_APP_VERSION=\"$4\"\n            DWARF_DSYM_FOLDER_PATH=\"$5\"\n            SYMBOL_OUTPUT_PATH=\"$6\"\n            UPLOAD_DSYM_ONLY=$7\n            run ${BUGLY_APP_ID} ${BUGLY_APP_KEY} ${BUNDLE_IDENTIFIER} ${BUGLY_APP_VERSION} ${DWARF_DSYM_FOLDER_PATH} ${SYMBOL_OUTPUT_PATH} ${UPLOAD_DSYM_ONLY}\n            fi\n";
+		};
+		90DBEEE44396A6B1A3C25E01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		999B249A1084609758F6A1DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9555C3CAA09A26F118F2734 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SmartHome/Pods-SmartHome-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1A31D5781DE440F900B9BB33 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1AFB622D1E62EA6D00AB254E /* XBAlertController.swift in Sources */,
+				1A9923081E91EE1400C1E02B /* BLEDeviceInfo.m in Sources */,
+				1A31D59D1DE569D800B9BB33 /* XBLoginViewController.swift in Sources */,
+				1AEC2C781E612120005E181D /* XBMyPurchaseTableCell.swift in Sources */,
+				1A42B1E61DF42DED00A407B7 /* GlobalDefines.swift in Sources */,
+				1AFB622B1E62D11600AB254E /* XBProductModel.swift in Sources */,
+				1A9923111E91EE1400C1E02B /* UEBaseData.m in Sources */,
+				1AC239F71E8FAAEC005C7AD5 /* UITextField+Extension.swift in Sources */,
+				1AC239F51E8FA4F0005C7AD5 /* XBModifyPasswordViewController.swift in Sources */,
+				1A7720471DF4FC9200257F02 /* XBUserManager.swift in Sources */,
+				1A99230A1E91EE1400C1E02B /* BLEInfoEditCell.m in Sources */,
+				1A42B1EA1DF4634100A407B7 /* XBLoginManager.swift in Sources */,
+				1AFA39E81E2C91DE0036C870 /* XBMyConcernCell.swift in Sources */,
+				1A018D8A1E2C57E100B1629D /* XBRelationConcernModel.swift in Sources */,
+				1AEC2C841E615283005E181D /* XBDateSelectView.swift in Sources */,
+				1AECDDA91E75332F00294A3F /* XBRingView.swift in Sources */,
+				1A9923061E91EE1400C1E02B /* BLEConnector.m in Sources */,
+				1A42B1DF1DF3C3E000A407B7 /* XBMainView.swift in Sources */,
+				1AFB622F1E62EACE00AB254E /* XBDimmingPresentationController.swift in Sources */,
+				1A9923071E91EE1400C1E02B /* BLEDataPack.m in Sources */,
+				1AFB62251E6270DA00AB254E /* XBSleepData.swift in Sources */,
+				1A31D5801DE440F900B9BB33 /* AppDelegate.swift in Sources */,
+				1A9923121E91EE1400C1E02B /* UEReadDataPack.m in Sources */,
+				1AC7B5BC1E5A887C0080BABD /* XBApplyConcernViewController.swift in Sources */,
+				1AECDDAF1E76EBAD00294A3F /* XBEcgView.swift in Sources */,
+				1AEC2C741E611415005E181D /* XBBaseViewController.swift in Sources */,
+				1A9923051E91EE1400C1E02B /* BLECentralManager.m in Sources */,
+				1ABA44CC1E84313F009AED65 /* XBHourValueFormatter.swift in Sources */,
+				1A14D6421DE6B81E00CE719B /* MBProgressHUD.m in Sources */,
+				1AEC2C761E611DBD005E181D /* XBProductVersionSectionHeader.swift in Sources */,
+				1A9BCADC1E2A8B990001A880 /* XBPhotoPickerManager.swift in Sources */,
+				1AFA39E61E2C82880036C870 /* XBConcernMeCell.swift in Sources */,
+				1ABA44C01E83A710009AED65 /* XBSingleReportView.swift in Sources */,
+				1A99230D1E91EE1400C1E02B /* AlertHelper.m in Sources */,
+				1A018D881E2BB9AD00B1629D /* XBTableGroupItem.swift in Sources */,
+				1A0426801E96091500D2FC9B /* NSObject+Extension.swift in Sources */,
+				1A3F78BA1E8E2500000AD173 /* XBRequestURLs.swift in Sources */,
+				1ABA44C91E8407B1009AED65 /* XBDoubleSetLineView.swift in Sources */,
+				1A10733A1E5A0AF400D06DBB /* XBDeleteDeviceViewController.swift in Sources */,
+				1ABA44C41E83DABE009AED65 /* XBRealDetailTableCell.swift in Sources */,
+				1A9923101E91EE1400C1E02B /* UIAlertView+Blocks.m in Sources */,
+				1A018D7F1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift in Sources */,
+				1AC239F31E8F9016005C7AD5 /* XBVerifyCodeViewController.swift in Sources */,
+				1AF921071DEF195400075A34 /* XBMainViewController.swift in Sources */,
+				1AC7B5C21E5AB0900080BABD /* XBTextField.swift in Sources */,
+				1A018D8C1E2C59E400B1629D /* XBRelationConcernCell.swift in Sources */,
+				1A4A75F51E2A2DA600A40787 /* MainItemModel.swift in Sources */,
+				1A99230F1E91EE1400C1E02B /* UIActionSheet+Blocks.m in Sources */,
+				1ABA44C21E83C3CC009AED65 /* Math.swift in Sources */,
+				1A8AC67F1DE809E4009CC8F6 /* XBNetworking.swift in Sources */,
+				1A1A944F1E9637C60076DD86 /* XBLog.swift in Sources */,
+				1AFB62271E62723400AB254E /* XBSleepHistoryTableCell.swift in Sources */,
+				1AEC2C801E614B48005E181D /* XBSingleSelectHealthHistoryController.swift in Sources */,
+				1AC7B5BA1E5A7B2C0080BABD /* XBSplitView.swift in Sources */,
+				1AEC2C7E1E614B20005E181D /* XBMultiSelectHealthHistoryController.swift in Sources */,
+				1A4A75F81E2A622D00A40787 /* XBEditUserInfoViewController.swift in Sources */,
+				1AFA7F7E1E93B49D000F7B9F /* XBRealData.swift in Sources */,
+				1AF364231E5B0AC9008AD8FC /* XBRoundedButton.swift in Sources */,
+				1ABA44BE1E83A57C009AED65 /* XBMultiReportView.swift in Sources */,
+				1A018D851E2BAE5200B1629D /* XBRelationNoticeController.swift in Sources */,
+				1A9923091E91EE1400C1E02B /* BLEInfoCell.m in Sources */,
+				1AAF1E0C1E2C9EE400B1792E /* XBProductVersionController.swift in Sources */,
+				1A9BCAE81E2B5FB90001A880 /* XBProductMainController.swift in Sources */,
+				1AC7B5C01E5A889A0080BABD /* XBMyConcernViewController.swift in Sources */,
+				1A9923131E91EE1400C1E02B /* BLEPeripheralManager.m in Sources */,
+				1AEC2C721E60A521005E181D /* XBCheckProductView.swift in Sources */,
+				1A9BCAE61E2B5D280001A880 /* XBProductMainView.swift in Sources */,
+				1A31D5A01DE56E2700B9BB33 /* XBNavigationController.swift in Sources */,
+				1AFA7F781E935EC9000F7B9F /* NSString+Extension.swift in Sources */,
+				1AECDDAB1E763F0F00294A3F /* XBSliderView.swift in Sources */,
+				1AFB62311E62F66400AB254E /* XBAlertView.swift in Sources */,
+				1ABA44D01E8502F0009AED65 /* XBButton.swift in Sources */,
+				1AFB62371E63089900AB254E /* XBRealDataViewController.swift in Sources */,
+				1A99231D1E91F33E00C1E02B /* CBCentralViewController.m in Sources */,
+				1A018D7C1E2B6A0400B1629D /* XBAddDeviceViewController.swift in Sources */,
+				1A42B1E81DF43EA900A407B7 /* UIView+Extension.swift in Sources */,
+				1AF921091DEF1BB600075A34 /* XBFileLocationHelper.swift in Sources */,
+				1AECDDA71E752F2800294A3F /* XBReportViewController.swift in Sources */,
+				1AC7B5BE1E5A888C0080BABD /* XBConcernMeViewController.swift in Sources */,
+				1A31D5A31DE586CE00B9BB33 /* XBRegisterViewController.swift in Sources */,
+				1A99230C1E91EE1400C1E02B /* ActionSheetHelper.m in Sources */,
+				1AECDDAD1E76908300294A3F /* XBRealDataTableCell.swift in Sources */,
+				1AEC2C821E615038005E181D /* XBHealthCareHeaderView.swift in Sources */,
+				1A9BCAE01E2B37D70001A880 /* XBOperateUtils.swift in Sources */,
+				1A973C2D1E65CF7900FB2431 /* XBShadowButton.swift in Sources */,
+				1AF364211E5B0924008AD8FC /* XBSearchApplyCell.swift in Sources */,
+				1A3352E71E9DD62200C24CD7 /* XBAnimator.swift in Sources */,
+				1A37A3C61DF71684003B006C /* XBFindPasswordController.swift in Sources */,
+				1A9923251E92275B00C1E02B /* UIDevice+Extension.swift in Sources */,
+				1A018D8E1E2C5D3900B1629D /* XBApplyConcernCell.swift in Sources */,
+				1A9BCADE1E2B1FFB0001A880 /* UIImage+Extension.swift in Sources */,
+				1AEC2C7A1E612809005E181D /* XBHealthCareViewController.swift in Sources */,
+				1A99230B1E91EE1400C1E02B /* BLEInfoManagerViewController.m in Sources */,
+				1A99230E1E91EE1400C1E02B /* RIButtonItem.m in Sources */,
+				1A42B1DD1DF3C26300A407B7 /* XBSquareButton.swift in Sources */,
+				1A973C311E6693BB00FB2431 /* UIImageView+Extension.swift in Sources */,
+				1ABA44CE1E84C335009AED65 /* XBDisplayRealStateView.swift in Sources */,
+				1AEC2C701E6081F3005E181D /* XBTableViewHeaderFooterView.swift in Sources */,
+				1A14D6441DE6C10700CE719B /* MBProgressHUD+Extension.swift in Sources */,
+				1A42B1E41DF3DB6F00A407B7 /* UIButton.swift in Sources */,
+				1ABA44BC1E83A3AD009AED65 /* XBMultiReportViewController.swift in Sources */,
+				1AC7B5C41E5AF1F70080BABD /* XBRoundedTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1A31D5881DE440F900B9BB33 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1A31D5891DE440F900B9BB33 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1AAF140D1EAF21B800FB7453 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1AAF140C1EAF21B800FB7453 /* en */,
+				1AAF140E1EAF21BA00FB7453 /* zh-Hans */,
+				1AAF140F1EAF224500FB7453 /* Base */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1ABA91311EAC7BD200EA9F3D /* XBLoginViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA91331EAC7BD600EA9F3D /* zh-Hans */,
+				1ABA91341EAC7C7B00EA9F3D /* Base */,
+				1ABA914A1EAC80C400EA9F3D /* en */,
+			);
+			name = XBLoginViewController.xib;
+			sourceTree = "<group>";
+		};
+		1ABA91371EAC7EDC00EA9F3D /* XBRegisterViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA91361EAC7EDC00EA9F3D /* Base */,
+				1ABA91391EAC7EE300EA9F3D /* en */,
+				1AD9802F1EAE459F00B09FC7 /* zh-Hans */,
+			);
+			name = XBRegisterViewController.xib;
+			sourceTree = "<group>";
+		};
+		1ABA913E1EAC7FDD00EA9F3D /* XBFindPasswordController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA913D1EAC7FDD00EA9F3D /* Base */,
+				1ABA91421EAC7FE000EA9F3D /* zh-Hans */,
+			);
+			name = XBFindPasswordController.xib;
+			sourceTree = "<group>";
+		};
+		1ABA91451EAC806200EA9F3D /* XBEditUserInfoViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA91441EAC806200EA9F3D /* Base */,
+				1ABA91471EAC806400EA9F3D /* en */,
+				1AD980301EAE4FD700B09FC7 /* zh-Hans */,
+			);
+			name = XBEditUserInfoViewController.xib;
+			sourceTree = "<group>";
+		};
+		1ABA914D1EAC86E200EA9F3D /* XBAddDeviceViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA914C1EAC86E200EA9F3D /* Base */,
+				1ABA914F1EAC86E400EA9F3D /* en */,
+				1ABA91511EAC86E500EA9F3D /* zh-Hans */,
+			);
+			name = XBAddDeviceViewController.xib;
+			sourceTree = "<group>";
+		};
+		1ABA91541EAC873F00EA9F3D /* XBDeleteDeviceViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA91531EAC873F00EA9F3D /* Base */,
+				1ABA91561EAC874000EA9F3D /* en */,
+				1ABA91581EAC874100EA9F3D /* zh-Hans */,
+			);
+			name = XBDeleteDeviceViewController.xib;
+			sourceTree = "<group>";
+		};
+		1ABA915F1EACA2F100EA9F3D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ABA91601EACA2F300EA9F3D /* en */,
+				1ABA91611EACA2F400EA9F3D /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1A31D58C1DE440F900B9BB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/laixiaobing/Desktop/Learn/SmartHome/SmartHome/Venders/MBProgressHUD/SmartHome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1A31D58D1DE440F900B9BB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/laixiaobing/Desktop/Learn/SmartHome/SmartHome/Venders/MBProgressHUD/SmartHome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1A31D58F1DE440F900B9BB33 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9747999DE36F1A85A7ACB267 /* Pods-SmartHome.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DU7LRUN8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../../../Downloads/realm-swift-2.2.0/ios/swift-3.0.2\"",
+				);
+				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Xfrontend -debug-time-function-bodies";
+				PRODUCT_BUNDLE_IDENTIFIER = com.EEJEE.isleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartHome/Venders/MBProgressHUD/SmartHome-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		1A31D5901DE440F900B9BB33 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686A3CF006294A054FA73D8C /* Pods-SmartHome.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 94DU7LRUN8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"\"$(SRCROOT)/../../../Downloads/realm-swift-2.2.0/ios/swift-3.0.2\"",
+				);
+				INFOPLIST_FILE = SmartHome/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -Xfrontend -debug-time-function-bodies";
+				PRODUCT_BUNDLE_IDENTIFIER = com.EEJEE.isleep;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "SmartHome/Venders/MBProgressHUD/SmartHome-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1A31D5771DE440F900B9BB33 /* Build configuration list for PBXProject "SmartHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A31D58C1DE440F900B9BB33 /* Debug */,
+				1A31D58D1DE440F900B9BB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1A31D58E1DE440F900B9BB33 /* Build configuration list for PBXNativeTarget "SmartHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A31D58F1DE440F900B9BB33 /* Debug */,
+				1A31D5901DE440F900B9BB33 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1A31D5741DE440F900B9BB33 /* Project object */;
+}

@@ -1,0 +1,42 @@
+
+/* Class = "UILabel"; text = "Middle Name"; ObjectID = "3Gu-PT-rFO"; */
+"3Gu-PT-rFO.text" = "Middle Name";
+
+/* Class = "UILabel"; text = "Birth*"; ObjectID = "5Ac-JB-JhY"; */
+"5Ac-JB-JhY.text" = "Birthday";
+
+/* Class = "UILabel"; text = "Confirm Password*"; ObjectID = "GGf-YR-op1"; */
+"GGf-YR-op1.text" = "Confirm Password*";
+
+/* Class = "UILabel"; text = "Last Name*"; ObjectID = "Gqn-xG-t5e"; */
+"Gqn-xG-t5e.text" = "Last Name*";
+
+/* Class = "UILabel"; text = "Password*"; ObjectID = "KyO-dr-ie5"; */
+"KyO-dr-ie5.text" = "Password*";
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "L3x-Xh-ZqO"; */
+"L3x-Xh-ZqO.normalTitle" = "Back";
+
+/* Class = "UILabel"; text = "用户信息修改"; ObjectID = "Xik-j4-P5x"; */
+"Xik-j4-P5x.text" = "USER INFORMATION";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "cyr-sX-Ezk"; */
+"cyr-sX-Ezk.normalTitle" = "Submit";
+
+/* Class = "UILabel"; text = "Email*"; ObjectID = "dAA-94-g7l"; */
+"dAA-94-g7l.text" = "E-mail*";
+
+/* Class = "UILabel"; text = "Phone Number*"; ObjectID = "fwZ-PQ-oJw"; */
+"fwZ-PQ-oJw.text" = "Phone Number*";
+
+/* Class = "UILabel"; text = "Gender*"; ObjectID = "htE-xo-DNj"; */
+"htE-xo-DNj.text" = "Gender";
+
+/* Class = "UILabel"; text = "First Name*"; ObjectID = "sGW-8d-Bb2"; */
+"sGW-8d-Bb2.text" = "First Name*";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "z4K-Lg-TWU"; */
+"z4K-Lg-TWU.text" = "Address";
+
+/* Class = "UILabel"; text = "Select Picture"; ObjectID = "zoN-Lh-zPb"; */
+"zoN-Lh-zPb.text" = "Select Picture";

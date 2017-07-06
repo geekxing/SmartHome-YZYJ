@@ -1,0 +1,314 @@
+/*
+ Localizable.strings
+ SmartHome
+ 
+ Created by 赖霄冰 on 2017/4/23.
+ Copyright © 2017年 helloworld.com. All rights reserved.
+ */
+
+"Choose a way to select your avatar" = "请选择头像";
+"your device has no access to camera" = "你的设备没有摄像头";
+"PhotoLibrary" = "从相册中选择";
+"Camera" = "拍照";
+"This app has no permission to camera" = "此应用没有权限访问您的相机";
+"Please open the permission in Privacy Settings, otherwise the function cannot be used." = "请到“隐私设置”中启用访问，否则无法使用该功能。";
+
+"DONE" = "确定";
+
+"ALERTDONE" = "确定";
+
+"ALERTCANCEL" = "取消";
+
+"Put the QR code in the scan area" = "将二维码置于扫描区域";
+
+//MARK: - TIPS
+
+"No Data" = "暂无数据";
+
+"Email format error" = "邮箱格式错误";
+
+"Password can only be the combination of numbers and letters. It may not be less than 6 or more than 16 characters" =
+"密码只能是数字或字母组合且不能少于6位或多余16位";
+
+"Two passwords are not the same!" = "两次密码不一致";
+
+"Select one period from the list" = "请在列表中至少选择一个时间段";
+
+"The period you select is too long" = "你选择的时间段过长";
+
+//MARK: - USER INFO
+
+"Male" = "男";
+
+"Female" = "女";
+
+"Reset Password" = "重置密码";
+
+"New Password" = "新密码";
+
+"Confirm Password" = "确认密码";
+
+"Please enter full information" = "请输入完整信息";
+
+"Verify Code" = "验证码";
+
+"Please enter the verification code" = "请输入验证码";
+
+"Enter Verify Code" = "输入验证码";
+
+//MARK: - FAMILY CARE
+
+"FAMILY CARE" = "亲情关注";
+
+"Care\nRequest" = "关注申请";
+
+"My\nCare" = "我的关注";
+
+"Care\nMe" = "关注我的";
+
+"Approve" = "批准";
+
+"Refuse" = "拒绝";
+
+"Cancel" = "取消";
+
+"Request" = "申请";
+
+"Approve the Request" = "批准申请";
+
+"Already Care Me" = "关注我的";
+
+"Mattress Pad" = "智能床垫";
+
+"Pillow" = "智能枕";
+
+"Bracelet" = "智能手环";
+
+"Real-time Data" = "查看实时数据";
+
+"Health Archives" = "查看健康档案";
+
+"CANCEL_CARE_OTHER_TIP" = "确定不再关注%1$@？";
+
+"CANCEL_CARED_BY_OTHER_TIP" = "确定不再被%1$@关注？";
+
+//MARK: - Product Items
+
+"Real-time\nData" = "实时数据";
+
+"Health\nArchives" = "健康档案";
+
+"Add Device" = "添加设备";
+
+"Delete\nDevice" = "删除设备";
+
+"Smart\nMattress Pad" = "智能床垫";
+
+"Smart\nPillow" = "智能枕";
+
+"Smart\nBracelet" = "智能手环";
+
+"Family\nCare" = "亲情关注";
+
+"Value-Added\nServices" = "增值服务";
+
+"Doctor's Hall" = "名医坐堂";
+
+"Log Out" = "注销";
+
+//MARK: - HEALTH ARCHIVES
+
+"Y" = "年";
+
+"M" = "月";
+
+"D" = "日";
+
+"Report Date" = "测试日期";
+
+"Sleep Time" = "睡眠时长";
+
+"Sleep Score" = "睡眠评分";
+
+"to" = "至";
+
+"HEALTH ARCHIVES" = "健康档案";
+
+"One Report" = "查询单次睡眠";
+
+"Multiple Reports" = "查询多次睡眠";
+
+"DATA_ANALYSIS_DATE_PERIOD" = "%1$@%2$zd日 - %3$@%4$zd日";
+
+"DATA_ANALYSIS_TOTAL_REPORTS" = "共计次数：%1$zd次";
+
+"Inquiry" = "查询";
+
+"Maximum" = "最高值";
+
+"Average" = "平均值";
+
+"Minimum" = "最低值";
+
+"Heart Rate" = "心率";
+
+"Deep Sleep Amount" = "深度睡眠时长";
+
+"Sleep Quality Curve" = "睡眠质量曲线";
+
+//MARK: - Single Report
+
+"TRACKING REPORT" = "检测报告";
+
+"TRACKING_REPORT_DATE" = "检测日期：%1$@%2$zd日";
+
+"TRACKING_TOTAL_SLEEP_TIME" = "总睡眠时长：%1$zd小时%2$zd分";
+
+"TRACKING_DEEP_SLEEP_TIME" = "深度睡眠时长：%1$zd小时%2$zd分";
+
+"TRACKING_LIGHT_SLEEP_TIME" = "浅度睡眠时长：%1$zd小时%2$zd分";
+
+"Average\nHeart Rate" = "平均心率";
+
+"Average\nRespiration" = "平均呼吸率";
+
+"Sleep-turning\ntimes" = "翻身次数";
+
+"Bed Exits" = "起夜次数";
+
+"go to\nbed" = "上床";
+
+"get up" = "起床";
+
+"fall sleep" = "入眠";
+
+"deep" = "深睡";
+
+"light" = "浅睡";
+
+"total" = "总长";
+
+//MARK: - Real-time Data
+
+"REAL-TIME DATA" = "实时数据";
+
+"Heart\nRate" = "心率";
+
+"Respiration" = "呼吸率";
+
+"Status" = "状态";
+
+"bpm" = "次/分";
+
+"times" = "次";
+
+"breaths/min" = "次/分";
+
+"Off-Line" = "离线";
+
+"In bed" = "在床";
+
+"nobody" = "无人";
+
+"Body\nmoving" = "体动";
+
+"h" = "时";
+
+"hour" = "时";
+
+"" = "分";
+
+"DATA ANALYSIS" = "统计分析";
+
+"Total Sleep" = "睡眠总时长";
+
+"Deep Sleep" = "深度睡眠时长";
+
+//MARK: - Product Version
+
+"VALUE-ADDED\nSERVICES" = "增值服务";
+
+"News" = "公司新闻";
+
+"New Arrivals" = "新品发布";
+
+"Value-Added Services\n\nYour Devices:" = "增值服务\n\n你当前拥有的产品:";
+
+"Smart Mattress Pad" = "智能床垫";
+
+"Smart Pillow" = "智能枕";
+
+"Smart Bracelet" = "智能手环";
+
+"*Advanced Version" = "*高级版";
+
+"Renewal\nFee" = "续费";
+
+//MARK: - DEVICE
+
+"Are you sure to delete the device?" = "是否确定删除该设备";
+
+"SN is empty" = "SN为空";
+
+"Please enter at least 20 characters" = "请输入满20位";
+
+//MARK: - BLE
+
+"Wifi Name" = "Wifi名称";
+
+"Enter Wifi Name" = "输入Wifi名称";
+
+"Wifi Password" = "Wifi密码";
+
+"Enter Wifi Password" = "输入Wifi密码";
+
+"reconnect" = "重连";
+
+"set up" = "设置";
+
+"BLE_MODIFY_SUCESS" = "修改成功";
+
+"BLE_MODIFY_FAIL" = "修改失败";
+
+//MARK: - Success & Err Msg
+
+"Registration Success" = "注册成功";
+
+"Email does not exist" = "邮箱不存在";
+
+"User does not exist" = "用户不存在";
+
+"Invalid Email or Password" = "邮箱或者密码错误";
+
+"Email already exists" = "邮箱已存在";
+
+"Server Error" = "服务器错误";
+
+"Verification failed" = "验证失败";
+
+"Too many verification errors" = "验证次数过多";
+
+"Verification expired" = "验证码已过期";
+
+"invalid token" = "登录口令已失效，请手动登录";
+
+"search failed" = "查询失败";
+
+"Already applied" = "已经申请过关注";
+
+"You can't concern yourself" = "不能关注你自己";
+
+"operation failed" = "操作失败";
+
+"SN does not exist" = "SN不存在";
+
+"you can't bind the same type device" = "不能绑定同类型设备";
+
+"bind failed" = "绑定失败";
+
+"unbind failed" = "解绑失败";
+
+"Has been bound by the others" = "已被其他人绑定";
+
+
+

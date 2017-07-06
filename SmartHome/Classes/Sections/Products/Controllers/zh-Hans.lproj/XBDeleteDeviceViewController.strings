@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "Uif-sR-anc"; */
+"Uif-sR-anc.normalTitle" = "返回";
+
+/* Class = "UILabel"; text = "删除设备"; ObjectID = "Vma-G5-yZ5"; */
+"Vma-G5-yZ5.text" = "删除设备";
+
+/* Class = "UITextField"; placeholder = "显示当前用户信息中该类设备SN"; ObjectID = "fiQ-xP-gPv"; */
+"fiQ-xP-gPv.placeholder" = "显示当前用户信息中该类设备SN";
+
+/* Class = "UILabel"; text = "现有智能床垫序列号"; ObjectID = "hAY-AN-6Z7"; */
+"hAY-AN-6Z7.text" = "现有智能床垫序列号";
+
+/* Class = "UIButton"; normalTitle = "Submit"; ObjectID = "uN7-Db-x1m"; */
+"uN7-Db-x1m.normalTitle" = "提交";

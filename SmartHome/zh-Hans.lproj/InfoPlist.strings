@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SmartHome
+
+  Created by 赖霄冰 on 2017/4/25.
+  Copyright © 2017年 helloworld.com. All rights reserved.
+*/
+
+
+CFBundleDisplayName = "智睡宝";
