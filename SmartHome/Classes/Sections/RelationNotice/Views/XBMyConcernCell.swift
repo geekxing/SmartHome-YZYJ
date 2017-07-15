@@ -29,7 +29,7 @@ class XBMyConcernCell: XBConcernMeCell {
     
     private let bedView = XBCheckProductView(NSLocalizedString("Mattress Pad", comment: ""))
     private let pillowView = XBCheckProductView(NSLocalizedString("Pillow", comment: ""))
-    private let ringView = XBCheckProductView(NSLocalizedString("Bracelet", comment: ""))
+    private let babyPadView = XBCheckProductView(NSLocalizedString("Baby Mattress Pad", comment: ""))
     
     var productViews:[XBCheckProductView]!
     
@@ -41,7 +41,7 @@ class XBMyConcernCell: XBConcernMeCell {
         arrowButton = UIButton.init(image: UIImage(named:"arrowDown"), backImage: nil, color: nil, target: self, sel: #selector(clickArrow(_:)), title: "")
         arrowButton.imageEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0)
         arrowButton.setImage(UIImage(named:"arrowUp"), for: .selected)
-        productViews = [bedView, pillowView, ringView]
+        productViews = [bedView, pillowView, babyPadView]
         for view in productViews {
             view.isHidden = true
             configProductView(view)

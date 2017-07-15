@@ -54,7 +54,9 @@ class XBApplyConcernViewController: UIViewController {
     }
     
     private func setupSearchComponent() {
-        searchBar = XBRoundedTextField(frame: CGRect(x: 33*UIRate, y: 152*UIRate, width: 265*UIRate, height: 29))
+        
+        let searchImg = #imageLiteral(resourceName: "search")
+        searchBar = XBRoundedTextField(frame: CGRect(x: 33*UIRate, y: 152*UIRate, width: view.width-66*UIRate-10-searchImg.size.width, height: 29))
         searchBar.returnKeyType = .search
         searchBar.clearButtonMode = .whileEditing
         searchBar.autocapitalizationType = .none
@@ -63,7 +65,7 @@ class XBApplyConcernViewController: UIViewController {
         scrollView.addSubview(searchBar)
         
         searchButton = UIButton(type: .system)
-        searchButton.setImage(UIImage(named:"search"), for: .normal)
+        searchButton.setImage(searchImg, for: .normal)
         searchButton.addTarget(self, action: #selector(searchPeople), for: .touchUpInside)
         searchButton.sizeToFit()
         searchButton.centerY = searchBar.centerY

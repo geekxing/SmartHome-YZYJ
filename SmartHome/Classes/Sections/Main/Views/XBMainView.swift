@@ -16,7 +16,7 @@ class XBMainView: UIView {
         return  69.0*UIRate
     }
     var buttonH: CGFloat {
-        return 100.0*UIRateH
+        return 100.0*UIRate
     }
     
     //Properties
@@ -38,7 +38,7 @@ class XBMainView: UIView {
         let btnTitles =
             [NSLocalizedString("Smart\nMattress Pad", comment: ""),
              NSLocalizedString("Smart\nPillow", comment: ""),
-             NSLocalizedString("Smart\nBracelet", comment: ""),
+             NSLocalizedString("Baby\nMattress Pad", comment: ""),
              NSLocalizedString("Family\nCare", comment: ""),
              NSLocalizedString("Value-Added\nServices", comment: ""),
              NSLocalizedString("Doctor's Hall", comment: "")]

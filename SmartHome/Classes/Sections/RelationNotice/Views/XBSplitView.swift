@@ -52,7 +52,7 @@ class XBSplitView: UIView {
     private func setupButton(title:String!) -> XBShadowButton {
         
         let button = XBShadowButton.init(image: nil, backImage: UIImage.imageWith(RGBA(r: 196, g: 190, b: 183, a: 1.0)), color: nil, target: self, sel: #selector(tapBtn(_:)), title: title)
-        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: UIRate*20)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: min(UIRate*20, 20))
         button.titleLabel?.numberOfLines = 0
         button.titleLabel?.textAlignment = .center
         button.setBackgroundImage(UIImage.imageWith(UIColor.white), for: .selected)

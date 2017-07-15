@@ -1,6 +1,6 @@
 
-/* Class = "UIButton"; normalTitle = "REGISTER AN ACCOUNT"; ObjectID = "942-WX-6Tj"; */
-"942-WX-6Tj.normalTitle" = "注册";
+/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "942-WX-6Tj"; */
+"942-WX-6Tj.normalTitle" = "登录";
 
 /* Class = "UILabel"; text = "Sign In"; ObjectID = "MIU-1G-HNk"; */
 "MIU-1G-HNk.text" = "登录";
@@ -8,8 +8,8 @@
 /* Class = "UIButton"; normalTitle = "Forgot Password?"; ObjectID = "U5e-63-KYo"; */
 "U5e-63-KYo.normalTitle" = "忘记密码？";
 
-/* Class = "UIButton"; normalTitle = "Log In"; ObjectID = "VPr-qy-orB"; */
-"VPr-qy-orB.normalTitle" = "登录";
+/* Class = "UIButton"; normalTitle = "REGISTER AN ACCOUNT"; ObjectID = "VPr-qy-orB"; */
+"VPr-qy-orB.normalTitle" = "注册";
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "Yeu-Mj-Cfr"; */
 "Yeu-Mj-Cfr.placeholder" = "邮箱";

@@ -51,7 +51,7 @@ class XBBaseViewController: UIViewController {
         titleLabel.font = UIFontSize(27*UIRate)
         titleLabel.sizeToFit()
         titleLabel.centerX = naviBackground.centerX
-        titleLabel.top = UIRate * 24
+        titleLabel.top = 24
         naviBackground.addSubview(titleLabel)
         view.addSubview(naviBackground)
     }

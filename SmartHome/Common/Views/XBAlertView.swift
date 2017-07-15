@@ -49,7 +49,7 @@ class XBAlertView: UIView {
         }
         
         self.height = 176 + titleLabel.height
-        titleLabel.top = 50*UIRate
+        titleLabel.top = 50
         titleLabel.centerX = width * 0.5
         leftButton?.left = 38 * UIRate
         leftButton?.bottom = height - 44

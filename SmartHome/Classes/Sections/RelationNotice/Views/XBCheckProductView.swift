@@ -43,9 +43,11 @@ class XBCheckProductView: UIView {
         productLabel.textAlignment = .right
         productLabel.font = UIFont.boldSystemFont(ofSize: 14)
         productLabel.textColor = XB_DARK_TEXT
+        productLabel.adjustsFontSizeToFitWidth = true
+        productLabel.minimumScaleFactor = 0.5
         
         let label = UILabel()
-        label.text = "Mattress Pad"
+        label.text = "Baby Mattress Pad"
         label.sizeToFit()
         productLabel.width = label.width
         productLabel.height = label.height
@@ -63,22 +65,24 @@ class XBCheckProductView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        productLabel.left = 0
-        productLabel.centerY = height * 0.5
-        realTimeDataButton.height = 20
-        realTimeDataButton.left = productLabel.right + UIRate*20
-        realTimeDataButton.centerY = height * 0.5
         healCareButton.height = 20;
-        healCareButton.left = realTimeDataButton.right+10
+        healCareButton.right = self.width
         healCareButton.centerY = height * 0.5
+        realTimeDataButton.height = 20
+        realTimeDataButton.right = healCareButton.left - UIRate*10
+        realTimeDataButton.centerY = height * 0.5
+        let labelR = realTimeDataButton.left - UIRate*20
+        productLabel.width = labelR
+        productLabel.right = labelR
+        productLabel.centerY = height * 0.5
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
-        var width = productLabel.width + 30 + healCareButton.width + realTimeDataButton.width
-        if width > size.width-40 {
-            width = size.width-40
-            healCareButton.width = width/3 - 10
-            realTimeDataButton.width = width/3 - 10
+        var width = productLabel.width + 30*UIRate + healCareButton.width + realTimeDataButton.width
+        if width > size.width-30*UIRate {
+            width = size.width-30*UIRate
+            healCareButton.width = width/3 - 10*UIRate
+            realTimeDataButton.width = width/3 - 10*UIRate
         }
         return CGSize(width: width, height: healCareButton.height)
     }

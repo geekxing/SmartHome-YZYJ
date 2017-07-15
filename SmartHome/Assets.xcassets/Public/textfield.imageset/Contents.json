@@ -5,6 +5,17 @@
       "scale" : "1x"
     },
     {
+      "resizing" : {
+        "mode" : "3-part-horizontal",
+        "center" : {
+          "mode" : "stretch",
+          "width" : 1
+        },
+        "cap-insets" : {
+          "right" : 426,
+          "left" : 113
+        }
+      },
       "idiom" : "universal",
       "filename" : "textfield@2x.png",
       "scale" : "2x"

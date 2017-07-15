@@ -29,6 +29,11 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        registerButton.titleLabel?.adjustsFontSizeToFitWidth = true
+        registerButton.titleLabel?.minimumScaleFactor = 0.5
+        findPasswordBtn.titleLabel?.adjustsFontSizeToFitWidth = true
+        findPasswordBtn.titleLabel?.minimumScaleFactor = 0.5
+        
         NotificationCenter.default.addObserver(self, selector: #selector(textFieldDidChange), name: NSNotification.Name.UITextFieldTextDidChange, object: nil)
         if let loginData = XBLoginManager.shared.currentLoginData {
             usernameTextField.text = loginData.account
@@ -38,6 +43,7 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
                 canAutoLogin(loginData.token)
             }
         }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +56,14 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
             usernameTextField.text = loginData.account
             passwordTextField.text = loginData.password
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        registerButton.sizeToFit()
+        registerButton.left = passwordTextField.left - UIRate*16
+        findPasswordBtn.sizeToFit()
+        findPasswordBtn.right = passwordTextField.right + UIRate*16
     }
     
     //MARK: - UITextFieldDelegate

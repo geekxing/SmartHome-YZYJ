@@ -71,7 +71,7 @@ class XBProductVersionController: XBBaseViewController {
         let groupItem3 = XBTableGroupItem()
         let item = XBProductModel(productName:NSLocalizedString("Smart Mattress Pad", comment: ""), typesn: loginUser!.type1sn, typeIp: loginUser!.type1Ip, level: loginUser!.level1, deadline: loginUser!.deadline1)
         let item2 = XBProductModel(productName:NSLocalizedString("Smart Pillow", comment: ""), typesn: loginUser!.type1sn, typeIp: loginUser!.type1Ip, level: loginUser!.level1, deadline: loginUser!.deadline1)
-        let item3 = XBProductModel(productName:NSLocalizedString("Smart Bracelet", comment: ""), typesn: loginUser!.type1sn, typeIp: loginUser!.type1Ip, level: loginUser!.level1, deadline: loginUser!.deadline1)
+        let item3 = XBProductModel(productName:NSLocalizedString("Baby Mattress Pad", comment: ""), typesn: loginUser!.type1sn, typeIp: loginUser!.type1Ip, level: loginUser!.level1, deadline: loginUser!.deadline1)
         groupItem3.items = [item, item2, item3]
         
         groupItem3.headerTitle = NSLocalizedString("Value-Added Services\n\nYour Devices:", comment: "")

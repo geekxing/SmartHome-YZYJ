@@ -28,7 +28,15 @@ class XBSleepData: NSObject {
     var avgBreath:Int = 0
     var outNum:Int = 0
     var turnNum:Int = 0
-    var score:Int = 0
+    var score:Int = 0 {
+        didSet {
+            if self.score < 10 {
+               self.score = 10
+            } else if self.score > 100 {
+                self.score = 100
+            }
+        }
+    }
     
     var selected = false
     
@@ -52,8 +60,15 @@ class XBSleepData: NSObject {
     //返回总的睡眠时长
     func sleepTime() -> Double {
         
-        let total = (lightSleepTime + deepSleepTime)
-        return total / 3600.0
+        var totalSleep = lightSleepTime + deepSleepTime
+        let totalOnBed = outOfBed - goToBed
+        if totalSleep > totalOnBed {
+            let scale = totalOnBed / totalSleep
+            totalSleep = totalOnBed
+            lightSleepTime *= scale
+            deepSleepTime *= scale
+        }
+        return totalSleep / 3600.0
         
     }
     

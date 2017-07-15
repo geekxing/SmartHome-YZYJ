@@ -8,12 +8,13 @@
 
 import Foundation
 
+let isPad = UI_USER_INTERFACE_IDIOM() == .pad
 let SCALE = UIScreen.main.scale
 let SCREEN_WIDTH = UIScreen.main.bounds.width
 let SCREEN_HEIGHT = UIScreen.main.bounds.height
 let STATUS_BAR_HEIGHT = UIApplication.shared.statusBarFrame.height
-let UIRate = SCREEN_WIDTH / 375
-let UIRateH = SCREEN_HEIGHT / 667
+let UIRate = isPad ? 2 : SCREEN_WIDTH / 375
+let UIRateH = isPad ? 1.5 : SCREEN_HEIGHT / 667
 let SYS_LANGUAGE_CHINESE = getCurLanguage() == "zh-Hans-CN"
 
 let XB_DARK_TEXT = UIColorHex("333333", 1)

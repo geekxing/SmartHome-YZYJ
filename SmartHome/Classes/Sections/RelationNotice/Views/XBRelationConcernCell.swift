@@ -59,8 +59,8 @@ class XBRelationConcernCell: UITableViewCell {
         
         var nameLabelToHeaderMargin = 0.0
         if (avatarView.image != nil) {
-            avatarView.width = 54*UIRate
-            avatarView.height = 54*UIRate
+            avatarView.width = 54
+            avatarView.height = 54
             nameLabelToHeaderMargin = 8
         } else {
             avatarView.sizeThatFits(CGSize.zero)

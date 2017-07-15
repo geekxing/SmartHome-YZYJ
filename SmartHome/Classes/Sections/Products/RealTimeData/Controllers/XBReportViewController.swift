@@ -94,6 +94,7 @@ class XBReportViewController: XBBaseViewController {
                             rightColor:  UIColorHex("c6bdb5", 1),
                             dotImage: #imageLiteral(resourceName: "dot1"),
                             tagText: NSLocalizedString("fall sleep", comment: ""))
+        sleepTimeLineView.thumbnailButton.isHidden = true
         sleepTimeLineView.thumbnailButton.titleLabel?.font = sleepButton.titleLabel?.font
         
         self.pileSliderView(slider: deepSleepView,
@@ -124,7 +125,7 @@ class XBReportViewController: XBBaseViewController {
         self.triggerTime += 1
         if self.triggerTime <= 60 {
             self.ringView.progress += ringView.increment
-            self.sleepTimeLineView.progress += sleepTimeLineView.increment
+            //self.sleepTimeLineView.progress += sleepTimeLineView.increment
             self.deepSleepView.progress += deepSleepView.increment
             self.sleepView.progress += sleepView.increment
             self.totalSleepView.progress += totalSleepView.increment
@@ -205,22 +206,23 @@ class XBReportViewController: XBBaseViewController {
             self.getupButton.setTitle(getupStr, for: .normal)
             
             let gap = model.deepSleepTime+model.lightSleepTime
+            let scale = timeGap != 0 ? CGFloat(gap / timeGap) : 1  //睡眠时间所占的比例
             if gap != 0 {
                 
                 let timeCmp = XBOperateUtils.timeComps(gap)
-                self.totalSleepView.maxValue = 1
+                self.totalSleepView.maxValue = scale
                 self.totalSleepView.increment = self.totalSleepView.maxValue/60
                 self.totalSleepLabel.text = String(format: NSLocalizedString("TRACKING_TOTAL_SLEEP_TIME", comment: ""), timeCmp.hour, timeCmp.minute)
                 self.totalSleepLabel.sizeToFit()
                 
                 let timeCmp2 = XBOperateUtils.timeComps(model.deepSleepTime)
-                self.deepSleepView.maxValue = CGFloat(model.deepSleepTime / gap)
+                self.deepSleepView.maxValue = CGFloat(model.deepSleepTime / gap)*scale
                 self.deepSleepView.increment = self.deepSleepView.maxValue/60
                 self.deepSleepLabel.text = String(format: NSLocalizedString("TRACKING_DEEP_SLEEP_TIME", comment: ""), timeCmp2.hour,timeCmp2.minute)
                 self.deepSleepLabel.sizeToFit()
                 
                 let timeCmp3 = XBOperateUtils.timeComps(model.lightSleepTime)
-                self.sleepView.maxValue = CGFloat(model.lightSleepTime / gap)
+                self.sleepView.maxValue = CGFloat(model.lightSleepTime / gap)*scale
                 self.sleepView.increment = self.sleepView.maxValue/60
                 self.sleepLabel.text = String(format: NSLocalizedString("TRACKING_LIGHT_SLEEP_TIME", comment: ""), timeCmp3.hour,timeCmp3.minute)
                 self.sleepLabel.sizeToFit()
