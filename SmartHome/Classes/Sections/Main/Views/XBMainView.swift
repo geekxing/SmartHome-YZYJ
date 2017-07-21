@@ -13,10 +13,10 @@ class XBMainView: UIView {
     
     static let edgeMargin = CGFloat(46.0*UIRate)
     var buttonW: CGFloat {
-        return  69.0*UIRate
+        return  69.0*1.5*UIRate
     }
     var buttonH: CGFloat {
-        return 100.0*UIRate
+        return 100.0*1.5*UIRate
     }
     
     //Properties
@@ -37,15 +37,15 @@ class XBMainView: UIView {
     var mainItems:[MainItemModel] {
         let btnTitles =
             [NSLocalizedString("Smart\nMattress Pad", comment: ""),
-             NSLocalizedString("Smart\nPillow", comment: ""),
-             NSLocalizedString("Baby\nMattress Pad", comment: ""),
-             NSLocalizedString("Family\nCare", comment: ""),
-             NSLocalizedString("Value-Added\nServices", comment: ""),
-             NSLocalizedString("Doctor's Hall", comment: "")]
-        let btnImages = ["Sbed", "Spillow", "Sring", "Relation", "Product", "Doctor"]
-        let itemEnables = [true, false, false, true, true, false]
+//             NSLocalizedString("Smart\nPillow", comment: ""),
+//             NSLocalizedString("Baby\nMattress Pad", comment: ""),
+             NSLocalizedString("Family\nCare", comment: "")]
+//             NSLocalizedString("Value-Added\nServices", comment: ""),
+//             NSLocalizedString("Doctor's Hall", comment: "")]
+        let btnImages = ["Sbed",/** "Spillow", "Sring",*/ "Relation",/** "Product", "Doctor"*/]
+        let itemEnables = [true, true]
         var array = [MainItemModel]()
-        for i in 0..<6 {
+        for i in 0..<2 {
             let mainitem = MainItemModel(image: btnImages[i], title:btnTitles[i], enabled:itemEnables[i], backImage:"")
             array.append(mainitem)
         }
@@ -111,7 +111,7 @@ class XBMainView: UIView {
     }
     
     private func pileButton() {
-        let maxColsCount = mainItems.count / 2
+        let maxColsCount = 2/*mainItems.count / 2*/
         
         for i in 0..<mainItems.count {
             
@@ -141,7 +141,7 @@ class XBMainView: UIView {
     
     private func interMargin(numPerRow:Int) -> CGFloat {
         //（宽-2*边距-3*按钮宽）/2
-        return (bounds.width - 2*XBMainView.edgeMargin - CGFloat(CGFloat(numPerRow)*buttonW))/CGFloat(numPerRow-1)
+        return (bounds.width - 2*XBMainView.edgeMargin - CGFloat(CGFloat(numPerRow)*buttonW))/CGFloat(numPerRow-1 > 0 ? numPerRow-1 : 1)
     }
     
     //MARK: - action

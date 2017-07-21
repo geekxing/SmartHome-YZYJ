@@ -51,7 +51,7 @@ class XBMainViewController: XBBaseViewController {
         self.mainView.clickSquare = {[weak self] in
             switch $0.tag {
             case 0: self!.smartMattress()
-            case 3: self!.relationConcern()
+            case 1: self!.relationConcern()
             case 4: self!.productVersion()
             default: break
             }

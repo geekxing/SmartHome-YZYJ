@@ -25,6 +25,7 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
     @IBOutlet weak var birthField: XBTextField!
     @IBOutlet weak var birthButton: UIButton!
     @IBOutlet weak var genderField: XBTextField!
+    @IBOutlet weak var genderButton: UIButton!
     @IBOutlet weak var phoneNumberField: XBTextField!
     @IBOutlet weak var addressField: XBTextField!
     @IBOutlet weak var passwordField: XBTextField!
@@ -47,8 +48,7 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
     
     lazy var dateFormatter:DateFormatter? = {
         let dateFmt = DateFormatter()
-        
-        dateFmt.dateFormat = SYS_LANGUAGE_CHINESE ? "yyyy/MM/dd" : "MM/dd/yyyy"
+        dateFmt.dateFormat =  "MM/dd/yyyy"
         return dateFmt
     }()
     
@@ -138,8 +138,6 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
         onTextChanged()
         if textField == birthField {
             showCalendar()
-        } else if (textField == genderField) {
-            showGenderSelectView()
         }
     }
     
@@ -231,6 +229,11 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
         showCalendar()
     }
     
+    @IBAction func showGenderSelectView(_ sender: UIButton) {
+        self.view.endEditing(true)
+        chooseGenderDropDown.show()
+    }
+    
     //MARK: - Private
     @objc private func pickAvatar(_ sender: UIButton) {
         photoManager?.pickIn(vc: self)
@@ -251,11 +254,6 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
         } else {
             print("日期格式转化错误！")
         }
-    }
-    
-    private func showGenderSelectView() {
-        genderField.resignFirstResponder()
-        chooseGenderDropDown.show()
     }
     
     private func setAllTextFieldReturnType(type:UIReturnKeyType) {

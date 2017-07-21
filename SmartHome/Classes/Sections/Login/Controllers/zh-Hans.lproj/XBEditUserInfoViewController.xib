@@ -18,6 +18,7 @@
                 <outlet property="birthButton" destination="A8o-5R-JGH" id="Mn4-YG-VTl"/>
                 <outlet property="birthField" destination="Q5e-an-hPq" id="TWy-KS-9Sx"/>
                 <outlet property="firstnameField" destination="yaT-cw-9UX" id="bZv-W7-Mnk"/>
+                <outlet property="genderButton" destination="kzG-pz-s0E" id="0Li-LO-rJK"/>
                 <outlet property="genderField" destination="dwz-TA-HSX" id="LjU-Eb-DQO"/>
                 <outlet property="lastnameField" destination="TZj-IG-w8I" id="kis-3G-992"/>
                 <outlet property="middleNameField" destination="f9y-Bp-kWY" id="hEW-gb-Pau"/>
@@ -109,12 +110,19 @@
                                 <outlet property="delegate" destination="-1" id="Gsp-nl-CnI"/>
                             </connections>
                         </textField>
+                        <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8o-5R-JGH">
+                            <rect key="frame" x="33" y="197" width="295" height="53"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="fillBirthday:" destination="-1" eventType="touchUpInside" id="g3e-rN-nCo"/>
+                            </connections>
+                        </button>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cSP-Ap-cnP" userLabel="文本框底色5">
                             <rect key="frame" x="33" y="320" width="306" height="0.5"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
-                        <textField clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwz-TA-HSX" customClass="XBTextField" customModule="SmartHome" customModuleProvider="target">
+                        <textField clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwz-TA-HSX" customClass="XBTextField" customModule="SmartHome" customModuleProvider="target">
                             <rect key="frame" x="33" y="267" width="306" height="52"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <nil key="textColor"/>
@@ -124,6 +132,13 @@
                                 <outlet property="delegate" destination="-1" id="3dK-z4-AQn"/>
                             </connections>
                         </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kzG-pz-s0E">
+                            <rect key="frame" x="33" y="267" width="306" height="52"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <action selector="showGenderSelectView:" destination="-1" eventType="touchUpInside" id="8dz-LS-0HM"/>
+                            </connections>
+                        </button>
                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VMX-fe-1lW" userLabel="文本框底色6">
                             <rect key="frame" x="33" y="390" width="306" height="0.5"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -302,13 +317,6 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8o-5R-JGH">
-                            <rect key="frame" x="33" y="197" width="295" height="53"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <action selector="fillBirthday:" destination="-1" eventType="touchUpInside" id="g3e-rN-nCo"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="选择头像" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoN-Lh-zPb">
                             <rect key="frame" x="34" y="710" width="107" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
