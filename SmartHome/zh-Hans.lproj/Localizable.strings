@@ -168,6 +168,12 @@
 
 "TRACKING_LIGHT_SLEEP_TIME" = "浅度睡眠时长：%1$zd小时%2$zd分";
 
+"TRACKING_TOTAL_SLEEP_TIME_INVALID" = "总睡眠时长：--小时--分";
+
+"TRACKING_DEEP_SLEEP_TIME_INVALID" = "深度睡眠时长：--小时--分";
+
+"TRACKING_LIGHT_SLEEP_TIME_INVALID" = "浅度睡眠时长：--小时--分";
+
 "Average\nHeart Rate" = "平均心率";
 
 "Average\nRespiration" = "平均呼吸率";

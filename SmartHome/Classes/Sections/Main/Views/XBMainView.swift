@@ -88,11 +88,15 @@ class XBMainView: UIView {
     
     private func setupUserPart() {
         
-        avatarRing =  UIImageView(image: UIImage(named: "avatarRing"))
+        let ring = #imageLiteral(resourceName: "avatarRing")
+        avatarRing =  UIImageView(image:ring)
+        avatarRing.size = CGSize(width: ring.size.width*UIRate, height: ring.size.height*UIRate)
         avatarRing.centerX = self.centerX
-        avatarRing.top = 48
+        avatarRing.top = 48*UIRate
         
-        avatarView = UIImageView(frame:CGRect(x: 0 ,y: 62, width: 112, height: 112))
+        let wh = 112*UIRate
+        let gap = (avatarRing.width - wh) / 2
+        avatarView = UIImageView(frame:CGRect(x: 0 ,y: 0, width: wh, height: wh))
         avatarView.centerX = self.centerX
         avatarView.layer.cornerRadius = avatarView.height/2
         avatarView.layer.masksToBounds = true
@@ -100,6 +104,8 @@ class XBMainView: UIView {
         avatarView.layer.shadowColor = UIColor.black.cgColor
         avatarView.isUserInteractionEnabled = true
         avatarView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tapAvatar(tap:))))
+        avatarView.top = avatarRing.top+gap
+        avatarView.centerX = self.centerX
         
         nameLabel = UILabel()
         nameLabel.font = UIFont.boldSystemFont(ofSize: 16)
@@ -128,9 +134,9 @@ class XBMainView: UIView {
             square.tag = i
             var y  = CGFloat(0)
             if i < maxColsCount {
-                y = CGFloat( 329 * UIRate )
+                y = CGFloat( 289 * UIRateH )
             } else {
-                y = CGFloat( 488.0 * UIRate)
+                y = CGFloat( 448.0 * UIRateH)
             }
             square.frame = CGRect(x: x, y: y, width: buttonW, height: buttonH)
             self.squareBtns.append(square)

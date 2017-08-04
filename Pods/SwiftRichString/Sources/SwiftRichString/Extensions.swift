@@ -30,6 +30,11 @@
 //	THE SOFTWARE.
 
 import Foundation
+#if os(iOS) || os(tvOS) || os(watchOS)
+	import UIKit
+#elseif os(OSX)
+	import AppKit
+#endif
 
 //MARK: Marge Style Instances
 
@@ -134,8 +139,10 @@ func +<Key, Value> (lhs: [Key: Value], rhs: [Key: Value]) -> [Key: Value] {
 ///   - lhs: left MarkupString
 ///   - rhs: right MarkupString
 /// - Returns: a new MarkupString with the content of both lhs and rhs strings and with merged styles
-public func + (lhs: MarkupString, rhs: MarkupString) throws -> MarkupString {
-	let markupString = try MarkupString(source: lhs.string + rhs.string) // concatenate the content
+public func + (lhs: MarkupString, rhs: MarkupString) -> MarkupString? {
+	guard let markupString = MarkupString(source: lhs.string + rhs.string) else { // concatenate the content
+		return nil
+	}
 	// sum styles between lhs and rhs (rhs may replace existing lhs's styles)
 	markupString.styles = lhs.styles + rhs.styles
 	return markupString
@@ -144,6 +151,7 @@ public func + (lhs: MarkupString, rhs: MarkupString) throws -> MarkupString {
 
 //MARK: ShadowAttribute
 
+#if os(iOS) || os(OSX) || os(tvOS)
 public struct ShadowAttribute {
 	
 	/// The offset values of the shadow.
@@ -167,21 +175,27 @@ public struct ShadowAttribute {
 	/// The color of the shadow.
 	/// The default shadow color is black with an alpha of 1/3. If you set this property to nil, the shadow is not drawn.
 	/// The color you specify must be convertible to an RGBA color and may contain alpha information.
-	public var color: UIColor? {
+	public var color: SRColor? {
 		set { self.shadow.shadowColor = newValue }
-		get { return self.shadow.shadowColor as? UIColor }
+		get {
+			#if os(iOS) || os(tvOS) || os(watchOS)
+				return self.shadow.shadowColor as? SRColor
+			#else
+				return self.shadow.shadowColor
+			#endif
+		}
 	}
 	
 	/// Private cached object
 	private var shadow: NSShadow = NSShadow()
-	
+
 	/// Create a new shadow
 	///
 	/// - Parameters:
 	///   - color: color of the shadow
 	///   - radius: radius of the shadow
 	///   - offset: offset of the shadow
-	public init(color: UIColor, radius: CGFloat? = nil, offset: CGSize? = nil) {
+	public init(color: SRColor, radius: CGFloat? = nil, offset: CGSize? = nil) {
 		self.color = color
 		self.blurRadius = radius ?? 0.0
 		self.offset = offset ?? CGSize.zero
@@ -200,16 +214,17 @@ public struct ShadowAttribute {
 		return self.shadow
 	}
 }
+#endif
 
 public struct StrikeAttribute {
-	/// The value of this attribute is a UIColor object. The default value is nil, indicating same as foreground color.
-	public let color: UIColor?
+	/// The value of this attribute is a SRColor object. The default value is nil, indicating same as foreground color.
+	public let color: SRColor?
 	
 	/// This value indicates whether the text has a line through it and corresponds to one of the constants described in NSUnderlineStyle.
 	/// The default value for this attribute is styleNone.
 	public let style: NSUnderlineStyle?
 	
-	public init(color: UIColor?, style: NSUnderlineStyle?) {
+	public init(color: SRColor?, style: NSUnderlineStyle?) {
 		self.color = color
 		self.style = style
 	}
@@ -222,7 +237,7 @@ public struct StrokeAttribute {
 	
 	/// If it is not defined (which is the case by default),
 	// it is assumed to be the same as the value of color; otherwise, it describes the outline color.
-	public let color: UIColor?
+	public let color: SRColor?
 	
 	/// This value represents the amount to change the stroke width and is specified as a percentage
 	/// of the font point size. Specify 0 (the default) for no additional changes. Specify positive values to change the
@@ -230,7 +245,7 @@ public struct StrokeAttribute {
 	/// outlined text would be 3.0.
 	public let width: CGFloat?
 	
-	public init(color: UIColor?, width: CGFloat?) {
+	public init(color: SRColor?, width: CGFloat?) {
 		self.color = color
 		self.width = width
 	}
@@ -240,14 +255,14 @@ public struct StrokeAttribute {
 //MARK: UnderlineAttribute
 
 public struct UnderlineAttribute {
-	/// The value of this attribute is a UIColor object. The default value is nil, indicating same as foreground color.
-	public let color: UIColor?
+	/// The value of this attribute is a SRColor object. The default value is nil, indicating same as foreground color.
+	public let color: SRColor?
 	
 	/// This value indicates whether the text is underlined and corresponds to one of the constants described in NSUnderlineStyle.
 	/// The default value for this attribute is styleNone.
 	public let style: NSUnderlineStyle?
 	
-	public init(color: UIColor?, style: NSUnderlineStyle?) {
+	public init(color: SRColor?, style: NSUnderlineStyle?) {
 		self.color = color
 		self.style = style
 	}
@@ -269,8 +284,8 @@ public struct FontAttribute {
 		}
 	}
 	
-	/// Get the cached UIFont instance
-	private(set) var font: UIFont
+	/// Get the cached SRFont instance
+	private(set) var font: SRFont
 	
 	/// Size of the font
 	public var size: Float
@@ -281,23 +296,23 @@ public struct FontAttribute {
 	///   - name: name of the font (may be type safe or custom). You can extend the FontAttribute enum in order to include your own typesafe names
 	///   - size: size of the font
 	public init(_ name: FontName, size: Float) {
-		self.font = UIFont(name: name.rawValue, size: CGFloat(size))!
+		self.font = SRFont(name: name.rawValue, size: CGFloat(size))!
 		self.size = size
 	}
 	
 	/// Create a new FontAttribute name with given font name and size
 	/// - return: may return nil if name is not part of font's collection
 	public init?(_ name: String, size: Float) {
-		guard let font = UIFont(name: name, size: CGFloat(size)) else {
+		guard let font = SRFont(name: name, size: CGFloat(size)) else {
 			return nil
 		}
 		self.font = font
 		self.size = size
 	}
 	
-	/// Create a new FontAttribute from given UIFont instance
+	/// Create a new FontAttribute from given SRFont instance
 	/// - return: may return nil if font is not passed or not valid
-	public init?(font: UIFont?) {
+	public init?(font: SRFont?) {
 		guard let font = font else {
 			return nil
 		}
@@ -310,7 +325,7 @@ public struct FontAttribute {
 	/// - Parameter size: size
 	/// - Returns: a new FontAttribute
 	public static func system(size: CGFloat) -> FontAttribute {
-		return FontAttribute(font: UIFont.systemFont(ofSize: size))!
+		return FontAttribute(font: SRFont.systemFont(ofSize: size))!
 	}
 	
 	/// Bold system font
@@ -318,15 +333,17 @@ public struct FontAttribute {
 	/// - Parameter size: size
 	/// - Returns: a new FontAttribute
 	public static func bold(size: CGFloat) -> FontAttribute {
-		return FontAttribute(font: UIFont.boldSystemFont(ofSize: size))!
+		return FontAttribute(font: SRFont.boldSystemFont(ofSize: size))!
 	}
 	
 	/// Italic system font
 	///
 	/// - Parameter size: size
 	/// - Returns: a new FontAttribute
+	#if os(iOS)
 	public static func italic(size: CGFloat) -> FontAttribute {
-		return FontAttribute(font: UIFont.italicSystemFont(ofSize: size))!
+		return FontAttribute(font: SRFont.italicSystemFont(ofSize: size))!
 	}
+	#endif
 	
 }

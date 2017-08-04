@@ -30,12 +30,53 @@
 //	THE SOFTWARE.
 
 import Foundation
-
-#if os(iOS) || os(tvOS)
+#if os(iOS) || os(tvOS) || os(watchOS)
 	import UIKit
-	typealias Font = UIFont
-	typealias Color = UIColor
+#elseif os(OSX)
+	import AppKit
 #endif
+
+/// This is the struct which defines a regular expression rule and a set of styles to apply
+public struct RegExpPatternStyles {
+	
+	/// regular expression to match
+	private(set) var regularExpression: NSRegularExpression
+	
+	/// Styles to apply
+	private(set) var styles: [Style]
+	
+	
+	/// Initialize a new rule to apply a set of styles
+	///
+	/// - Parameters:
+	///   - pattern: pattern to match as regexp
+	///   - opts: options for searching
+	///   - styles: styles to apply
+	public init?(pattern: String, opts: NSRegularExpression.Options = .caseInsensitive, styles: [Style]) {
+		do {
+			self.regularExpression = try NSRegularExpression(pattern: pattern, options: opts)
+			self.styles = styles
+		} catch {
+			return nil
+		}
+	}
+	
+	/// Initialize a new regular expression matcher by defining a rule and a single style to apply when it matches
+	///
+	/// - Parameters:
+	///   - pattern: pattern to match as regexp
+	///   - opts: options for searching
+	///   - style: style to apply, defined directly as a `StyleMaker` closure
+	public init?(pattern: String, opts: NSRegularExpression.Options = .caseInsensitive, style maker: Style.StyleMaker) {
+		do {
+			self.regularExpression = try NSRegularExpression(pattern: pattern, options: opts)
+			self.styles = [Style(maker)]
+		} catch {
+			return nil
+		}
+	}
+}
+
 
 //MARK: StyleType
 
@@ -99,7 +140,7 @@ public class Style: Equatable {
 	/// - Example:
 	///		let italic = Style.new("italic", {
 	///			$0.font = FontAttribute(.TimesNewRomanPSMT, size: 50)
-	///			$0.color = UIColor.green
+	///			$0.color = SRColor.green
 	///		})
 	public init(_ name: String, _ maker: StyleMaker ) {
 		self.name = .named(name)
@@ -185,18 +226,18 @@ public class Style: Equatable {
 	/// You can however extended FontAttribute to add your own custom font and make them type safe as they should be.
 	public var font: FontAttribute? {
 		set { self.set(key: NSFontAttributeName, value: newValue?.font) }
-		get { return FontAttribute(font: attributes[NSFontAttributeName] as? UIFont ) }
+		get { return FontAttribute(font: attributes[NSFontAttributeName] as? SRFont ) }
 	}
 	
-	/// The value of this attribute is a UIColor object. Use this attribute to specify the color of the text during rendering.
+	/// The value of this attribute is a SRColor object. Use this attribute to specify the color of the text during rendering.
 	// If you do not specify this attribute, the text is rendered in black.
-	public var color: UIColor? {
+	public var color: SRColor? {
 		didSet { self.set(key: NSForegroundColorAttributeName, value: self.color) }
 	}
 	
-	/// The value of this attribute is a UIColor object. Use this attribute to specify the color of the background area behind the text.
+	/// The value of this attribute is a SRColor object. Use this attribute to specify the color of the background area behind the text.
 	/// If you do not specify this attribute, no background color is drawn.
-	public var backColor: UIColor? {
+	public var backColor: SRColor? {
 		didSet { self.set(key: NSBackgroundColorAttributeName, value: self.backColor) }
 	}
 	
@@ -212,7 +253,7 @@ public class Style: Equatable {
 			self.set(key: NSStrokeColorAttributeName, value: stroke.color)
 		}
 		get {
-			return StrokeAttribute(color: attributes[NSStrokeColorAttributeName] as? UIColor,
+			return StrokeAttribute(color: attributes[NSStrokeColorAttributeName] as? SRColor,
 			                       width: attributes[NSStrokeWidthAttributeName] as? CGFloat)
 		}
 	}
@@ -229,7 +270,7 @@ public class Style: Equatable {
 			self.set(key: NSUnderlineColorAttributeName, value: underline.color)
 		}
 		get {
-			return UnderlineAttribute(color: attributes[NSUnderlineColorAttributeName] as? UIColor,
+			return UnderlineAttribute(color: attributes[NSUnderlineColorAttributeName] as? SRColor,
 			                          style: attributes[NSUnderlineStyleAttributeName] as? NSUnderlineStyle)
 		}
 	}
@@ -246,13 +287,13 @@ public class Style: Equatable {
 			self.set(key: NSStrikethroughColorAttributeName, value: strike.color)
 		}
 		get {
-			return StrikeAttribute(color: attributes[NSStrikethroughColorAttributeName] as? UIColor,
+			return StrikeAttribute(color: attributes[NSStrikethroughColorAttributeName] as? SRColor,
 			                       style: attributes[NSStrikethroughStyleAttributeName] as? NSUnderlineStyle)
 		}
 	}
 
 	/// The value of this attribute is an NSShadow object. The default value of this property is nil.
-	#if os(iOS) || os(macOS)
+	#if os(iOS) || os(macOS) || os(tvOS)
 	public var shadow: ShadowAttribute? {
 		set { self.set(key: NSShadowAttributeName, value: newValue?.shadowObj) }
 		get { return ShadowAttribute(shadow: attributes[NSShadowAttributeName] as? NSShadow) }

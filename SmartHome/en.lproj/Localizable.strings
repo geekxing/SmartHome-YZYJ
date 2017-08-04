@@ -26,6 +26,12 @@
 
 "TRACKING_LIGHT_SLEEP_TIME" = "Light Sleep:%1$zd h %2$zd min";
 
+"TRACKING_TOTAL_SLEEP_TIME_INVALID" = "Sleep Time:-- h -- min";
+
+"TRACKING_DEEP_SLEEP_TIME_INVALID" = "Deep Sleep:-- h -- min";
+
+"TRACKING_LIGHT_SLEEP_TIME_INVALID" = "Light Sleep:-- h -- min";
+
 "DATA_ANALYSIS_DATE_PERIOD" = "%1$@ %2$zd - %3$@ %4$zd";
 
 "DATA_ANALYSIS_TOTAL_REPORTS" = "Total Reports:%1$zd";

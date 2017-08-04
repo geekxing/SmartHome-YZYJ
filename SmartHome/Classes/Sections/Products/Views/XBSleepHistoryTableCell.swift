@@ -27,7 +27,7 @@ class XBSleepHistoryTableCell: UITableViewCell {
                 dateLabel.sizeToFit()
                 hourLabel.text = String(format: "%.1f", model!.sleepTime())
                 hourLabel.sizeToFit()
-                scoreLabel.text = "\(model!.score)"
+                scoreLabel.text = model!.deleteTagForAnalysis ? "--" : "\(model!.score)"
                 scoreLabel.sizeToFit()
             }
         }

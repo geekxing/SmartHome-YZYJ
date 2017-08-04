@@ -30,7 +30,11 @@
 //	THE SOFTWARE.
 
 import Foundation
-import UIKit
+#if os(iOS) || os(tvOS) || os(watchOS)
+	import UIKit
+#elseif os(OSX)
+	import AppKit
+#endif
 
 public enum FontName: String {
 	case Copperplate_Light = "Copperplate-Light"
@@ -292,13 +296,15 @@ public enum FontName: String {
 	}
 	
 	
+	#if os(iOS)
 	/// This is the internal function which allows us to generate the enum above
 	///
 	/// - Returns: raw enum definitions
 	public static func generateEnumList() -> String {
-		return UIFont.familyNames
-			.flatMap { UIFont.fontNames(forFamilyName: $0) }
+		return SRFont.familyNames
+			.flatMap { SRFont.fontNames(forFamilyName: $0) }
 			.map { "case \($0.replacingOccurrences(of: "-", with: "_")) = \"\($0)\"" }
 			.joined(separator: "\n")
 	}
+	#endif
 }

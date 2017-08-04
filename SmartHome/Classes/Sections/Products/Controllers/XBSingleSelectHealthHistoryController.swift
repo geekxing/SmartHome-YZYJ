@@ -133,42 +133,57 @@ class XBSingleSelectHealthHistoryController: UIViewController {
     
     private func makeData() {
         SVProgressHUD.show()
-        XBNetworking.share.postWithPath(path: url, paras: params,
-                                        success: { [weak self] (json, message) in
-                                            if json[Code].intValue == 1 {
-                                                self?.group.removeAll()
-                                                self?.selItemIdxSet.removeAll()
-                                                var models = [XBSleepData]()
-                                                for (_ ,subJson):(String, JSON) in json[XBData] {
-                                                    let model = XBSleepData()
-                                                    model.add(subJson)
-                                                    models.append(model)
-                                                }
-                                                if self!.needSort {
-                                                    self!.sort(&models)
-                                                }
-                                                self?.group = models
-                                                SVProgressHUD.dismiss()
-                                                if self!.group.count > 0 {
-                                                    if self!.isMember(of: XBSingleSelectHealthHistoryController.self) {
-                                                        let firstRow = IndexPath(row: 0, section: 0)
-                                                        self!.makeCellChosen(indexPath: firstRow)
-                                                    }
-                                                } else {
-                                                    self!.tableView.reloadData()
-                                                }
-                                                
-                                            } else {
-                                                SVProgressHUD.showError(withStatus: message)
-                                            }
-            }, failure: { (error) in
-                SVProgressHUD.showError(withStatus: error.localizedDescription)
-        })
+        XBNetworking.share
+            .postWithPath(path: url, paras: params,
+                          success: { [weak self] (json, message) in
+                            if json[Code].intValue == 1 {
+                                self?.group.removeAll()
+                                self?.selItemIdxSet.removeAll()
+                                var models = [XBSleepData]()
+                                for (_ ,subJson):(String, JSON) in json[XBData] {
+                                    let model = XBSleepData()
+                                    model.add(subJson)
+                                    models.append(model)
+                                }
+                                if self!.needSort {
+                                    self!.sort(&models)
+                                }
+                                self?.group = models
+                                SVProgressHUD.dismiss()
+                                self?.afterGetData()
+                                
+                            } else {
+                                SVProgressHUD.showError(withStatus: message)
+                            }
+                }, failure: { (error) in
+                    SVProgressHUD.showError(withStatus: error.localizedDescription)
+            })
         
     }
     
     
     //MARK: - Private
+    
+    private func afterGetData() {
+        if self.group.count > 0 {
+            ///1.单次查询过滤掉白天无效数据  2.多次查询过滤掉白天和夜晚的无效数据
+            if self.isMember(of: XBSingleSelectHealthHistoryController.self) {
+                self.group = self.group.filter {
+                    return !$0.deleteTagForDay
+                }
+                if self.group.count > 0 {
+                    let firstRow = IndexPath(row: 0, section: 0)
+                    self.makeCellChosen(indexPath: firstRow)
+                }
+            } else {
+                self.group = self.group.filter {
+                    return !$0.deleteTagForDay && !$0.deleteTagForAnalysis
+                }
+            }
+        } else {
+            self.tableView.reloadData()
+        }
+    }
     
     private func sort(_ array:inout [XBSleepData]) {
         

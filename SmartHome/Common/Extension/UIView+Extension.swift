@@ -42,6 +42,22 @@ extension UIView {
         }
     }
     
+    // origin
+    var origin : CGPoint {
+        
+        get {
+            
+            return frame.origin
+        }
+        
+        set(newVal) {
+            
+            var tmpFrame : CGRect = frame
+            tmpFrame.origin     = newVal
+            frame               = tmpFrame
+        }
+    }
+    
     // height
     var height : CGFloat {
         
@@ -71,6 +87,22 @@ extension UIView {
             var tmpFrame : CGRect = frame
             tmpFrame.size.width   = newVal
             frame                 = tmpFrame
+        }
+    }
+    
+    // size
+    var size : CGSize {
+        
+        get {
+            
+            return frame.size
+        }
+        
+        set(newVal) {
+            
+            var tmpFrame : CGRect = frame
+            tmpFrame.size   = newVal
+            frame           = tmpFrame
         }
     }
     
@@ -153,6 +185,19 @@ extension UIView {
         set(newVal) {
             
             center = CGPoint(x: center.x, y: newVal)
+        }
+    }
+    
+    var sm_center : CGPoint {
+        
+        get {
+            
+            return center
+        }
+        
+        set(newVal) {
+            
+            center = newVal
         }
     }
     

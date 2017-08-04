@@ -12,6 +12,10 @@ import SwiftyJSON
 class XBSleepData: NSObject {
     
     let myProperties = XBSleepData.properties_name()
+    ///是否白天段睡眠时长小于1.5h的无效数据
+    fileprivate(set) var deleteTagForDay:Bool = false
+    ///是否夜晚段睡眠时长小于1.5h的不适用于统计分析的数据
+    fileprivate(set) var deleteTagForAnalysis:Bool = false
 
     var id:String = ""
     var user:String = ""
@@ -54,6 +58,8 @@ class XBSleepData: NSObject {
             }
             self.setValue(value, forKey: key)
         }
+        ///分析数据，给模型加上相应标签
+        self.setDeleteTag()
     }
     
     
@@ -62,6 +68,7 @@ class XBSleepData: NSObject {
         
         var totalSleep = lightSleepTime + deepSleepTime
         let totalOnBed = outOfBed - goToBed
+        ///修正数据部分
         if totalSleep > totalOnBed {
             let scale = totalOnBed / totalSleep
             totalSleep = totalOnBed
@@ -83,10 +90,22 @@ class XBSleepData: NSObject {
         
         var des = ""
         for property in myProperties {
-            des += " \(property) : \(String(describing: self.value(forKey: property))) "
+            if let value = self.value(forKey: property) {
+                des += " \(property) : \(String(describing: value)) "
+            }
         }
         return des
         
+    }
+    
+    //MARK: - Private
+    
+    private func setDeleteTag() {
+        let beginH = Date(timeIntervalSince1970: self.goToBed).hour
+        let endH = Date(timeIntervalSince1970: self.outOfBed).hour
+        let isWhiteDay = (beginH > 10 && endH < 22)
+        self.deleteTagForDay = isWhiteDay && (self.sleepTime() < 1.5)
+        self.deleteTagForAnalysis = !isWhiteDay && (self.sleepTime() < 1.5)
     }
     
 }

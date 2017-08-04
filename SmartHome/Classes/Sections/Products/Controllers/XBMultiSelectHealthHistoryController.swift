@@ -17,6 +17,7 @@ class XBMultiSelectHealthHistoryController: XBSingleSelectHealthHistoryControlle
     
     override var group: [XBSleepData] {
         didSet {
+            selItemIdxSet.removeAll()
             if group.count >= 1 {
                 let enumrator = group.enumerated()
                 for (index, obj) in enumrator {

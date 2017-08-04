@@ -174,12 +174,10 @@ class XBReportViewController: XBBaseViewController {
     func setValueForUI() {
         
         if let model = self.model {
-            
+            let isInvalid = model.deleteTagForAnalysis
             let date = Date(timeIntervalSince1970: model.creatTime)
             self.dateLabel.text = String(format: NSLocalizedString("TRACKING_REPORT_DATE", comment: ""), date.shortMonthName, date.day)
             self.dateLabel.sizeToFit()
-            self.ringView.maxValue = CGFloat(model.score)/100.0
-            self.ringView.increment = self.ringView.maxValue/60
             
             self.heatRateButton.subTitleLabel.attributedText = self.makeScoreAttributeString(score:"\(model.avgHeart)", text: NSLocalizedString("bpm", comment: ""))
             self.breathButton.subTitleLabel.attributedText = self.makeScoreAttributeString(score:"\(model.avgBreath)", text: NSLocalizedString("bpm", comment: ""))
@@ -205,32 +203,41 @@ class XBReportViewController: XBBaseViewController {
             self.sleepButton.setTitle(gotoBedStr, for: .normal)
             self.getupButton.setTitle(getupStr, for: .normal)
             
-            let gap = model.deepSleepTime+model.lightSleepTime
-            let scale = timeGap != 0 ? CGFloat(gap / timeGap) : 1  //睡眠时间所占的比例
-            if gap != 0 {
+            if !isInvalid {
+                self.ringView.maxValue = CGFloat(model.score)/100.0
+                self.ringView.increment = self.ringView.maxValue/60
                 
-                let timeCmp = XBOperateUtils.timeComps(gap)
-                self.totalSleepView.maxValue = scale
-                self.totalSleepView.increment = self.totalSleepView.maxValue/60
-                self.totalSleepLabel.text = String(format: NSLocalizedString("TRACKING_TOTAL_SLEEP_TIME", comment: ""), timeCmp.hour, timeCmp.minute)
-                self.totalSleepLabel.sizeToFit()
-                
-                let timeCmp2 = XBOperateUtils.timeComps(model.deepSleepTime)
-                self.deepSleepView.maxValue = CGFloat(model.deepSleepTime / gap)*scale
-                self.deepSleepView.increment = self.deepSleepView.maxValue/60
-                self.deepSleepLabel.text = String(format: NSLocalizedString("TRACKING_DEEP_SLEEP_TIME", comment: ""), timeCmp2.hour,timeCmp2.minute)
-                self.deepSleepLabel.sizeToFit()
-                
-                let timeCmp3 = XBOperateUtils.timeComps(model.lightSleepTime)
-                self.sleepView.maxValue = CGFloat(model.lightSleepTime / gap)*scale
-                self.sleepView.increment = self.sleepView.maxValue/60
-                self.sleepLabel.text = String(format: NSLocalizedString("TRACKING_LIGHT_SLEEP_TIME", comment: ""), timeCmp3.hour,timeCmp3.minute)
-                self.sleepLabel.sizeToFit()
-                
+                let gap = model.deepSleepTime+model.lightSleepTime
+                let scale = timeGap != 0 ? CGFloat(gap / timeGap) : 1  //睡眠时间所占的比例
+                if gap != 0 {
+                    
+                    let timeCmp = XBOperateUtils.timeComps(gap)
+                    self.totalSleepView.maxValue = scale
+                    self.totalSleepView.increment = self.totalSleepView.maxValue/60
+                    self.totalSleepLabel.text = String(format: NSLocalizedString("TRACKING_TOTAL_SLEEP_TIME", comment: ""), timeCmp.hour, timeCmp.minute)
+                    
+                    let timeCmp2 = XBOperateUtils.timeComps(model.deepSleepTime)
+                    self.deepSleepView.maxValue = CGFloat(model.deepSleepTime / gap)*scale
+                    self.deepSleepView.increment = self.deepSleepView.maxValue/60
+                    self.deepSleepLabel.text = String(format: NSLocalizedString("TRACKING_DEEP_SLEEP_TIME", comment: ""), timeCmp2.hour,timeCmp2.minute)
+                    
+                    let timeCmp3 = XBOperateUtils.timeComps(model.lightSleepTime)
+                    self.sleepView.maxValue = CGFloat(model.lightSleepTime / gap)*scale
+                    self.sleepView.increment = self.sleepView.maxValue/60
+                    self.sleepLabel.text = String(format: NSLocalizedString("TRACKING_LIGHT_SLEEP_TIME", comment: ""), timeCmp3.hour,timeCmp3.minute)
+                    
+                    self.beginAnimate()
+                }
+            } else {
+                self.ringView.maxValue = -1000
+                self.totalSleepLabel.text = NSLocalizedString("TRACKING_TOTAL_SLEEP_TIME_INVALID", comment: "")
+                self.deepSleepLabel.text = NSLocalizedString("TRACKING_DEEP_SLEEP_TIME_INVALID", comment: "")
+                self.sleepLabel.text = NSLocalizedString("TRACKING_LIGHT_SLEEP_TIME_INVALID", comment: "")
             }
             
-            self.beginAnimate()
-            
+            self.totalSleepLabel.sizeToFit()
+            self.deepSleepLabel.sizeToFit()
+            self.sleepLabel.sizeToFit()
         }
         
         

@@ -70,7 +70,8 @@ class XBRingView: UIView {
     }
     
     func drawText() {
-        let score = "\(Int(round(self.progress * 100)))" as NSString
+        //当最大值为负数时不显示分数
+        let score = self.maxValue < 0 ? "--" : "\(Int(round(self.progress * 100)))" as NSString
         //获取文字的rect
         let textRect = score.boundingRect(with: CGSize(width:70, height:40), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFontSize(40)], context: nil)
         score.draw(in: CGRect(x:(self.width-textRect.width)/2,y:self.height*0.5-37,width:textRect.width,height:textRect.height), withAttributes: [NSFontAttributeName:UIFontSize(40)])
