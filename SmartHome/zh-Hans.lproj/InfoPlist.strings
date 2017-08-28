@@ -8,3 +8,6 @@
 
 
 CFBundleDisplayName = "智睡宝";
+NSBluetoothPeripheralUsageDescription = "该应用想访问你的蓝牙";
+NSCameraUsageDescription = "该应用想使用您的摄像头";
+NSPhotoLibraryUsageDescription = "该应用想访问你的相册";

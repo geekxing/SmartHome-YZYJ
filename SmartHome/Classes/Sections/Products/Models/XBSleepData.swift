@@ -60,6 +60,7 @@ class XBSleepData: NSObject {
         }
         ///分析数据，给模型加上相应标签
         self.setDeleteTag()
+        modifyBreathValue()
     }
     
     
@@ -106,6 +107,16 @@ class XBSleepData: NSObject {
         let isWhiteDay = (beginH > 10 && endH < 22)
         self.deleteTagForDay = isWhiteDay && (self.sleepTime() < 1.5)
         self.deleteTagForAnalysis = !isWhiteDay && (self.sleepTime() < 1.5)
+    }
+    
+    private func modifyBreathValue() {
+        if avgHeart > 0 {
+            //校准呼吸率
+            let b = avgHeart / 4
+            let t = self.avgBreath != 0 ? self.avgBreath : b
+            let l = b + (t - b) / 3
+            self.avgBreath = l
+        }
     }
     
 }

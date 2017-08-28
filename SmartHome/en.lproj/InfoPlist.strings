@@ -8,4 +8,7 @@
 
 
 /// Localizable App Name是App在英语环境环境下显示的名称
-CFBundleDisplayName = "i Sleep";
+CFBundleDisplayName = "i Sleep & Dream";
+NSBluetoothPeripheralUsageDescription = "need access to bluetooth";
+NSCameraUsageDescription = "need access to camera";
+NSPhotoLibraryUsageDescription = "need access to photo library";

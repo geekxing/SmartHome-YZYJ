@@ -127,4 +127,9 @@ class XBMainViewController: XBBaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        let vc = XBHealthKitViewController()
+//        navigationController?.pushViewController(vc, animated: true)
+//    }
+    
 }

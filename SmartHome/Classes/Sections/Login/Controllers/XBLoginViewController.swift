@@ -60,9 +60,9 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        registerButton.sizeToFit()
+        registerButton.titleLabel?.adjustsFontSizeToFitWidth = true
         registerButton.left = passwordTextField.left - UIRate*16
-        findPasswordBtn.sizeToFit()
+        findPasswordBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         findPasswordBtn.right = passwordTextField.right + UIRate*16
     }
     
@@ -100,7 +100,9 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
         XBNetworking.share.postWithPath(path: CHECK_TOKEN, paras: params,
                                         success: {[weak self] (json, message) in
                                             if json[Code].intValue == 1 {
+                                                SVProgressHUD.show()
                                                 XBUserManager.shared.fetchUserFromServer(token: token, handler: { (user, error) in
+                                                    SVProgressHUD.dismiss()
                                                     if error == nil {
                                                         Bugly.setUserIdentifier(user!.email)
                                                         self!.navigationController!.pushViewController(XBMainViewController(), animated: true)
@@ -118,7 +120,7 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
     func doLogin() {
         view.endEditing(true)
         
-        let username = usernameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let username = usernameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).lowercased()
         let password = passwordTextField.text
         
         if let uid = username, let pwd = password {

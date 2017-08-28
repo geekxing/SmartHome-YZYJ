@@ -7,19 +7,19 @@ PODS:
   - Charts (3.0.2):
     - Charts/Core (= 3.0.2)
   - Charts/Core (3.0.2)
-  - CocoaLumberjack/Default (3.2.0)
-  - CocoaLumberjack/Swift (3.2.0):
+  - CocoaLumberjack/Default (3.2.1)
+  - CocoaLumberjack/Swift (3.2.1):
     - CocoaLumberjack/Default
   - DropDown (2)
   - FTPopOverMenu_Swift (0.0.8)
-  - IQKeyboardManagerSwift (4.0.11)
+  - IQKeyboardManagerSwift (4.0.13)
   - LGAlertView (2.4.0)
   - MJRefresh (3.1.12)
-  - Realm (2.9.1):
-    - Realm/Headers (= 2.9.1)
-  - Realm/Headers (2.9.1)
-  - RealmSwift (2.9.1):
-    - Realm (= 2.9.1)
+  - Realm (2.10.0):
+    - Realm/Headers (= 2.10.0)
+  - Realm/Headers (2.10.0)
+  - RealmSwift (2.10.0):
+    - Realm (= 2.10.0)
   - SDWebImage (4.1.0):
     - SDWebImage/Core (= 4.1.0)
   - SDWebImage/Core (4.1.0)
@@ -55,14 +55,14 @@ SPEC CHECKSUMS:
   Bugly: da3c02408c14838d498429320545a8e439392978
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   Charts: 236d6ccdd0ce6feae151d89e829a7397381a21fd
-  CocoaLumberjack: 9b4aed7073d242f29cc2f62068d995faf67f703a
+  CocoaLumberjack: 2800c03334042fe80589423c8d80e582dcaec482
   DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
   FTPopOverMenu_Swift: 08f9a712c63811f675fe0b604c792e46246e00d9
-  IQKeyboardManagerSwift: 10f0a6b8ea2904c8943c0e1a116c99f5b8ad83af
+  IQKeyboardManagerSwift: fb399c4cddcd8d9bbcd2d0c7c81ed290b61c088e
   LGAlertView: 2f5e83dd5cc2537de57d98727650609e86197d1a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
-  Realm: f91fb43bd474c4f731a116ebf7392c75dd015920
-  RealmSwift: 207f12a4a36b696c5183c60a1c06d70234a23e56
+  Realm: 98b3a25643cf6b3e07d2b99fb43fe0eb9c801dec
+  RealmSwift: 34073ad3a31232bbaf7c0db898c037940284cba2
   SDWebImage: 0e435c14e402a6730315a0fb79f95e68654d55a4
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994

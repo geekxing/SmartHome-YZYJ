@@ -169,7 +169,7 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
             return
         }
         
-        let email = usernameTextField.text!
+        let email = usernameTextField.text!.lowercased()
         let pwd = passwordField.text!
         let gender = "\(XBUserManager.integerForGender(genderField.text!))"
         let params:Parameters = [

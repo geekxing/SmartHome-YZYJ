@@ -125,6 +125,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		185023C81F384CA000C3470E /* SmartHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartHome.entitlements; sourceTree = "<group>"; };
 		1A018D7A1E2B6A0400B1629D /* XBAddDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBAddDeviceViewController.swift; sourceTree = "<group>"; };
 		1A018D7E1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBQRCodeScanViewController.swift; sourceTree = "<group>"; };
 		1A018D841E2BAE5200B1629D /* XBRelationNoticeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBRelationNoticeController.swift; sourceTree = "<group>"; };
@@ -417,6 +418,7 @@
 		1A31D57E1DE440F900B9BB33 /* SmartHome */ = {
 			isa = PBXGroup;
 			children = (
+				185023C81F384CA000C3470E /* SmartHome.entitlements */,
 				1A14D6381DE6B4F000CE719B /* Venders */,
 				1A31D5911DE5698000B9BB33 /* Classes */,
 				1A31D5971DE5698000B9BB33 /* Common */,
@@ -857,6 +859,7 @@
 		1A31D5741DE440F900B9BB33 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XB;
 				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = helloworld.com;
@@ -866,6 +869,11 @@
 						DevelopmentTeam = 94DU7LRUN8;
 						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -1279,7 +1287,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94DU7LRUN8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1309,7 +1317,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 94DU7LRUN8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
