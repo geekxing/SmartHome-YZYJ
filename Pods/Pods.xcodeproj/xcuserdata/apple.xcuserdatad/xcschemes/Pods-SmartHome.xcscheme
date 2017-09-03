@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "74299455A80BC7EEA54AF684319D4067"
+               BlueprintIdentifier = "F8A0129362A9795CCE4D8A0CB407DDBA"
                BuildableName = "Pods_SmartHome.framework"
                BlueprintName = "Pods-SmartHome"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,6 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -36,6 +37,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -45,7 +47,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "74299455A80BC7EEA54AF684319D4067"
+            BlueprintIdentifier = "F8A0129362A9795CCE4D8A0CB407DDBA"
             BuildableName = "Pods_SmartHome.framework"
             BlueprintName = "Pods-SmartHome"
             ReferencedContainer = "container:Pods.xcodeproj">

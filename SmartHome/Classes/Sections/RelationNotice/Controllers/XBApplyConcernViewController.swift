@@ -95,18 +95,19 @@ class XBApplyConcernViewController: UIViewController {
     
     //MARK: - Operate
     private func search(email:String, complete:@escaping ((_ email:String)->())){
-        if !XBOperateUtils.validateEmail(email) {
+        let emailLowercase = email.lowercased()
+        if !XBOperateUtils.validateEmail(emailLowercase) {
             SVProgressHUD.showError(withStatus: NSLocalizedString("Email format error", comment: ""))
             return
         }
-        let params:Dictionary = ["email":email]
+        let params:Dictionary = ["email":emailLowercase]
         XBNetworking.share.postWithPath(path: QUERY, paras: params, success: { [weak self] (json, message) in
             if json[Code] == 1 {
-                if email != self!.loginUser!.email {
+                if emailLowercase != self!.loginUser!.email {
                     let userData = json[XBData]
                     XBUserManager.shared.addUser(userJson: userData)
                 }
-                complete(email)
+                complete(emailLowercase)
             } else {
                 SVProgressHUD.showError(withStatus: message)
             }

@@ -84,11 +84,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftRichString.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>SwiftyJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -101,102 +96,6 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>1D8777581C71F8F4DA4255730EDD3673</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>245EFC98AACE97662F3496B3B3B9E6BA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>388AA36E87ECCECE193C31D5069310C8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>39B035AB0936540C49AFDF51EED48B6B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>5168099F2EBFC99A707C03C9EADE01A5</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>74299455A80BC7EEA54AF684319D4067</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7ECD6B6A948A5D501ACA0CD5D27C32DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>87CA7143AAAC406ED0DB1A7A818CF913</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8A140B679D8F469A8D95AACE9FEEAFD6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8A267660E1AD4832DE75665F2F87AEA3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8B8A09694423DB74F0A744BF93A426CF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>8E3C7894BEB1838A3981C3D86D86B53F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9709635CA61F7F72E71552ACC5E71EC3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A4EC9035DEC9ACAE2EC8ADAAC0B00FFA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C235F77E101E742652CCF98FFDFA5182</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E14A62900910444707A5504D25EC98DC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E27206BA153D9B9E9B9030C77637473C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F307B842FF76B2DE6C55DB67C0885325</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<dict/>
 </dict>
 </plist>

@@ -11,7 +11,6 @@ target ‘SmartHome’ do
     pod 'LGAlertView'
     pod 'FTPopOverMenu_Swift’
     pod 'Toast-Swift', '~> 2.0.0'
-    pod 'SwiftRichString'
     pod 'SnapKit', '~> 3.1.2'
     pod 'DropDown'
     pod 'Charts'

@@ -26,7 +26,6 @@ PODS:
   - SnapKit (3.1.2)
   - SVProgressHUD (2.1.2)
   - SwiftDate (4.1.7)
-  - SwiftRichString (0.9.9)
   - SwiftyJSON (3.1.4)
   - Toast-Swift (2.0.0)
 
@@ -46,7 +45,6 @@ DEPENDENCIES:
   - SnapKit (~> 3.1.2)
   - SVProgressHUD
   - SwiftDate (~> 4.0)
-  - SwiftRichString
   - SwiftyJSON
   - Toast-Swift (~> 2.0.0)
 
@@ -67,10 +65,9 @@ SPEC CHECKSUMS:
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   SwiftDate: 029be76691ee89176da3a46c7df3415b6734bc5b
-  SwiftRichString: 44e99361a01e7e6c27e194b8af079c0e344bab8c
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
   Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 89e453518380f3c264b1599941d929f5e4e42bc0
+PODFILE CHECKSUM: 245c6f1c62609d3061764cba351ef9ec1c4d4425
 
 COCOAPODS: 1.2.1
