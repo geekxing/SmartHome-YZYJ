@@ -69,7 +69,7 @@ class XBRegisterViewController: UIViewController, UITextFieldDelegate {
         setupDropDowns()
         
         scrollView.contentSize = CGSize(width: 0, height: backgroundView.top + backgroundView.height + CGFloat(margin))
-        self.automaticallyAdjustsScrollViewInsets = false
+        adjustsScrollViewInsets_NO(scrollView: scrollView, vc: self)
         
         middleNameField.tag = -1
         addressField.tag = -1

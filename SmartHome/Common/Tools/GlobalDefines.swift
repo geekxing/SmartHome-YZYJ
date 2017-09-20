@@ -16,6 +16,7 @@ let STATUS_BAR_HEIGHT = UIApplication.shared.statusBarFrame.height
 let UIRate = isPad ? 2 : SCREEN_WIDTH / 375
 let UIRateH = isPad ? 1.5 : SCREEN_HEIGHT / 667
 let SYS_LANGUAGE_CHINESE = getCurLanguage() == "zh-Hans-CN"
+let isPhoneX = SCREEN_HEIGHT == 812.0
 
 let XB_DARK_TEXT = UIColorHex("333333", 1)
 
@@ -175,6 +176,15 @@ func getCurLanguage() -> String {
     let languages = UserDefaults.standard.object(forKey: "AppleLanguages") as! [String]
     return languages[0]
     
+}
+
+///适配ios11后scrollView偏移量
+func adjustsScrollViewInsets_NO(scrollView:UIScrollView, vc:UIViewController) {
+    if #available(iOS 11.0, *) {
+        scrollView.contentInsetAdjustmentBehavior = .never
+    } else {
+        vc.automaticallyAdjustsScrollViewInsets = false
+    }
 }
 
 //MARK: - Notifications

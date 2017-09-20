@@ -763,6 +763,6 @@ public class ToastManager {
      `showToast` methods that don't require an explicit position.
      Default is `ToastPosition.Bottom`.
      */
-    public var position = ToastPosition.center
+    public var position = ToastPosition.bottom
     
 }

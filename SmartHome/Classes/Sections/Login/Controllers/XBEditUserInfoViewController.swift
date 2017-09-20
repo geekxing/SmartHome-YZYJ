@@ -59,7 +59,7 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.automaticallyAdjustsScrollViewInsets = false
+        adjustsScrollViewInsets_NO(scrollView: scrollView, vc: self)
         scrollView.contentSize = CGSize(width: 0, height: backgroundView.top + backgroundView.height + CGFloat(71))
         
         photoManager = XBPhotoPickerManager.shared
