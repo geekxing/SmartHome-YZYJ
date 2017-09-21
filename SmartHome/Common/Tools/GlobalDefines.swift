@@ -170,6 +170,18 @@ func UIFontSize(_ size:CGFloat) -> UIFont {
     return UIFont.systemFont(ofSize: size)
 }
 
+func UIFontRatioSize(_ size:CGFloat) -> UIFont {
+    return UIFont.systemFont(ofSize: size*UIRate)
+}
+
+func UIFontSizeB(_ size:CGFloat) -> UIFont {
+    return UIFont.boldSystemFont(ofSize: size)
+}
+
+func UIFontRatioSizeB(_ size:CGFloat) -> UIFont {
+    return UIFont.boldSystemFont(ofSize: size*UIRate)
+}
+
 ///获取当前语言
 func getCurLanguage() -> String {
     

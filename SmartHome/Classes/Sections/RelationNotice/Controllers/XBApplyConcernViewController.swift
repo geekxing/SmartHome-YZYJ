@@ -84,6 +84,9 @@ class XBApplyConcernViewController: UIViewController {
         tableView.separatorStyle = .none
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = 0
+        tableView.estimatedSectionFooterHeight = 0
+        tableView.estimatedSectionHeaderHeight = 0
         tableView.sectionFooterHeight = 0
         tableView.sectionHeaderHeight = 20
         tableView.delaysContentTouches = false

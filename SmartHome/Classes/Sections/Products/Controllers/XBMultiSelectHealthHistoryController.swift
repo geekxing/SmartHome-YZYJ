@@ -54,17 +54,17 @@ class XBMultiSelectHealthHistoryController: XBSingleSelectHealthHistoryControlle
     
     override func setupHeader() {
         headerView = XBHealthCareHeaderView(.multiple)
-        headerView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 198)
+        headerView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 198*UIRateH)
     }
     
     override func beginSearch() {
         
         let selectModels = (group as NSArray).objects(at: selItemIdxSet) as! [XBSleepData]
         if self.group.count == 0 {
-            self.view.makeToast(NSLocalizedString("No Data", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("No Data", comment: ""))
             
         } else if selectModels.count <= 1 {
-            self.view.makeToast(NSLocalizedString(NSLocalizedString("Select one period from the list", comment: ""), comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("Select one period from the list", comment: ""))
             
         } else {
             let mutiVC = XBMultiReportViewController()
@@ -76,7 +76,7 @@ class XBMultiSelectHealthHistoryController: XBSingleSelectHealthHistoryControlle
     
     override func onDateDidChanged() {
         if headerView.beginDate.add(components: [.month : 3]).isBefore(date: headerView.endDate, granularity: .day) {
-            self.view.makeToast(NSLocalizedString("The period you select is too long", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("The period you select is too long", comment: ""))
             return
         }
         super.onDateDidChanged()

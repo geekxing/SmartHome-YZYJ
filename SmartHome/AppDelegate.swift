@@ -16,7 +16,7 @@ var datePicker:UIDatePicker? = {
     let dPicker = UIDatePicker()
     dPicker.datePickerMode = .date;
     dPicker.maximumDate = Date()
-    dPicker.frame = CGRect(x: 0.0, y: 0.0, width: dPicker.width, height: 250.0)
+    dPicker.frame = CGRect(x: 0.0, y: 0.0, width: dPicker.width, height: 216.0)
     return dPicker
 }()
 

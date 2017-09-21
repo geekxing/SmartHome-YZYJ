@@ -9,7 +9,6 @@
 import UIKit
 import SVProgressHUD
 import SwiftyJSON
-import Toast_Swift
 
 class XBRelationNoticeController: XBBaseViewController {
     

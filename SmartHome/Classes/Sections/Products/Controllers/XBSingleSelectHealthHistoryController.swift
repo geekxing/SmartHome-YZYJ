@@ -75,7 +75,7 @@ class XBSingleSelectHealthHistoryController: UIViewController {
     //MARK: - Setup
     func setupHeader() {
         headerView = XBHealthCareHeaderView(.single)
-        headerView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 121)
+        headerView.frame = CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 121*UIRateH)
     }
     
     private func setupTableView() {
@@ -119,7 +119,7 @@ class XBSingleSelectHealthHistoryController: UIViewController {
     func beginSearch() {
 
         if self.group.count == 0 {
-            self.view.makeToast(NSLocalizedString("No Data", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("No Data", comment: ""))
             return
         }
         let story = UIStoryboard(name: "XBReportViewController", bundle: Bundle.main)

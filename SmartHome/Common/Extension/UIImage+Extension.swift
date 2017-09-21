@@ -148,4 +148,23 @@ extension UIImage {
         return image
     }
     
+    
+    class func sizeWidthRatio(size:CGSize) -> CGSize {
+        var newSize = size
+        let w  = size.width * UIRate
+        if w>0 {
+            newSize = CGSize(width: w, height: w*size.height/size.width)
+        }
+        return newSize
+    }
+    
+    class func sizeHeightRatio(size:CGSize) -> CGSize {
+        var newSize = size
+        let h  = size.height * UIRateH
+        if h>0 {
+            newSize = CGSize(width: h*size.width/size.height, height: h)
+        }
+        return newSize
+    }
+    
 }

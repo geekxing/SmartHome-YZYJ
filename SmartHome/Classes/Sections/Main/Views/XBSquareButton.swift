@@ -50,7 +50,7 @@ class XBSquareButton: UIButton {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        imageView!.frame = CGRect(x: 0, y: 0, width: bounds.width, height: 2*bounds.height/3)
+        imageView!.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.width)
         if let title = titleLabel!.text {
             var size = (title as NSString).size(attributes: [NSFontAttributeName:titleLabel!.font])
             var fontSize = titleLabel!.font.pointSize

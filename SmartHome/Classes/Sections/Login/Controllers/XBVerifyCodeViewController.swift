@@ -26,7 +26,7 @@ class XBVerifyCodeViewController: XBFindPasswordController {
     
     @IBAction override func submit(_ sender: UIButton) {
         if (email == nil || emailField.isBlank()) {
-            self.view.makeToast(NSLocalizedString("Please enter full information", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("Please enter full information", comment: ""))
             return
         }
         let params = ["email":email!,

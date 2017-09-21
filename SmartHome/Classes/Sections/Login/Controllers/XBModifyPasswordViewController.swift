@@ -53,7 +53,7 @@ class XBModifyPasswordViewController: XBFindPasswordController, UITextFieldDeleg
     
     @IBAction override func submit(_ sender: UIButton) {
         if (email == nil || emailField.isBlank() || confirmPasswordField.isBlank()) {
-            self.view.makeToast(NSLocalizedString("Please enter full information", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("Please enter full information", comment: ""))
             return
         }
         if !XBOperateUtils.validatePassword(emailField.text!, confirmPwd: confirmPasswordField.text!) {

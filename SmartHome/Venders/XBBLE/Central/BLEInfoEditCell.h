@@ -16,7 +16,7 @@
 
 @property (nonatomic , copy) void (^sendBLEManageInfo)(NSString * info);
 
-@property (nonatomic , copy) void (^tfBecomeFirstResponder)();
+@property (nonatomic , copy) void (^tfBecomeFirstResponder)(void);
 
 
 

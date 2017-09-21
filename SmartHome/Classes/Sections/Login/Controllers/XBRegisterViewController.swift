@@ -9,7 +9,6 @@
 import UIKit
 import SwiftyJSON
 import IQKeyboardManagerSwift
-import Toast_Swift
 import SVProgressHUD
 import DropDown
 
@@ -61,6 +60,15 @@ class XBRegisterViewController: UIViewController, UITextFieldDelegate {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        let classString = String(describing: type(of: self))
+        super.init(nibName: nibNameOrNil ?? classString, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
@@ -137,7 +145,7 @@ class XBRegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func submit(_ sender: UIButton) {
         if (!fullFilled || !checkboxButton.isSelected) {
-            self.view.makeToast(NSLocalizedString("Please enter full information", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("Please enter full information", comment: ""))
             return
         }
         view.endEditing(true)

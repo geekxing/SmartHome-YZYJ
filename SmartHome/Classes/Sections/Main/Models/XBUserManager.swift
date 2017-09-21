@@ -13,36 +13,36 @@ import SwiftyJSON
 let XBUserInfoHasChangedNotification = "XBUserInfoHasChangedNotification"
 
 class XBUser: Object {
-    dynamic var id:String?
-    dynamic var userId:String?
-    dynamic var email:String!
-    dynamic var follower:Data? = Data()
-    dynamic var firstName = ""
-    dynamic var middleName:String?
-    dynamic var lastName = ""
-    dynamic var name:String?
-    dynamic var image:String? = ""
-    dynamic var password:String?
-    dynamic var mphone:String?
-    dynamic var address:String?
-    dynamic var gender:Int = 0
-    dynamic var birthDay:String?
-    dynamic var focus:Data? = Data()
-    dynamic var device:Data? = Data()
-    dynamic var createTime = 0.0
+    @objc dynamic var id:String?
+    @objc dynamic var userId:String?
+    @objc dynamic var email:String!
+    @objc dynamic var follower:Data? = Data()
+    @objc dynamic var firstName = ""
+    @objc dynamic var middleName:String?
+    @objc dynamic var lastName = ""
+    @objc dynamic var name:String?
+    @objc dynamic var image:String? = ""
+    @objc dynamic var password:String?
+    @objc dynamic var mphone:String?
+    @objc dynamic var address:String?
+    @objc dynamic var gender:Int = 0
+    @objc dynamic var birthDay:String?
+    @objc dynamic var focus:Data? = Data()
+    @objc dynamic var device:Data? = Data()
+    @objc dynamic var createTime = 0.0
     
-    dynamic var type1sn:String?
-    dynamic var type1Ip:String?
-    dynamic var level1:String?
-    dynamic var deadline1:String?
-    dynamic var type2sn:String?
-    dynamic var type2Ip:String?
-    dynamic var level2:String?
-    dynamic var deadline2:String?
-    dynamic var type3sn:String?
-    dynamic var type3Ip:String?
-    dynamic var level3:String?
-    dynamic var deadline3:String?
+    @objc dynamic var type1sn:String?
+    @objc dynamic var type1Ip:String?
+    @objc dynamic var level1:String?
+    @objc dynamic var deadline1:String?
+    @objc dynamic var type2sn:String?
+    @objc dynamic var type2Ip:String?
+    @objc dynamic var level2:String?
+    @objc dynamic var deadline2:String?
+    @objc dynamic var type3sn:String?
+    @objc dynamic var type3Ip:String?
+    @objc dynamic var level3:String?
+    @objc dynamic var deadline3:String?
     
     override static func primaryKey() -> String? {
         return "email"
@@ -54,7 +54,7 @@ class XBUser: Object {
         return name
     }
     
-    func Device() -> [String] {
+    @objc func Device() -> [String] {
         if let data = self.device {
             return data.count == 0 ? [] : try! JSONSerialization.jsonObject(with: data, options: []) as! [String]
         }
@@ -87,7 +87,7 @@ class XBUser: Object {
 }
 
 class XBUserManager: NSObject {
-    static let shared = XBUserManager()
+    @objc static let shared = XBUserManager()
     
     let userProperties = XBUser.properties_name()
     
@@ -106,7 +106,7 @@ class XBUserManager: NSObject {
     ///
     /// - Returns: 当前登录用户信息
     ///
-    func loginUser() -> XBUser? {
+    @objc func loginUser() -> XBUser? {
         if let userID = XBUserManager.shared.currentAccount() {
             if let loginUser = XBUserManager.shared.user(uid: userID) {
                 return loginUser

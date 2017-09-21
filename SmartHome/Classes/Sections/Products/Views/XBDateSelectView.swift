@@ -13,7 +13,7 @@ class XBDateSelectView: UIView {
     lazy var datePck:UIDatePicker? = {
         let dPicker = UIDatePicker()
         dPicker.datePickerMode = .date;
-        dPicker.frame = CGRect(x: 0.0, y: 0.0, width: dPicker.width, height: 250.0)
+        dPicker.frame = CGRect(x: 0.0, y: 0.0, width: dPicker.width, height: 216.0)
         return dPicker
     }()
     
@@ -55,7 +55,7 @@ class XBDateSelectView: UIView {
     var beginDate:Date?
     
     lazy var toolbar:UIToolbar? = {
-        let tool = UIToolbar(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: 44))
+        let tool = UIToolbar(frame: CGRect(x: 0, y: (isPhoneX ? -34 : 0), width: SCREEN_WIDTH, height: 44))
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
         tool.items = [doneButton]
         return tool
@@ -81,7 +81,7 @@ class XBDateSelectView: UIView {
         super.layoutSubviews()
         
         let fieldW = areaWidth - yearLabel.width - 5
-        let fieldH = 30.0
+        let fieldH = 30.0*UIRateH
         yearField.width = fieldW
         yearField.height = CGFloat(fieldH)
         yearField.left = XBDateSelectView.outerMargin
@@ -126,7 +126,7 @@ class XBDateSelectView: UIView {
     }
     
     private func commonInitField(_ textfield:XBRoundedTextField) {
-        textfield.font = UIFontSize(14)
+        textfield.font = UIFontRatioSize(14)
         textfield.textColor = UIColorHex("777777", 1.0)
         textfield.textAlignment = .center
         textfield.isEnabled = false
@@ -134,7 +134,7 @@ class XBDateSelectView: UIView {
     }
     
     private func commonInitLabel(_ label:UILabel, _ text:String) {
-        label.font = UIFont.boldSystemFont(ofSize: 18)
+        label.font = UIFontRatioSizeB(18)
         label.textColor = UIColorHex("ffffff", 1.0)
         label.text = text
         label.sizeToFit()
@@ -142,8 +142,11 @@ class XBDateSelectView: UIView {
     }
     
     private func setupButton() {
-        selectButton = UIButton(image: UIImage(named:"pullDownBtn"), backImage: nil, color: nil, target: self, sel: #selector(pickDate(_:)), title: "")
-        selectButton.sizeToFit()
+        let image = #imageLiteral(resourceName: "pullDownBtn")
+        let filedH = 30.0*UIRateH
+        let size = CGSize(width: filedH, height: filedH)
+        selectButton = UIButton(image: image, backImage: nil, color: nil, target: self, sel: #selector(pickDate(_:)), title: "")
+        selectButton.size = size
         addSubview(selectButton)
     }
     

@@ -22,6 +22,15 @@ class XBFindPasswordController: UIViewController {
     
     var email:String?
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        let classString = String(describing: type(of: self))
+        super.init(nibName: nibNameOrNil ?? classString, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -46,7 +55,7 @@ class XBFindPasswordController: UIViewController {
     @IBAction func submit(_ sender: UIButton) {
         email = emailField.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         if (emailField.isBlank()) {
-            self.view.makeToast(NSLocalizedString("Please enter full information", comment: ""))
+            SVProgressHUD.showInfo(withStatus:NSLocalizedString("Please enter full information", comment: ""))
             return
         }
         let params = ["email":email!]

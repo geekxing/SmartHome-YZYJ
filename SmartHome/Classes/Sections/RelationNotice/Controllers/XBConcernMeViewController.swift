@@ -8,7 +8,6 @@
 
 import UIKit
 import SwiftyJSON
-import Toast_Swift
 import SVProgressHUD
 import MJRefresh
 

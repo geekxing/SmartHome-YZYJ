@@ -9,8 +9,9 @@
 import UIKit
 import SwiftyJSON
 import SVProgressHUD
+import swiftScan
 
-class XBAddDeviceViewController: UIViewController {
+class XBAddDeviceViewController: UIViewController,LBXScanViewControllerDelegate {
     
     @IBOutlet weak var snField: UITextField!
     @IBOutlet weak var scanButton: UIButton!
@@ -19,6 +20,15 @@ class XBAddDeviceViewController: UIViewController {
     
     let token = XBLoginManager.shared.currentLoginData!.token
     private var typeSn:String?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        let classString = String(describing: type(of: self))
+        super.init(nibName: nibNameOrNil ?? classString, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +61,7 @@ class XBAddDeviceViewController: UIViewController {
         }
         XBPhotoPickerManager.shared.checkCameraAuth {[weak self] (flag) in
             if flag {
-                let qrVC = XBQRCodeScanViewController()
-                qrVC.returnScan = {[weak self] scan in
-                    self?.snField.text = scan
-                }
-                self?.navigationController?.pushViewController(qrVC, animated: true)
+                self?.qqStyle()
             }
         }
         
@@ -73,6 +79,26 @@ class XBAddDeviceViewController: UIViewController {
         navigationController!.popViewController(animated: true)
     }
 
+    //MARK: ----模仿qq扫码界面---------
+    func qqStyle()
+    {
+        print("qqStyle")
+        
+        let vc = QQScanViewController()
+        var style = LBXScanViewStyle()
+        style.animationImage = UIImage(named: "CodeScan.bundle/qrcode_scan_light_green")
+        vc.scanStyle = style
+        vc.scanResultDelegate = self
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    //MARK: --- LBXScanViewControllerDelegate
+    func scanFinished(scanResult: LBXScanResult, error: String?) {
+        self.snField.text = scanResult.strScanned
+    }
+    
+    
     //MARK: - Private
     private func addDevice(sn:String) {
         

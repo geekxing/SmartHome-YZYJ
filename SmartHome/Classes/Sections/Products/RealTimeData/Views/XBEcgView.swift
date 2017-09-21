@@ -62,14 +62,14 @@ class XBEcgView: UIView {
     
     //MARK: - Notification
     
-    func didBecomActive() {
+    @objc func didBecomActive() {
         if let ecg = ecgLine {
             XBAnimator.resumeAnim(for: ecg, with: 1)
         }
         
     }
     
-    func didEnterBackground() {
+    @objc func didEnterBackground() {
         
         XBAnimator.pauseAnim(for: ecgLine)
         

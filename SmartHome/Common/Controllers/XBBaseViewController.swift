@@ -51,13 +51,13 @@ class XBBaseViewController: UIViewController {
         titleLabel.font = UIFontSize(27*UIRate)
         titleLabel.sizeToFit()
         titleLabel.centerX = naviBackground.centerX
-        titleLabel.top = 24
+        titleLabel.top = 24+(isPhoneX ? 20 : 0)
         naviBackground.addSubview(titleLabel)
         view.addSubview(naviBackground)
     }
     
     //MARK: - Notification
-    func onStatusFrameChanged(_ aNote:Notification) {
+    @objc func onStatusFrameChanged(_ aNote:Notification) {
         
     }
 

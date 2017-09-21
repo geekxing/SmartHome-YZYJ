@@ -18,6 +18,15 @@ class XBDeleteDeviceViewController: UIViewController {
     
     let token = XBLoginManager.shared.currentLoginData!.token
     var loginUser:XBUser!
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        let classString = String(describing: type(of: self))
+        super.init(nibName: nibNameOrNil ?? classString, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

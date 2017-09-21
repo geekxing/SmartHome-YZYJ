@@ -10,7 +10,6 @@ target ‘SmartHome’ do
     pod 'SDWebImage'
     pod 'LGAlertView'
     pod 'FTPopOverMenu_Swift’
-    pod 'Toast-Swift', '~> 2.0.0'
     pod 'SnapKit', '~> 3.1.2'
     pod 'DropDown'
     pod 'Charts'
@@ -20,4 +19,5 @@ target ‘SmartHome’ do
     pod 'CocoaLumberjack/Swift'
     pod 'RealmSwift'
     pod 'Bugly'
+    pod 'swiftScan', '~> 1.1.0'
 end

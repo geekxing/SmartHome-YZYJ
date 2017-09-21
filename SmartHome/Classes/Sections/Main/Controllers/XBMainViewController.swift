@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Toast_Swift
 import SVProgressHUD
 import SwiftyJSON
 

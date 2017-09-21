@@ -26,8 +26,8 @@ PODS:
   - SnapKit (3.1.2)
   - SVProgressHUD (2.2.1)
   - SwiftDate (4.4.1)
+  - swiftScan (1.1.1)
   - SwiftyJSON (3.1.4)
-  - Toast-Swift (2.0.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
@@ -45,8 +45,8 @@ DEPENDENCIES:
   - SnapKit (~> 3.1.2)
   - SVProgressHUD
   - SwiftDate (~> 4.0)
+  - swiftScan (~> 1.1.0)
   - SwiftyJSON
-  - Toast-Swift (~> 2.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
@@ -65,9 +65,9 @@ SPEC CHECKSUMS:
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
   SVProgressHUD: db27c54e6e18bc903341661fc9feb55e04905cc4
   SwiftDate: a70a534d4feed03b2a2b575e36bef82dc2286a8d
+  swiftScan: f1f7f3eccb67ed1fb9777d084486d201dfca0306
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
-  Toast-Swift: 5b2f8f720f7e78e48511f693df1f9c9a6e38a25a
 
-PODFILE CHECKSUM: 245c6f1c62609d3061764cba351ef9ec1c4d4425
+PODFILE CHECKSUM: cbfa506c376a45993f6574e7e539750e0e17767f
 
 COCOAPODS: 1.2.1

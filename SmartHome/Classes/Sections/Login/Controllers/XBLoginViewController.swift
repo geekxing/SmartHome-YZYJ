@@ -26,6 +26,15 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
         NotificationCenter.default.removeObserver(self)
     }
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        let classString = String(describing: type(of: self))
+        super.init(nibName: nibNameOrNil ?? classString, bundle: nibBundleOrNil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,9 +69,7 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        registerButton.titleLabel?.adjustsFontSizeToFitWidth = true
         registerButton.left = passwordTextField.left - UIRate*16
-        findPasswordBtn.titleLabel?.adjustsFontSizeToFitWidth = true
         findPasswordBtn.right = passwordTextField.right + UIRate*16
     }
     
@@ -125,7 +132,7 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
         
         if let uid = username, let pwd = password {
             if (uid as NSString).length == 0 || (pwd as NSString).length == 0 {
-                self.view.makeToast(NSLocalizedString("Please enter full information", comment: ""))
+                SVProgressHUD.showInfo(withStatus:NSLocalizedString("Please enter full information", comment: ""))
             } else {
                 
                 XBOperateUtils.shared.login(email: uid, pwd: pwd, success: { [weak self] (result) in

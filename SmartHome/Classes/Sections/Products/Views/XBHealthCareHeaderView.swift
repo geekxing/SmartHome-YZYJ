@@ -22,6 +22,8 @@ class XBHealthCareHeaderView: UIView {
     
     var beginDate = Date(timeIntervalSinceNow: -7*24*3600) //一周前
     var endDate = Date()
+    
+    let dateSelectViewH = 33*UIRateH
 
     private var selectType:XBHealthCareHeaderViewSelectType?
     
@@ -47,7 +49,7 @@ class XBHealthCareHeaderView: UIView {
         super.layoutSubviews()
         
         container.width = self.width
-        container.height = 48
+        container.height = 48*UIRateH
         container.left = 0
         container.bottom = height
         
@@ -64,7 +66,9 @@ class XBHealthCareHeaderView: UIView {
         shawdowLine.top  = container.height;
         
         toLabel.centerX = width * 0.5
-        toLabel.centerY = (height - 48.0) * 0.5
+        toLabel.centerY = (height - container.height) * 0.5
+        
+        selectViewB?.bottom = self.height - container.height - selectViewA!.top
     }
     
     //MARK: - Public
@@ -85,7 +89,7 @@ class XBHealthCareHeaderView: UIView {
     
     private func setup() {
         if selectType == .single {
-            selectViewA = XBDateSelectView(frame: CGRect(x: 0, y: 25.0, width: self.width, height: 33.0))
+            selectViewA = XBDateSelectView(frame: CGRect(x: 0, y: 25.0, width: self.width, height: dateSelectViewH))
             selectViewA?.date = endDate
             selectViewA?.labelTextColor = UIColorHex("595757", 1.0)
             addSubview(selectViewA!)
@@ -94,7 +98,7 @@ class XBHealthCareHeaderView: UIView {
             }
         } else {
             backgroundColor = RGBA(r: 196, g: 190, b: 183, a: 1.0)
-            selectViewA = XBDateSelectView(frame: CGRect(x: 0, y: 25.0, width: self.width, height: 33.0))
+            selectViewA = XBDateSelectView(frame: CGRect(x: 0, y: 25.0*UIRateH, width: self.width, height: dateSelectViewH))
             selectViewA?.date = beginDate
             selectViewA?.labelTextColor = UIColorHex("ffffff", 1.0)
             addSubview(selectViewA!)
@@ -104,12 +108,12 @@ class XBHealthCareHeaderView: UIView {
             }
             
             toLabel.text = NSLocalizedString("to", comment: "")
-            toLabel.font = UIFont.boldSystemFont(ofSize: 18)
+            toLabel.font = UIFontSizeB(16)
             toLabel.textColor = UIColorHex("ffffff", 1.0)
             toLabel.sizeToFit()
             addSubview(toLabel)
             
-            selectViewB = XBDateSelectView(frame: CGRect(x: 0, y: selectViewA!.bottom+40, width: self.width, height: 33.0))
+            selectViewB = XBDateSelectView(frame: CGRect(x: 0, y: 0, width: self.width, height: dateSelectViewH))
             selectViewB?.beginDate = beginDate
             selectViewB?.date = endDate
             selectViewB?.labelTextColor = UIColorHex("ffffff", 1.0)
@@ -141,7 +145,7 @@ class XBHealthCareHeaderView: UIView {
     private func setupLabel() {
         for (title) in titles {
             let label = UILabel()
-            label.font = UIFont.boldSystemFont(ofSize: UIRate*16)
+            label.font = UIFontRatioSizeB(16)
             label.textColor = XB_DARK_TEXT
             label.text = title
             label.textAlignment = .center
