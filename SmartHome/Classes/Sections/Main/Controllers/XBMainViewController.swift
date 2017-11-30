@@ -51,7 +51,7 @@ class XBMainViewController: XBBaseViewController {
             switch $0.tag {
             case 0: self!.smartMattress()
             case 1: self!.relationConcern()
-            case 4: self!.productVersion()
+            case 2: self!.clockKnock()
             default: break
             }
         }
@@ -118,6 +118,11 @@ class XBMainViewController: XBBaseViewController {
     
     private func relationConcern() {
         let vc = XBRelationNoticeController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func clockKnock() {
+        let vc = XBClockKnockViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -8,11 +8,9 @@
 
 import UIKit
 import SVProgressHUD
-import SwiftyJSON
 
 class XBApplyConcernViewController: UIViewController {
     
-    let token = XBLoginManager.shared.currentLoginData!.token
     var loginUser: XBUser? {
         return XBUserManager.shared.loginUser()
     }
@@ -119,19 +117,6 @@ class XBApplyConcernViewController: UIViewController {
         }
     }
     
-    func apply(email:String) {
-        let params:Dictionary = ["token":token,
-                                 "email":email]
-        XBNetworking.share.postWithPath(path: APPLY, paras: params, success: { (json, message) in
-            if json[Code].intValue == normalSuccess {
-            } else {
-                SVProgressHUD.showError(withStatus: message)
-            }
-        }) { (error) in
-            SVProgressHUD.showError(withStatus: error.localizedDescription)
-        }
-    }
-    
     //MARK: - Private
     @objc fileprivate func searchPeople() {
         searchBar.resignFirstResponder()
@@ -180,7 +165,7 @@ extension XBApplyConcernViewController: UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchApply) as! XBSearchApplyCell
         cell.model = model
         cell.clickApplyButton = {[weak self] user in
-            self?.apply(email: user.email!)
+            XBRelationHandlers.apply(email: user.email!)
             self?.dataArray.removeAll()
             tableView.reloadData()
         }

@@ -174,6 +174,10 @@ class XBConcernMeViewController: UIViewController {
         XBNetworking.share.postWithPath(path: HANDLE, paras: params, success: { [weak self] (json, message) in
             if json[Code].intValue == normalSuccess {
                 self?.loadData()
+                ///批准申请后反申请
+                if handle == "agree" {
+                    XBRelationHandlers.apply(email: otherEmail)
+                }
             } else {
                 SVProgressHUD.showError(withStatus: message)
             }

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1827C3771F7388F8002AE42D /* CodeScan.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1827C3751F7388F8002AE42D /* CodeScan.bundle */; };
 		1827C3781F7388F8002AE42D /* QQScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1827C3761F7388F8002AE42D /* QQScanViewController.swift */; };
+		182BEE381FCFA56F00143170 /* XBRelationHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182BEE371FCFA56F00143170 /* XBRelationHandlers.swift */; };
+		182BEE3E1FCFC72F00143170 /* XBClockKnockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182BEE3D1FCFC72F00143170 /* XBClockKnockViewController.swift */; };
+		182BEE401FCFC80600143170 /* XBClockKnockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182BEE3F1FCFC80600143170 /* XBClockKnockView.swift */; };
 		1A018D7C1E2B6A0400B1629D /* XBAddDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D7A1E2B6A0400B1629D /* XBAddDeviceViewController.swift */; };
 		1A018D7F1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D7E1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift */; };
 		1A018D851E2BAE5200B1629D /* XBRelationNoticeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A018D841E2BAE5200B1629D /* XBRelationNoticeController.swift */; };
@@ -129,6 +132,9 @@
 /* Begin PBXFileReference section */
 		1827C3751F7388F8002AE42D /* CodeScan.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CodeScan.bundle; sourceTree = "<group>"; };
 		1827C3761F7388F8002AE42D /* QQScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QQScanViewController.swift; sourceTree = "<group>"; };
+		182BEE371FCFA56F00143170 /* XBRelationHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XBRelationHandlers.swift; sourceTree = "<group>"; };
+		182BEE3D1FCFC72F00143170 /* XBClockKnockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XBClockKnockViewController.swift; sourceTree = "<group>"; };
+		182BEE3F1FCFC80600143170 /* XBClockKnockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XBClockKnockView.swift; sourceTree = "<group>"; };
 		185023C81F384CA000C3470E /* SmartHome.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmartHome.entitlements; sourceTree = "<group>"; };
 		1A018D7A1E2B6A0400B1629D /* XBAddDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBAddDeviceViewController.swift; sourceTree = "<group>"; };
 		1A018D7E1E2B7EBE00B1629D /* XBQRCodeScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XBQRCodeScanViewController.swift; sourceTree = "<group>"; };
@@ -300,6 +306,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182BEE391FCFC71B00143170 /* ClockKnock */ = {
+			isa = PBXGroup;
+			children = (
+				182BEE3A1FCFC71B00143170 /* Models */,
+				182BEE3B1FCFC71B00143170 /* Controllers */,
+				182BEE3C1FCFC71B00143170 /* Views */,
+			);
+			path = ClockKnock;
+			sourceTree = "<group>";
+		};
+		182BEE3A1FCFC71B00143170 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		182BEE3B1FCFC71B00143170 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				182BEE3D1FCFC72F00143170 /* XBClockKnockViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		182BEE3C1FCFC71B00143170 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				182BEE3F1FCFC80600143170 /* XBClockKnockView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		18FB87F41F72A8AE0064981D /* QRCodeSection */ = {
 			isa = PBXGroup;
 			children = (
@@ -334,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				1A018D891E2C57E100B1629D /* XBRelationConcernModel.swift */,
+				182BEE371FCFA56F00143170 /* XBRelationHandlers.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -457,6 +497,7 @@
 		1A31D5921DE5698000B9BB33 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				182BEE391FCFC71B00143170 /* ClockKnock */,
 				18FB87F41F72A8AE0064981D /* QRCodeSection */,
 				1AAF1E071E2C9EBE00B1792E /* ProducVersion */,
 				1A018D801E2BAE3500B1629D /* RelationNotice */,
@@ -1004,6 +1045,7 @@
 				1AEC2C781E612120005E181D /* XBMyPurchaseTableCell.swift in Sources */,
 				1A42B1E61DF42DED00A407B7 /* GlobalDefines.swift in Sources */,
 				1AFB622B1E62D11600AB254E /* XBProductModel.swift in Sources */,
+				182BEE401FCFC80600143170 /* XBClockKnockView.swift in Sources */,
 				1A9923111E91EE1400C1E02B /* UEBaseData.m in Sources */,
 				1AC239F71E8FAAEC005C7AD5 /* UITextField+Extension.swift in Sources */,
 				1AC239F51E8FA4F0005C7AD5 /* XBModifyPasswordViewController.swift in Sources */,
@@ -1046,6 +1088,7 @@
 				1A018D8C1E2C59E400B1629D /* XBRelationConcernCell.swift in Sources */,
 				1A4A75F51E2A2DA600A40787 /* MainItemModel.swift in Sources */,
 				1A99230F1E91EE1400C1E02B /* UIActionSheet+Blocks.m in Sources */,
+				182BEE3E1FCFC72F00143170 /* XBClockKnockViewController.swift in Sources */,
 				1ABA44C21E83C3CC009AED65 /* Math.swift in Sources */,
 				1A8AC67F1DE809E4009CC8F6 /* XBNetworking.swift in Sources */,
 				1A1A944F1E9637C60076DD86 /* XBLog.swift in Sources */,
@@ -1066,6 +1109,7 @@
 				1AEC2C721E60A521005E181D /* XBCheckProductView.swift in Sources */,
 				1A9BCAE61E2B5D280001A880 /* XBProductMainView.swift in Sources */,
 				1A31D5A01DE56E2700B9BB33 /* XBNavigationController.swift in Sources */,
+				182BEE381FCFA56F00143170 /* XBRelationHandlers.swift in Sources */,
 				1AFA7F781E935EC9000F7B9F /* NSString+Extension.swift in Sources */,
 				1AECDDAB1E763F0F00294A3F /* XBSliderView.swift in Sources */,
 				1AFB62311E62F66400AB254E /* XBAlertView.swift in Sources */,

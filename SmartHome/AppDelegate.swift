@@ -11,6 +11,7 @@ import SVProgressHUD
 import IQKeyboardManagerSwift
 import DropDown
 import RealmSwift
+import UserNotifications
 
 var datePicker:UIDatePicker? = {
     let dPicker = UIDatePicker()
@@ -40,34 +41,47 @@ let bindDevice    = 1024
 let deleteDevice  = 1026
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        IQKeyboardManager.sharedManager().enable = true
-        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
-        
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
-        DropDown.startListeningToKeyboard()
-        
-        SVProgressHUD.setDefaultStyle(.dark)
-        SVProgressHUD.setMaximumDismissTimeInterval(3.0)
-        SVProgressHUD.setMinimumDismissTimeInterval(3.0)
-        SVProgressHUD.setDefaultAnimationType(.native)
-        
-        XBLog.configDDLog()
-        
-        Bugly.start(withAppId: "86e9c0d8d0")
-        
+        configThirdParties()
         setupMainViewController()
         commenInitListenEvents()
         realmMigration()
+        registerNotifications()
+        
+        if let launchOpt = launchOptions {
+            if launchOpt[UIApplicationLaunchOptionsKey.localNotification] != nil {
+                //在APP被杀死的时候点击通知唤醒APP不会响应其他代理方法，故只能从这取通知
+                var things = [Any]()
+                things.append(launchOpt[UIApplicationLaunchOptionsKey.localNotification]!)
+                for thing in things {
+                    switch thing {
+                    case let localNote as UILocalNotification: ///UIConcreteLocalNotification
+                        handleLocalNote(localNote.userInfo)
+                    default:break
+                    }
+                }
+            }
+        }
         
         return true
+    }
+    
+    //这个方法好像只有在用户在前台的时候才会走
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        if (application.applicationState == .active) {
+            print(notification.userInfo)
+            handleLocalNote(notification.userInfo)
+        } else {
+            print(application.applicationState)
+        }
     }
     
     func application(_ application: UIApplication, willChangeStatusBarFrame newStatusBarFrame: CGRect) {
@@ -84,6 +98,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     deinit {
         NotificationCenter.default.removeObserver(self)
+    }
+    
+    //MARK: - UNUserNotificationCenterDelegate
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        let userInfo = notification.request.content.userInfo
+        print("在前端收到通知%@", userInfo)
+        handleLocalNote(userInfo)
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    @available(iOS 10.0, *)
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+        print("点击响应通知%@", userInfo)
+        handleLocalNote(userInfo)
+        completionHandler()
+    }
+    
+    
+    //MARK: - Methods
+    func handleLocalNote(_ userInfo:[AnyHashable : Any]?) {
+        let acc = XBLoginManager.shared.currentLoginData!.account + "clock"
+        var data = (UserDefaults.standard.value(forKey: acc) ?? []) as! [Dictionary<String, String>]
+        for (idx, dict) in data.enumerated() {
+            if let info = userInfo, let identifier = info["id"] {
+                if dict["id"] == (identifier as! String) {
+                    //已经接收到的本地通知移除掉
+                    data.remove(at: idx); break
+                }
+            }
+        }
+        UIApplication.shared.applicationIconBadgeNumber = data.count
+        UserDefaults.standard.setValue(data, forKey: acc)
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue:XBLocalNotificationNotification), object: nil, userInfo: userInfo)
     }
     
     func setupMainViewController() {
@@ -103,6 +153,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @objc func logout(aNote:Notification) {
         setupLoginVC()
+    }
+    
+    func configThirdParties() {
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
+        
+        DropDown.startListeningToKeyboard()
+        
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setMaximumDismissTimeInterval(3.0)
+        SVProgressHUD.setMinimumDismissTimeInterval(3.0)
+        SVProgressHUD.setDefaultAnimationType(.native)
+        
+        XBLog.configDDLog()
+        
+        Bugly.start(withAppId: "86e9c0d8d0")
     }
     
     func realmMigration() {
@@ -126,6 +192,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Tell Realm to use this new configuration object for the default Realm
         Realm.Configuration.defaultConfiguration = config
         
+    }
+    
+    func registerNotifications() {
+        if #available(iOS 10.0, *) {
+            let center = UNUserNotificationCenter.current()
+            center.delegate = self
+            center.requestAuthorization(options: [.sound, .alert, .badge], completionHandler: { (granted, error) in
+                if error == nil {
+                    print("已经注册通知")
+                }
+            })
+        } else {
+            let settings = UIUserNotificationSettings(types: [.alert,.badge,.sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+            print("已经注册通知")
+        }
     }
     
 }

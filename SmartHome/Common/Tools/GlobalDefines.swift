@@ -204,4 +204,5 @@ func adjustsScrollViewInsets_NO(scrollView:UIScrollView, vc:UIViewController) {
 let XBSearchSleepCareHistoryNotification = "kSearchSleepCareHistoryNotification"
 let XBDrawFrequecyDidChanged = "kDrawFrequecyDidChanged"
 let XBDateSelectViewDidSelectDate = "kDateSelectViewDidSelectDate"
+let XBLocalNotificationNotification = "XBLocalNotificationNotification"
 

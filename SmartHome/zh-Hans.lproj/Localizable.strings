@@ -194,6 +194,9 @@
 
 "total" = "总长";
 
+//MARK: - 闹钟通知
+"Clock" = "闹钟通知";
+
 //MARK: - Real-time Data
 
 "REAL-TIME DATA" = "实时数据";

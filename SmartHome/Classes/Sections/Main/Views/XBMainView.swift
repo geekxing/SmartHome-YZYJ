@@ -39,13 +39,14 @@ class XBMainView: UIView {
             [NSLocalizedString("Smart\nMattress Pad", comment: ""),
 //             NSLocalizedString("Smart\nPillow", comment: ""),
 //             NSLocalizedString("Baby\nMattress Pad", comment: ""),
-             NSLocalizedString("Family\nCare", comment: "")]
+             NSLocalizedString("Family\nCare", comment: ""),
+             NSLocalizedString("Clock", comment: "")]
 //             NSLocalizedString("Value-Added\nServices", comment: ""),
 //             NSLocalizedString("Doctor's Hall", comment: "")]
-        let btnImages = ["Sbed",/** "Spillow", "Sring",*/ "Relation",/** "Product", "Doctor"*/]
-        let itemEnables = [true, true]
+        let btnImages = ["Sbed", /**"Spillow","Sring",*/ "Relation",/** "Product",*/ "Doctor"]
+        let itemEnables = [true, true, true]
         var array = [MainItemModel]()
-        for i in 0..<2 {
+        for i in 0..<btnTitles.count {
             let mainitem = MainItemModel(image: btnImages[i], title:btnTitles[i], enabled:itemEnables[i], backImage:"")
             array.append(mainitem)
         }
@@ -128,9 +129,7 @@ class XBMainView: UIView {
             
             let square = XBSquareButton(image: UIImage(named: mainItem.image!), backImage: UIImage(named: mainItem.backImage!), color:nil, target: self, sel: #selector(click(btn:)), title:mainItem.title)
             
-            if mainItem.enabled == false {
-                square.isEnabled = mainItem.enabled
-            }
+            square.isEnabled = mainItem.enabled
             square.tag = i
             var y  = CGFloat(0)
             if i < maxColsCount {
