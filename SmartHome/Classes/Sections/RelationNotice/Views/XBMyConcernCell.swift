@@ -60,8 +60,8 @@ class XBMyConcernCell: XBConcernMeCell {
         arrowButton.left = 2
         arrowButton.centerY = avatarView.centerY;
         for (index, view) in productViews.enumerated() {
-            let size = view.sizeThatFits(CGSize(width: self.width, height: 20))
-            view.frame = CGRect(x: 0, y: 71 + CGFloat(index*40), width: size.width, height: 20)
+            let size = view.sizeThatFits(CGSize(width: self.width, height: 27))
+            view.frame = CGRect(x: 0, y: 71 + CGFloat(index*33), width: size.width, height: 27)
             view.right = cancelConcernButton.centerX
         }
     }

@@ -65,10 +65,10 @@ class XBCheckProductView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        healCareButton.height = 20;
+        healCareButton.height = 26
         healCareButton.right = self.width
         healCareButton.centerY = height * 0.5
-        realTimeDataButton.height = 20
+        realTimeDataButton.height = 26
         realTimeDataButton.right = healCareButton.left - UIRate*10
         realTimeDataButton.centerY = height * 0.5
         let labelR = realTimeDataButton.left - UIRate*20
