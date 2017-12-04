@@ -63,19 +63,17 @@ class XBClockKnockView: UIView, UITextFieldDelegate, UITableViewDelegate, UITabl
         self.addSubview(self.doneButton)
         self.addSubview(self.contentField)
         self.addSubview(self.tableView)
-        self.datePickButton.backgroundColor = UIColor.red
+        self.datePickButton.backgroundColor = RGBA(r: 213, g: 213, b: 213, a: 1)
         self.datePickButton.setTitle(dateFormatter?.string(from: Date()), for: .normal)
         self.datePickButton.addTarget(self, action: #selector(showTimePicker), for: .touchUpInside)
-        self.doneButton.backgroundColor = UIColor.blue
+        self.doneButton.backgroundColor = RGBA(r: 117, g: 113, b: 109, a: 1)
         self.doneButton.setTitle(NSLocalizedString("DONE", comment: ""), for: .normal)
         self.doneButton.addTarget(self, action: #selector(setNote), for: .touchUpInside)
         self.contentField.borderStyle = .roundedRect
         self.contentField.placeholder = NSLocalizedString("Leave messages to remind yourself", comment: "")
         self.contentField.delegate = self
-        self.tableView.backgroundColor = UIColor.yellow
         self.tableView.dataSource = self
         self.tableView.delegate = self
-        self.tableView.tableFooterView = UIView()
         
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(rawValue:XBLocalNotificationNotification), object: nil)
     }
@@ -93,6 +91,7 @@ class XBClockKnockView: UIView, UITextFieldDelegate, UITableViewDelegate, UITabl
         self.doneButton.size = CGSize(width: 100, height: 44)
         self.doneButton.centerX = self.width * 0.5
         self.doneButton.top = self.contentField.bottom + 20
+        self.doneButton.layer.cornerRadius = self.doneButton.height * 0.5
         
         self.tableView.frame = CGRect(x: 25, y: self.doneButton.bottom + 15, width: self.width-50, height: self.height - self.doneButton.bottom - 30)
     }
@@ -136,6 +135,7 @@ class XBClockKnockView: UIView, UITextFieldDelegate, UITableViewDelegate, UITabl
                 content.body = self.contentField.text ?? ""
                 content.badge = 1
                 content.userInfo = userInfo as [AnyHashable:AnyObject]
+                content.sound =  UNNotificationSound.default()
                 
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: max(fireDate.timeIntervalSinceNow, 1), repeats: false)
                 
@@ -157,6 +157,7 @@ class XBClockKnockView: UIView, UITextFieldDelegate, UITableViewDelegate, UITabl
                 }
                 localNote.applicationIconBadgeNumber = 1
                 localNote.userInfo = userInfo as [AnyHashable:AnyObject]
+                localNote.soundName = UILocalNotificationDefaultSoundName
                 
                 // 调用通知
                 UIApplication.shared.scheduleLocalNotification(localNote)

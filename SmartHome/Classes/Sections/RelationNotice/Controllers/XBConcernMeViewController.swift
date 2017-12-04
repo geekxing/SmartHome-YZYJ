@@ -178,8 +178,6 @@ class XBConcernMeViewController: UIViewController {
                 if handle == "agree" {
                     XBRelationHandlers.apply(email: otherEmail)
                 }
-            } else {
-                SVProgressHUD.showError(withStatus: message)
             }
         }) { (error) in
             SVProgressHUD.showError(withStatus: error.localizedDescription)

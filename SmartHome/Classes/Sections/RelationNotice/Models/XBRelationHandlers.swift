@@ -16,9 +16,7 @@ class XBRelationHandlers: NSObject {
                                  "email":email]
         XBNetworking.share.postWithPath(path: APPLY, paras: params, success: { (json, message) in
             if json[Code].intValue == normalSuccess {
-            } else {
-                SVProgressHUD.showError(withStatus: message)
-            }
+            } 
         }) { (error) in
             SVProgressHUD.showError(withStatus: error.localizedDescription)
         }
