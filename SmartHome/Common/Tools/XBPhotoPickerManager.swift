@@ -34,7 +34,7 @@ class XBPhotoPickerManager: NSObject, UIImagePickerControllerDelegate, UINavigat
     //MARK: - Auths
     
     func checkCameraAuth(_ request:@escaping (Bool)->()) {
-        let authStatus = AVCaptureDevice.authorizationStatus(forMediaType: AVMediaTypeVideo)
+        let authStatus = AVCaptureDevice.authorizationStatus(for: AVMediaType.video)
         
         if(authStatus == .denied || authStatus == .restricted) {
             UIAlertView(title: NSLocalizedString("This app has no permission to camera" , comment: ""), message: NSLocalizedString("Please open the permission in Privacy Settings, otherwise the function cannot be used.", comment: ""), delegate: nil, cancelButtonTitle: NSLocalizedString("DONE", comment: "")).show()
@@ -43,7 +43,7 @@ class XBPhotoPickerManager: NSObject, UIImagePickerControllerDelegate, UINavigat
             if authStatus == .authorized {
                 request(true)
             } else {
-                AVCaptureDevice.requestAccess(forMediaType: AVMediaTypeVideo, completionHandler: { (grand) in
+                AVCaptureDevice.requestAccess(for: AVMediaType.video, completionHandler: { (grand) in
                     if grand {
                         DispatchQueue.main.async(execute: {
                             request(grand)

@@ -200,6 +200,13 @@ func adjustsScrollViewInsets_NO(scrollView:UIScrollView, vc:UIViewController) {
     }
 }
 
+func dPrint(_ item: Any) {
+    #if DEBUG
+    print(item)
+    #else
+    #endif
+}
+
 //MARK: - Notifications
 
 let XBSearchSleepCareHistoryNotification = "kSearchSleepCareHistoryNotification"

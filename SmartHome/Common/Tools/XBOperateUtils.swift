@@ -46,7 +46,7 @@ class XBOperateUtils: NSObject {
                                                 XBUserManager.shared.addUser(userJson: json[XBData]["userInfo"])
                                                 success(message)
                                             } else {   //服务器返回失败原因
-                                                failure(NSError(domain: SMErrorDomain, code: json[Code].intValue, userInfo: [kCFErrorLocalizedDescriptionKey as AnyHashable :message]))
+                                                failure(NSError(domain: SMErrorDomain, code: json[Code].intValue, userInfo: [kCFErrorLocalizedDescriptionKey as String :message]))
                                             }
         }, failure: { error in
             failure(error)

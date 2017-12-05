@@ -52,12 +52,12 @@ class XBSquareButton: UIButton {
         super.layoutSubviews()
         imageView!.frame = CGRect(x: 0, y: 0, width: bounds.width, height: bounds.width)
         if let title = titleLabel!.text {
-            var size = (title as NSString).size(attributes: [NSFontAttributeName:titleLabel!.font])
+            var size = (title as NSString).size(withAttributes: [NSAttributedStringKey.font:titleLabel!.font])
             var fontSize = titleLabel!.font.pointSize
             while size.width > self.width && titleLabel!.adjustsFontSizeToFitWidth {
                 fontSize -= 1
                 let font = UIFontSize(fontSize)
-                size = (title as NSString).size(attributes: [NSFontAttributeName:font])
+                size = (title as NSString).size(withAttributes: [NSAttributedStringKey.font:font])
             }
             titleLabel?.width = size.width
             titleLabel?.height = size.height

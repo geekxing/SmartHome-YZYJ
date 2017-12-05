@@ -73,7 +73,7 @@ class XBRealDataViewController: XBBaseViewController {
         timer?.setEventHandler( handler: {
             self.makeData()
         })
-        timer?.scheduleRepeating(deadline: .now(), interval: .seconds(10))
+        timer?.schedule(deadline: .now(), repeating: .seconds(10))
         timer?.resume()
     }
     
@@ -165,10 +165,10 @@ class XBRealDataViewController: XBBaseViewController {
     //MARK: - misc
     
     fileprivate func makeScoreAttributeString(score:String, text:String) -> NSAttributedString {
-        let scoreAttri = NSMutableAttributedString(string: score, attributes: [NSFontAttributeName:UIFontSize(26),
-                                                                               NSForegroundColorAttributeName:UIColor.black])
-        let textAttri = NSMutableAttributedString(string: "\n\(text)", attributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: 12),
-                                                                                    NSForegroundColorAttributeName:XB_DARK_TEXT])
+        let scoreAttri = NSMutableAttributedString(string: score, attributes: [NSAttributedStringKey.font:UIFontSize(26),
+                                                                               NSAttributedStringKey.foregroundColor:UIColor.black])
+        let textAttri = NSMutableAttributedString(string: "\n\(text)", attributes: [NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: 12),
+                                                                                    NSAttributedStringKey.foregroundColor:XB_DARK_TEXT])
         scoreAttri.append(textAttri)
         return scoreAttri
     }

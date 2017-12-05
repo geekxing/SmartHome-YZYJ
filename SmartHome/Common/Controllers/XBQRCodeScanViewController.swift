@@ -44,7 +44,7 @@ UIAlertViewDelegate {
     func setupUI(){
         self.title = "QR Code"
         self.view.backgroundColor = UIColor.clear
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor:UIColor.white]
         
         self.view.addSubview(centerView)
         self.view.addSubview(scanRectView)
@@ -177,7 +177,7 @@ UIAlertViewDelegate {
             
             self.session = AVCaptureSession()
             
-            self.device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
+            self.device = AVCaptureDevice.default(for: AVMediaType.video)
             try! device.lockForConfiguration()
             device.focusMode = .continuousAutoFocus
             device.unlockForConfiguration()
@@ -188,14 +188,14 @@ UIAlertViewDelegate {
             output.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             
             if UIScreen.main.bounds.size.height<500 {
-                self.session.sessionPreset = AVCaptureSessionPreset640x480
+                self.session.sessionPreset = AVCaptureSession.Preset.vga640x480
             }else{
-                self.session.sessionPreset = AVCaptureSessionPresetHigh
+                self.session.sessionPreset = AVCaptureSession.Preset.high
             }
             self.session.addInput(self.input)
             self.session.addOutput(self.output)
             
-            self.output.metadataObjectTypes = [AVMetadataObjectTypeQRCode]
+            self.output.metadataObjectTypes = [AVMetadataObject.ObjectType.qr]
             
             let scanSize:CGSize = CGSize(width: 200*UIRate, height: 200*UIRate)
             
@@ -210,7 +210,7 @@ UIAlertViewDelegate {
             self.output.rectOfInterest = scanRect
             
             self.preview = AVCaptureVideoPreviewLayer(session:self.session)
-            self.preview.videoGravity = AVLayerVideoGravityResizeAspectFill
+            self.preview.videoGravity = AVLayerVideoGravity.resizeAspectFill
             self.preview.frame = UIScreen.main.bounds
             self.view.layer.insertSublayer(self.preview, at: 0)
             
@@ -234,9 +234,9 @@ UIAlertViewDelegate {
         
         for connection in imageOutput.connections{
             
-            for port in (connection as! AVCaptureConnection).inputPorts {
+            for port in (connection ).inputPorts {
                 
-                if (port as! AVCaptureInputPort).mediaType == AVMediaTypeVideo {
+                if (port ).mediaType == AVMediaType.video {
                     imageConnect = (connection as? AVCaptureConnection)!
                     break
                 }
@@ -257,7 +257,9 @@ UIAlertViewDelegate {
         if self.returnScan != nil {
             if let metadata = metadataObjects.first {
                 let metaObj = metadata as! AVMetadataMachineReadableCodeObject
-                self.returnScan!(metaObj.stringValue)
+                if let str = metaObj.stringValue {
+                    self.returnScan!(str)
+                }
             }
         }
         

@@ -63,7 +63,7 @@ class XBNetworking: NSObject {
                     let json = JSON(value)
                     let message = localizeMsg(path, code: json[Code].intValue)
                     //LogInfo(message: json.stringValue)
-                    print(json)
+                    dPrint(json)
                     success(json, message)
                 case .failure(let error):
                     failure(error)
@@ -103,11 +103,11 @@ class XBNetworking: NSObject {
                         if let value = response.result.value as? Parameters {
                             let json = JSON(value)
                             success(json)
-                            debugPrint(json)
+                            dPrint(json)
                         }
                     }
                 case .failure(let encodingError):
-                    debugPrint(encodingError)
+                    dPrint(encodingError)
                     failture(encodingError)
                 }
         }

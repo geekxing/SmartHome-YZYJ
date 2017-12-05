@@ -20,7 +20,7 @@
 
 @property (nonatomic , assign) NSInteger numOfVCNeedPop;
 
-@property (nonatomic , copy) void (^setBLEFinished)();
+@property (nonatomic , copy) void (^setBLEFinished)(void);
 
 @property (nonatomic , copy) NSDictionary * targetDevInfo;
 

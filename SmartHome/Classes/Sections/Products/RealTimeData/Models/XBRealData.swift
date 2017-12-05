@@ -28,9 +28,9 @@ class XBRealData: NSObject {
     
     let myProperties = XBRealData.properties_name()
     
-    var breath:Int = 0
-    var heart:Int = 0
-    var event:Int = 0
+    @objc var breath:Int = 0
+    @objc var heart:Int = 0
+    @objc var event:Int = 0
     
     
     func add(_ json:JSON) {

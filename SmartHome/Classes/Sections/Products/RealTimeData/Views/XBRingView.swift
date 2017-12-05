@@ -27,12 +27,12 @@ class XBRingView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        titleSize = (title as NSString).size(attributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: UIRate*14)])
+        titleSize = (title as NSString).size(withAttributes: [NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: UIRate*14)])
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        titleSize = (title as NSString).size(attributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: UIRate*14)])
+        titleSize = (title as NSString).size(withAttributes: [NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: UIRate*14)])
     }
     
     private var ringRect:CGRect {
@@ -73,9 +73,9 @@ class XBRingView: UIView {
         //当最大值为负数时不显示分数
         let score = self.maxValue < 0 ? "--" : "\(Int(round(self.progress * 100)))" as NSString
         //获取文字的rect
-        let textRect = score.boundingRect(with: CGSize(width:70, height:40), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName:UIFontSize(40)], context: nil)
-        score.draw(in: CGRect(x:(self.width-textRect.width)/2,y:self.height*0.5-37,width:textRect.width,height:textRect.height), withAttributes: [NSFontAttributeName:UIFontSize(40)])
-        (title as NSString).draw(at: CGPoint(x:(self.width-titleSize.width)*0.5,y:self.height*0.5+15), withAttributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: UIRate*14)])
+        let textRect = score.boundingRect(with: CGSize(width:70, height:40), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font:UIFontSize(40)], context: nil)
+        score.draw(in: CGRect(x:(self.width-textRect.width)/2,y:self.height*0.5-37,width:textRect.width,height:textRect.height), withAttributes: [NSAttributedStringKey.font:UIFontSize(40)])
+        (title as NSString).draw(at: CGPoint(x:(self.width-titleSize.width)*0.5,y:self.height*0.5+15), withAttributes: [NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: UIRate*14)])
     }
 
 }

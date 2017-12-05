@@ -17,22 +17,22 @@ class XBSleepData: NSObject {
     ///是否夜晚段睡眠时长小于1.5h的不适用于统计分析的数据
     fileprivate(set) var deleteTagForAnalysis:Bool = false
 
-    var id:String = ""
-    var user:String = ""
-    var deviceSN:String = ""
-    var creatTime:Double = 0
-    var date:Double = 0
-    var goToBed:Double = 0
-    var outOfBed:Double = 0
-    var sleepStart:Double = 0
-    var sleepEnd:Double = 0
-    var lightSleepTime:Double = 0
-    var deepSleepTime:Double = 0
-    var avgHeart:Int = 0
-    var avgBreath:Int = 0
-    var outNum:Int = 0
-    var turnNum:Int = 0
-    var score:Int = 0 {
+    @objc var id:String = ""
+    @objc var user:String = ""
+    @objc var deviceSN:String = ""
+    @objc var creatTime:Double = 0
+    @objc var date:Double = 0
+    @objc var goToBed:Double = 0
+    @objc var outOfBed:Double = 0
+    @objc var sleepStart:Double = 0
+    @objc var sleepEnd:Double = 0
+    @objc var lightSleepTime:Double = 0
+    @objc var deepSleepTime:Double = 0
+    @objc var avgHeart:Int = 0
+    @objc var avgBreath:Int = 0
+    @objc var outNum:Int = 0
+    @objc var turnNum:Int = 0
+    @objc var score:Int = 0 {
         didSet {
             if self.score < 10 {
                self.score = 10

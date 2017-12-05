@@ -144,7 +144,7 @@ class XBDoubleSetLineView:XBSingleReportView  {
     //MARK: - Misc
     
     override func makeScoreAttributeString(score:String, text:String) -> NSAttributedString {
-        return NSMutableAttributedString(string: score + text, attributes: [NSFontAttributeName:UIFontSize(10)])
+        return NSMutableAttributedString(string: score + text, attributes: [NSAttributedStringKey.font:UIFontSize(10)])
     }
     
 

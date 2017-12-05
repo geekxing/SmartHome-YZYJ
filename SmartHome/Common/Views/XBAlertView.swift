@@ -43,7 +43,7 @@ class XBAlertView: UIView {
         super.layoutSubviews()
         
         if let titleText = titleLabel.text {
-            let rect = (titleText as NSString).boundingRect(with: CGSize(width: self.width - XBAlertView.labelGap, height: CGFloat.infinity), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSFontAttributeName:titleLabel.font], context: nil)
+            let rect = (titleText as NSString).boundingRect(with: CGSize(width: self.width - XBAlertView.labelGap, height: CGFloat.infinity), options: [.usesLineFragmentOrigin, .usesFontLeading], attributes: [NSAttributedStringKey.font:titleLabel.font], context: nil)
             titleLabel.width = rect.width
             titleLabel.height = rect.height
         }

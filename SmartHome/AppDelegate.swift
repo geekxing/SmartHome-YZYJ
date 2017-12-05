@@ -77,7 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     //这个方法好像只有在用户在前台的时候才会走
     func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
         if (application.applicationState == .active) {
-            print(notification.userInfo)
             handleLocalNote(notification.userInfo)
         } else {
             print(application.applicationState)

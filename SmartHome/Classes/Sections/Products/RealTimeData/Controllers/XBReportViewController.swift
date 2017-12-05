@@ -159,11 +159,11 @@ class XBReportViewController: XBBaseViewController {
         let smallSize = SCREEN_WIDTH >= 375 ? 9 : 8
         
         let scoreAttri = NSMutableAttributedString(string: score,
-                                                   attributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: CGFloat(bigSize)),
-                                                                NSForegroundColorAttributeName:UIColor.white])
+                                                   attributes: [NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: CGFloat(bigSize)),
+                                                                NSAttributedStringKey.foregroundColor:UIColor.white])
         let textAttri = NSMutableAttributedString(string: "\n\(text)",
-            attributes: [NSFontAttributeName:UIFont.boldSystemFont(ofSize: CGFloat(smallSize)),
-                         NSForegroundColorAttributeName:UIColor.white])
+            attributes: [NSAttributedStringKey.font:UIFont.boldSystemFont(ofSize: CGFloat(smallSize)),
+                         NSAttributedStringKey.foregroundColor:UIColor.white])
         scoreAttri.append(textAttri)
         return scoreAttri
     }

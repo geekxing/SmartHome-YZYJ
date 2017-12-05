@@ -223,8 +223,8 @@ class XBSingleReportView: UIView {
     }
     
     func makeScoreAttributeString(score:String, text:String) -> NSAttributedString {
-        let scoreAttri = NSMutableAttributedString(string: score, attributes: [NSFontAttributeName:UIFontSize(20)])
-        let textAttri = NSMutableAttributedString(string: "\n\(text)", attributes: [NSFontAttributeName:UIFontSize(12)])
+        let scoreAttri = NSMutableAttributedString(string: score, attributes: [NSAttributedStringKey.font:UIFontSize(20)])
+        let textAttri = NSMutableAttributedString(string: "\n\(text)", attributes: [NSAttributedStringKey.font:UIFontSize(12)])
         scoreAttri.append(textAttri)
         return scoreAttri
     }
