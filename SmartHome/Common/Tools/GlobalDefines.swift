@@ -17,6 +17,7 @@ let UIRate = isPad ? 2 : SCREEN_WIDTH / 375
 let UIRateH = isPad ? 1.5 : SCREEN_HEIGHT / 667
 let SYS_LANGUAGE_CHINESE = getCurLanguage() == "zh-Hans-CN"
 let isPhoneX = SCREEN_HEIGHT == 812.0
+let iPhone5s_or_below = SCREEN_HEIGHT <= 568.0
 
 let XB_DARK_TEXT = UIColorHex("333333", 1)
 

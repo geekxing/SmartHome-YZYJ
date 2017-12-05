@@ -33,13 +33,13 @@ class XBProductMainController: XBMainViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.rightBarButtonItem = nil
-        (mainView as! XBProductMainView).toggleFunctionEnabled(sn: loginUser!.Device().first)
+        (mainView as! XBProductMainView).toggleFunctionEnabled(sn: loginUser != nil ? loginUser!.Device().first : "", loginUser: loginUser)
     }
     
     //MARK: - Notification
     @objc override func onUserInfoUpdated(notification:Notification) {
         super.onUserInfoUpdated(notification: notification)
-        (mainView as! XBProductMainView).toggleFunctionEnabled(sn: loginUser!.Device().first)
+        (mainView as! XBProductMainView).toggleFunctionEnabled(sn: loginUser != nil ? loginUser!.Device().first : "", loginUser: loginUser)
     }
     
     //MARK: - Private

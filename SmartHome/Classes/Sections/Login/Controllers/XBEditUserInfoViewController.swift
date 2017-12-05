@@ -118,6 +118,9 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
     }
     
     private func setupAvatar() {
+        guard loginUser.email != nil else {
+            return
+        }
         avatarView.setHeader(url: loginUser.image, uid: loginUser.email)
         avatarView.isUserInteractionEnabled = true
         let tapAvatarGR = UITapGestureRecognizer.init(target: self, action: #selector(pickAvatar(_:)))
@@ -177,7 +180,7 @@ class XBEditUserInfoViewController: UIViewController, UITextFieldDelegate, XBPho
             return
         }
         
-        let email = usernameTextField.text!.lowercased()
+        let email = usernameTextField.text!
         let pwd = passwordField.text!
         let gender = "\(XBUserManager.integerForGender(genderField.text!))"
         let params:Parameters = [

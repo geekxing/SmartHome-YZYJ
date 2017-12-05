@@ -34,7 +34,7 @@ class XBRealDataViewController: XBBaseViewController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        if self.sn == nil {
+        if self.sn == nil && loginUser != nil {
             self.sn = loginUser!.Device().first ?? ""
         }
     }

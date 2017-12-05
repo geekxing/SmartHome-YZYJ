@@ -34,7 +34,7 @@ class XBProductMainView: XBMainView {
         return 117.0*UIRate;
     }
     
-    func toggleFunctionEnabled(sn:String?) {
+    func toggleFunctionEnabled(sn:String?, loginUser:XBUser?) {
         if sn != "" && sn != nil {
             for btn in squareBtns {
                 btn.isEnabled = true
@@ -42,7 +42,7 @@ class XBProductMainView: XBMainView {
         } else {
             for i in 0..<squareBtns.count {
                 let btn = squareBtns[i]
-                btn.isEnabled = i == 2
+                btn.isEnabled = (i == 2 && loginUser != nil)
             }
         }
     }

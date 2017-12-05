@@ -3,14 +3,14 @@ platform :ios, ‘8.0’
 use_frameworks!
 
 target ‘SmartHome’ do
-    pod 'Alamofire', '~> 4.0'
+    pod 'Alamofire'
     pod 'IQKeyboardManagerSwift'
     pod 'SwiftyJSON'
     pod 'SVProgressHUD'
     pod 'SDWebImage'
     pod 'LGAlertView'
     pod 'FTPopOverMenu_Swift’
-    pod 'SnapKit', '~> 3.1.2'
+    pod 'SnapKit'
     pod 'DropDown'
     pod 'Charts'
     pod 'SwiftDate', '~> 4.0'
@@ -19,5 +19,5 @@ target ‘SmartHome’ do
     pod 'CocoaLumberjack/Swift'
     pod 'RealmSwift'
     pod 'Bugly'
-    pod 'swiftScan', '~> 1.1.0'
+    pod 'swiftScan'
 end

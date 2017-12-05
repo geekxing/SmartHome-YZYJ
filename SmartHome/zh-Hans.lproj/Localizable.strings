@@ -197,6 +197,12 @@
 //MARK: - 闹钟通知
 "Clock" = "闹钟通知";
 
+"Alarm Time\nNotes Massage Inform" = "闹铃和消息通知";
+
+"Leave messages to remind yourself" = "留言提醒";
+
+"fireDate overdue" = "提醒时间已过期";
+
 //MARK: - Real-time Data
 
 "REAL-TIME DATA" = "实时数据";
@@ -316,6 +322,3 @@
 "unbind failed" = "解绑失败";
 
 "Has been bound by the others" = "已被其他人绑定";
-
-
-

@@ -40,7 +40,7 @@ class XBMainView: UIView {
 //             NSLocalizedString("Smart\nPillow", comment: ""),
 //             NSLocalizedString("Baby\nMattress Pad", comment: ""),
              NSLocalizedString("Family\nCare", comment: ""),
-             NSLocalizedString("Clock", comment: "")]
+             NSLocalizedString("Alarm Time\nNotes Massage Inform", comment: "")]
 //             NSLocalizedString("Value-Added\nServices", comment: ""),
 //             NSLocalizedString("Doctor's Hall", comment: "")]
         let btnImages = ["Sbed", /**"Spillow","Sring",*/ "Relation",/** "Product",*/ "Doctor"]

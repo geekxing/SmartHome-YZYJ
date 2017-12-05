@@ -71,6 +71,9 @@ class XBClockKnockView: UIView, UITextFieldDelegate, UITableViewDelegate, UITabl
         self.doneButton.addTarget(self, action: #selector(setNote), for: .touchUpInside)
         self.contentField.borderStyle = .roundedRect
         self.contentField.placeholder = NSLocalizedString("Leave messages to remind yourself", comment: "")
+        if iPhone5s_or_below {
+            self.contentField.font = UIFontSize(13)
+        }
         self.contentField.delegate = self
         self.tableView.dataSource = self
         self.tableView.delegate = self

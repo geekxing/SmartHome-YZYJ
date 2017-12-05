@@ -147,12 +147,16 @@ class XBUserManager: NSObject {
     
     func addUser(userJson:JSON) {
         //用户信息本地缓存
-        let realm = try! Realm()
-        print(realm.configuration.fileURL!)
-        try! realm.write {
-            let user = self.user(userJson)
-            realm.add(user, update: true)
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: XBUserInfoHasChangedNotification), object: user.email)
+        do {
+            let realm = try Realm()
+            print(realm.configuration.fileURL!)
+            try! realm.write {
+                let user = self.user(userJson)
+                realm.add(user, update: true)
+                NotificationCenter.default.post(name: NSNotification.Name(rawValue: XBUserInfoHasChangedNotification), object: user.email)
+            }
+        } catch let error as NSError {
+            print(error)
         }
     }
     
@@ -175,7 +179,7 @@ class XBUserManager: NSObject {
     /// - Returns:当前登录账号
     func user(uid:String) -> XBUser? {
         let realm = try! Realm()
-        let predicate = NSPredicate(format: "email = %@", argumentArray: [uid])
+        let predicate = NSPredicate(format: "email = [cd] %@", argumentArray: [uid])
         return realm.objects(XBUser.self).filter(predicate).first
     }
     

@@ -127,7 +127,7 @@ class XBLoginViewController: UIViewController, UITextFieldDelegate, XBRegisterVi
     func doLogin() {
         view.endEditing(true)
         
-        let username = usernameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).lowercased()
+        let username = usernameTextField.text?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
         let password = passwordTextField.text
         
         if let uid = username, let pwd = password {

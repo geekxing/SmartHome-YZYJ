@@ -104,7 +104,7 @@ class XBApplyConcernViewController: UIViewController {
         let params:Dictionary = ["email":emailLowercase]
         XBNetworking.share.postWithPath(path: QUERY, paras: params, success: { [weak self] (json, message) in
             if json[Code] == 1 {
-                if emailLowercase != self!.loginUser!.email {
+                if emailLowercase != self!.loginUser?.email.lowercased() {
                     let userData = json[XBData]
                     XBUserManager.shared.addUser(userJson: userData)
                 }
